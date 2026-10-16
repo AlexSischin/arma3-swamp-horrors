@@ -1,0 +1,166 @@
+version=54;
+class EditorData
+{
+	moveGridStep=1;
+	angleGridStep=0.2617994;
+	scaleGridStep=1;
+	autoGroupingDist=10;
+	toggles=1;
+	mods[]=
+	{
+		"WBK_Zombies_AdvancedEditorSettings"
+	};
+	class ItemIDProvider
+	{
+		nextID=14;
+	};
+	class MarkerIDProvider
+	{
+		nextID=1;
+	};
+	class Camera
+	{
+		pos[]={1015.6968,12.861422,1295.3668};
+		dir[]={-0.34574747,-0.39319611,0.85197169};
+		up[]={-0.14785564,0.91945457,0.36433765};
+		aside[]={0.9266054,-1.4901161e-08,0.37603536};
+	};
+};
+binarizationWanted=0;
+sourceName="swamp_horrors";
+addons[]=
+{
+	"rhsusf_c_troops",
+	"A3_Ui_F"
+};
+class AddonsMetaData
+{
+	class List
+	{
+		items=2;
+		class Item0
+		{
+			className="rhsusf_c_troops";
+			name="RHSUSF Infantry & Equipment";
+			author="Red Hammer Studios";
+			url="http://www.rhsmods.org/";
+		};
+		class Item1
+		{
+			className="A3_Ui_F";
+			name="Arma 3 - User Interface";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+	};
+};
+dlcs[]=
+{
+	"RHS_USAF"
+};
+randomSeed=7486610;
+class ScenarioData
+{
+	author="Alex32";
+};
+class Mission
+{
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startFog=0.2;
+		startWind=0.15000001;
+		startWaves=0.050000001;
+		forecastWeather=0.30000001;
+		forecastFog=0.2;
+		forecastWind=0.15000001;
+		forecastWaves=0.050000001;
+		forecastLightnings=0.050000001;
+		wavesForced=1;
+		windForced=1;
+		year=2035;
+		month=4;
+		day=11;
+		minute=0;
+		startFogBase=5;
+		forecastFogBase=5;
+		startFogDecay=0.1;
+		forecastFogDecay=0.1;
+	};
+	class Entities
+	{
+		items=2;
+		class Item0
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={1011.449,8.0742884,1302.6421};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						name="player1";
+						isPlayer=1;
+					};
+					id=5;
+					type="rhsusf_socom_marsoc_elementleader";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male12ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=4;
+		};
+		class Item1
+		{
+			dataType="Marker";
+			position[]={1400.9902,1.2273352,1582.6847};
+			name="marker_0";
+			markerType="RECTANGLE";
+			type="";
+			a=75;
+			b=25;
+			id=10;
+		};
+	};
+};
