@@ -1,3 +1,13 @@
+fn_groupInitPosition = compile preprocessFile "fn_group\initPosition.sqf";
+fn_groupInitGameObjects = compile preprocessFile "fn_group\initGameObjects.sqf";
+fn_groupInitPath = compile preprocessFile "fn_group\initPath.sqf";
+fn_groupInitMarkers = compile preprocessFile "fn_group\initMarkers.sqf";
+
+fn_groupReloadGameObjectState = compile preprocessFile "fn_group\reloadGameObjectState.sqf";
+fn_groupPersistGameObjectState = compile preprocessFile "fn_group\persistGameObjectState.sqf";
+
+fn_groupUpdateMarkers = compile preprocessFile "fn_group\updateMarkers.sqf";
+
 fn_groupCreateUnit = compile preprocessFile "fn_group\createUnit.sqf";
 
 fn_groupGetControlledUavs = compile preprocessFile "fn_group\getControlledUavs.sqf";
@@ -18,7 +28,8 @@ fn_groupChooseRandomPath = compile preprocessFile "fn_group\chooseRandomPath.sqf
 fn_groupChooseBackoffPath = compile preprocessFile "fn_group\chooseBackoffPath.sqf";
 fn_groupChooseRandomNeighbourPath = compile preprocessFile "fn_group\chooseRandomNeighbourPath.sqf";
 fn_groupCalculatePathHopPlan = compile preprocessFile "fn_group\calculatePathHopPlan.sqf";
-fn_groupCalculateVirtualMigration = compile preprocessFile "fn_group\calculateVirtualMigration.sqf";
+fn_groupMigrateVirtually = compile preprocessFile "fn_group\migrateVirtually.sqf";
+fn_groupMigratePhysically = compile preprocessFile "fn_group\migratePhysically.sqf";
 
 fn_groupVisualizeIndexPath = compile preprocessFile "fn_group\visualizeIndexPath.sqf";
 
