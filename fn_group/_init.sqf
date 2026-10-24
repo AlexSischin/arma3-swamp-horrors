@@ -1,7 +1,7 @@
-fn_groupInitPosition = compile preprocessFile "fn_group\initPosition.sqf";
-fn_groupInitGameObjects = compile preprocessFile "fn_group\initGameObjects.sqf";
-fn_groupInitPath = compile preprocessFile "fn_group\initPath.sqf";
-fn_groupInitMarkers = compile preprocessFile "fn_group\initMarkers.sqf";
+fn_groupInitPositionState = compile preprocessFile "fn_group\initPositionState.sqf";
+fn_groupInitGameObjectState = compile preprocessFile "fn_group\initGameObjectState.sqf";
+fn_groupInitMigrationState = compile preprocessFile "fn_group\initMigrationState.sqf";
+fn_groupInitMarkerState = compile preprocessFile "fn_group\initMarkerState.sqf";
 
 fn_groupReloadGameObjectState = compile preprocessFile "fn_group\reloadGameObjectState.sqf";
 fn_groupPersistGameObjectState = compile preprocessFile "fn_group\persistGameObjectState.sqf";

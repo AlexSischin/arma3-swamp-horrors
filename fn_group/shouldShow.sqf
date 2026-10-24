@@ -1,9 +1,9 @@
-params ["_params", "_state"];
+params ["_params", "_posState"];
 
 private _showDistanceMin = _params get "_showDistanceMin";
 private _showDistanceMax = _params get "_showDistanceMax";
 
-private _groupWorldPos = _state get "_groupWorldPos";
+private _groupWorldPos = _posState get "_groupWorldPos";
 
 private _subjectArray = [] call fn_groupGetRenderSubjects;
 private _shouldShow = false;

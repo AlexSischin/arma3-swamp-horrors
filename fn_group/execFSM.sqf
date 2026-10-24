@@ -1,19 +1,9 @@
 params ["_params"];
 
-private _state = createHashMap;
-// Position.
-_state set ["_groupIndexPos", nil];
-_state set ["_groupWorldPos", nil];
-// Game objects.
-_state set ["_group", nil];
-_state set ["_unit", nil];
-// Migration
-_state set ["_path", nil];
-_state set ["_untraveledTime", nil];
-_state set ["_nHops", nil];
-// Markers
-_state set ["_groupMarker", nil];
-_state set ["_pathMarkerArray", nil];
+private _posState = nil;
+private _gameObjectState = nil;
+private _migrationState = nil;
+private _markerState = nil;
 
 // Behaviour.
 private _fsm = [
@@ -27,10 +17,10 @@ private _fsm = [
             ]
         ],
         {
-            [_params] call fn_groupInitPosition;
-            [_params, _state] call fn_groupInitGameObjects;
-            [] call fn_groupInitPath;
-            [_params, _state] call fn_groupInitMarkers;
+            _posState = [_params] call fn_groupInitPositionState;
+            _gameObjectState = [_params, _posState] call fn_groupInitGameObjectState;
+            _migrationState = [] call fn_groupInitMigrationState;
+            _markerState = [_params, _posState] call fn_groupInitMarkerState;
         }
     ],
     [
@@ -38,8 +28,8 @@ private _fsm = [
         [
             [
                 "NORMAL",
-                {[_params, _state] call fn_groupShouldShow},
-                {[_state] call fn_groupFSMShow}
+                {[_params, _posState] call fn_groupShouldShow},
+                {[_gameObjectState] call fn_groupFSMShow}
             ],
             [
                 "HIDDEN",
@@ -48,9 +38,9 @@ private _fsm = [
             ]
         ],
         {
-            [_params, _state] call fn_groupMigrateVirtually;
-            [_state] call fn_groupPersistGameObjectState;
-            [_params, _state] call fn_groupUpdateMarkers;
+            [_params, _posState, _migrationState] call fn_groupMigrateVirtually;
+            [_posState, _gameObjectState, _migrationState] call fn_groupPersistGameObjectState;
+            [_params, _posState, _migrationState, _markerState] call fn_groupUpdateMarkers;
         }
     ],
     [
@@ -63,10 +53,10 @@ private _fsm = [
             ],
             [
                 "HIDDEN",
-                {[_params, _state] call fn_groupShouldHide},
+                {[_params, _posState] call fn_groupShouldHide},
                 {
-                    [_params, _state] call fn_groupReloadGameObjectState;
-                    [_state] call fn_groupFSMHide;
+                    [_params, _posState, _gameObjectState] call fn_groupReloadGameObjectState;
+                    [_gameObjectState] call fn_groupFSMHide;
                 }
             ],
             [
@@ -76,9 +66,9 @@ private _fsm = [
             ]
         ],
         {
-            [_params, _state] call fn_groupReloadGameObjectState;
-            [_params, _state] call fn_groupMigratePhysically;
-            [_params, _state] call fn_groupUpdateMarkers;
+            [_params, _posState, _gameObjectState] call fn_groupReloadGameObjectState;
+            [_params, _posState, _gameObjectState, _migrationState] call fn_groupMigratePhysically;
+            [_params, _posState, _migrationState, _markerState] call fn_groupUpdateMarkers;
         }
     ],
     [
