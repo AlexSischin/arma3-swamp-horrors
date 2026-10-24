@@ -2,8 +2,9 @@ params ["_params", "_posState"];
 
 private _chunkSize = _params get "_chunkSize";
 
-private _groupWorldPos = _posState get "_groupWorldPos";
+private _groupIndexPos = _posState get "_groupIndexPos";
 
+private _groupWorldPos = [_groupIndexPos, _chunkSize] call fn_chunkGetPosForIndex;
 private _groupMarker = [_groupWorldPos, "ColorBLUFOR", "b_inf"] call fn_commonVisualizePoint;
 
 private _markerState = createHashMap;

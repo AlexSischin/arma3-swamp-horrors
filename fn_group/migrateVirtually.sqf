@@ -10,7 +10,6 @@ private _migrationMaxDistance = _params get "_migrationMaxDistance";
 private _delay = _params get "_delay";
 
 private _groupIndexPos = _posState get "_groupIndexPos";
-private _groupWorldPos = _posState get "_groupWorldPos";
 private _path = _migrationState get "_path";
 private _untraveledTime = _migrationState get "_untraveledTime";
 
@@ -26,14 +25,12 @@ while {_nHopsRemaining > 0} do {
         _nHopsRemaining = _nHopsRemaining - _currentPathHops;
         _path deleteRange [0, _currentPathHops];
         _groupIndexPos = _path select 0;
-        _groupWorldPos = [_groupIndexPos, _chunkSize, _housePosWeight, _roadPosWeight, _otherPosWeight] call fn_chunkSelectUnitPos;
     } else {
         _nHopsRemaining = _nHopsRemaining - 1;
     };
 };
 
 _posState set ["_groupIndexPos", _groupIndexPos];
-_posState set ["_groupWorldPos", _groupWorldPos];
 _migrationState set ["_path", _path];
 _migrationState set ["_untraveledTime", _untraveledTime];
 _migrationState set ["_nHops", _nHops];

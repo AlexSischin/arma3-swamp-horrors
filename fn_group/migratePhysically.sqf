@@ -44,7 +44,7 @@ if (_nHops > 0) then {
 private _newWaypointWorldPos = nil;
 if (_createNewWaypoint) then {
     private _newWaypointIndexPos = _path select 1;
-    _newWaypointWorldPos = [_newWaypointIndexPos, _chunkSize, _housePosWeight, _roadPosWeight, _otherPosWeight] call fn_chunkSelectUnitPos;
+    _newWaypointWorldPos = [_newWaypointIndexPos, _chunkSize, _housePosWeight, _roadPosWeight, _otherPosWeight] call fn_chunkSelectRandomWorldPos;
 };
 
 _migrationState set ["_path", _path];

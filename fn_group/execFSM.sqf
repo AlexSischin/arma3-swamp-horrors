@@ -39,7 +39,7 @@ private _fsm = [
         ],
         {
             [_params, _posState, _migrationState] call fn_groupMigrateVirtually;
-            [_posState, _gameObjectState, _migrationState] call fn_groupPersistGameObjectState;
+            [_params, _posState, _gameObjectState, _migrationState] call fn_groupPersistGameObjectState;
             [_params, _posState, _migrationState, _markerState] call fn_groupUpdateMarkers;
         }
     ],

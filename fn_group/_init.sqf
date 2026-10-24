@@ -31,6 +31,7 @@ fn_groupCalculatePathHopPlan = compile preprocessFile "fn_group\calculatePathHop
 fn_groupMigrateVirtually = compile preprocessFile "fn_group\migrateVirtually.sqf";
 fn_groupMigratePhysically = compile preprocessFile "fn_group\migratePhysically.sqf";
 
+fn_groupVisualizeIndexPos = compile preprocessFile "fn_group\visualizeIndexPos.sqf";
 fn_groupVisualizeIndexPath = compile preprocessFile "fn_group\visualizeIndexPath.sqf";
 
 fn_groupExecFSM = compile preprocessFile "fn_group\execFSM.sqf";

@@ -7,9 +7,7 @@ private _roadPosWeight = _params get "_roadPosWeight";
 private _otherPosWeight = _params get "_otherPosWeight";
 
 private _groupIndexPos = [_chunkGrid, 2, {_this select 1}] call fn_commonSelectRandomWeighted select 0;
-private _groupWorldPos = [_groupIndexPos, _chunkSize, _housePosWeight, _roadPosWeight, _otherPosWeight] call fn_chunkSelectUnitPos;
 
 private _posState = createHashMap;
 _posState set ["_groupIndexPos", _groupIndexPos];
-_posState set ["_groupWorldPos", _groupWorldPos];
 _posState

@@ -1,8 +1,10 @@
 params [
-    ["_indexPath", []],
-    ["_chunkSize", 0],
+    ["_indexPath", nil],
+    ["_chunkSize", nil],
     ["_color", "colorBLUFOR"]
 ];
+
+if (count _indexPath == 0) exitWith {[]};
 
 private _chunkCenterPath = [_indexPath, _chunkSize] call fn_chunkGetPosForIndexArray;
 private _pathLength = count _chunkCenterPath;
