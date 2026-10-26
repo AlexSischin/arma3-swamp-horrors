@@ -48,6 +48,8 @@ _params set ["_migrationMaxDistance", 500];
 _params set ["_speedKmH", 80];
 // Performance parameters.
 _params set ["_delay", 2];
+// Marker parameters.
+_params set ["_markersEnabled", true];
 
 for [{private _i = 0}, {_i < 1}, {_i = _i + 1}] do {
     [_params] spawn fn_groupExecFSM;

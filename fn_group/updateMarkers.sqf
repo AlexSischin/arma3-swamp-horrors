@@ -1,5 +1,9 @@
 params ["_params", "_posState", "_migrationState", "_markerState"];
 
+private _markersEnabled = _params get "_markersEnabled";
+
+if (!_markersEnabled) exitWith {};
+
 private _chunkSize = _params get "_chunkSize";
 
 private _groupIndexPos = _posState get "_groupIndexPos";
