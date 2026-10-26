@@ -35,6 +35,13 @@ _params set ["_chunkSize", _chunkMap select 2];
 // Identity parameters.
 _params set ["_side", west];
 _params set ["_class", "B_Soldier_F"];
+_params set ["_unitArray", [
+    "rhsusf_socom_marsoc_elementleader",
+    "rhsusf_socom_marsoc_cso",
+    "rhsusf_socom_marsoc_cso_breacher",
+    "rhsusf_socom_marsoc_cso_mechanic",
+    "rhsusf_socom_marsoc_sarc"
+]];
 // Placement parameters.
 _params set ["_housePosWeight", 4];
 _params set ["_roadPosWeight", 1];

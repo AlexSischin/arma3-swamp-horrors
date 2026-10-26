@@ -2,18 +2,26 @@ params ["_params", "_posState"];
 
 private _chunkSize = _params get "_chunkSize";
 private _side = _params get "_side";
-private _class = _params get "_class";
+private _housePosWeight = _params get "_housePosWeight";
+private _roadPosWeight = _params get "_roadPosWeight";
+private _otherPosWeight = _params get "_otherPosWeight";
+private _unitArray = _params get "_unitArray";
 
 private _groupIndexPos = _posState get "_groupIndexPos";
 
-private _dir = random 360;
 private _group = createGroup [_side, true];
-_group setFormDir _dir;
-private _groupWorldPos = [_groupIndexPos, _chunkSize] call fn_chunkSelectRandomWorldPos;
-private _unit = [_group, _groupWorldPos, _class] call fn_groupCreateUnit;
-_unit setDir _dir;
+private _groupDir = random 360;
+_group setFormDir _groupDir;
+private _groupWorldPos = [_groupIndexPos, _chunkSize, _housePosWeight, _roadPosWeight, _otherPosWeight] call fn_chunkSelectRandomWorldPos;
+private _nUnits = count _unitArray;
+for [{private _u = 0}, {_u < _nUnits}, {_u = _u + 1}] do {
+    private _unit = _unitArray select _u;
+
+    private _unitPos = [_groupWorldPos, _nUnits, 0] call fn_groupFindSafePos;
+    private _unitGameObject = [_group, _unitPos, _unit] call fn_groupCreateUnit;
+    _unitGameObject setDir _groupDir;
+};
 
 private _gameObjectState = createHashMap;
 _gameObjectState set ["_group", _group];
-_gameObjectState set ["_unit", _unit];
 _gameObjectState

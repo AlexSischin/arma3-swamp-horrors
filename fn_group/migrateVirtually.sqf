@@ -2,9 +2,6 @@ params ["_params", "_posState", "_migrationState"];
 
 private _chunkMap = _params get "_chunkMap";
 private _chunkSize = _params get "_chunkSize";
-private _housePosWeight = _params get "_housePosWeight";
-private _roadPosWeight = _params get "_roadPosWeight";
-private _otherPosWeight = _params get "_otherPosWeight";
 private _speedKmH = _params get "_speedKmH";
 private _migrationMaxDistance = _params get "_migrationMaxDistance";
 private _delay = _params get "_delay";

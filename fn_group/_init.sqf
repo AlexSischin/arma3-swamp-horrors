@@ -3,6 +3,8 @@ fn_groupInitGameObjectState = compile preprocessFile "fn_group\initGameObjectSta
 fn_groupInitMigrationState = compile preprocessFile "fn_group\initMigrationState.sqf";
 fn_groupInitMarkerState = compile preprocessFile "fn_group\initMarkerState.sqf";
 
+fn_groupFindSafePos = compile preprocessFile "fn_group\findSafePos.sqf";
+
 fn_groupReloadGameObjectState = compile preprocessFile "fn_group\reloadGameObjectState.sqf";
 fn_groupPersistGameObjectState = compile preprocessFile "fn_group\persistGameObjectState.sqf";
 
