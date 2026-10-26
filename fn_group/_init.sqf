@@ -3,14 +3,14 @@ fn_groupInitGameObjectState = compile preprocessFileLineNumbers "fn_group\initGa
 fn_groupInitMigrationState = compile preprocessFileLineNumbers "fn_group\initMigrationState.sqf";
 fn_groupInitMarkerState = compile preprocessFileLineNumbers "fn_group\initMarkerState.sqf";
 
-fn_groupFindSafePos = compile preprocessFileLineNumbers "fn_group\findSafePos.sqf";
-
 fn_groupReloadGameObjectState = compile preprocessFileLineNumbers "fn_group\reloadGameObjectState.sqf";
 fn_groupPersistGameObjectState = compile preprocessFileLineNumbers "fn_group\persistGameObjectState.sqf";
 
 fn_groupUpdateMarkers = compile preprocessFileLineNumbers "fn_group\updateMarkers.sqf";
 
+fn_groupFindSafePos = compile preprocessFileLineNumbers "fn_group\findSafePos.sqf";
 fn_groupCreateUnit = compile preprocessFileLineNumbers "fn_group\createUnit.sqf";
+fn_groupCreateVehicle = compile preprocessFileLineNumbers "fn_group\createVehicle.sqf";
 
 fn_groupGetControlledUavs = compile preprocessFileLineNumbers "fn_group\getControlledUavs.sqf";
 fn_groupGetRenderSubjects = compile preprocessFileLineNumbers "fn_group\getRenderSubjects.sqf";

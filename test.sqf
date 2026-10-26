@@ -2,18 +2,18 @@ private _chunkSize = 50;
 private _chunkMap = [
     _chunkSize,
     [
-        // {
-        //     params ["_pos", "_chunkSize"];
-        //     [_pos, 1] call fn_chunkScoreHouse
-        // },
+        {
+            params ["_pos", "_chunkSize"];
+            [_pos, 1] call fn_chunkScoreHouse
+        }
         // {
         //     params ["_pos", "_chunkSize"];
         //     [_pos, 1] call fn_chunkScoreRoad
         // },
-        {
-            params ["_pos", "_chunkSize"];
-            [_pos, _chunkSize] call fn_chunkScoreWater
-        }
+        // {
+        //     params ["_pos", "_chunkSize"];
+        //     [_pos, _chunkSize] call fn_chunkScoreWater
+        // }
         // {
         //     params ["_pos", "_chunkSize"];
         //     [_pos, 1] call fn_chunkScoreHeight
@@ -33,14 +33,17 @@ _params set ["_chunkMapId", _chunkMap select 0];
 _params set ["_chunkGrid", _chunkMap select 1];
 _params set ["_chunkSize", _chunkMap select 2];
 // Identity parameters.
-_params set ["_side", west];
+_params set ["_side", east];
 _params set ["_class", "B_Soldier_F"];
 _params set ["_unitArray", [
-    "rhsusf_socom_marsoc_elementleader",
-    "rhsusf_socom_marsoc_cso",
-    "rhsusf_socom_marsoc_cso_breacher",
-    "rhsusf_socom_marsoc_cso_mechanic",
-    "rhsusf_socom_marsoc_sarc"
+    "rhs_msv_sergeant",
+    "rhs_msv_machinegunner",
+    "rhs_msv_at",
+    "rhs_msv_strelok_rpg_assist"
+]];
+_params set ["_vehicleArray", [
+    ["rhs_tigr_m_msv", [["rhs_msv_emr_combatcrew", "driver", []], ["rhs_msv_emr_combatcrew", "gunner", [0]]]],
+    ["rhs_uaz_open_MSV_01", [["rhs_msv_emr_combatcrew", "driver", []]]]
 ]];
 // Placement parameters.
 _params set ["_housePosWeight", 4];
@@ -52,7 +55,7 @@ _params set ["_showDistanceMax", 500];
 _params set ["_hideDistanceMin", 600];
 // Migration parameters.
 _params set ["_migrationMaxDistance", 500];
-_params set ["_speedKmH", 80];
+_params set ["_speedKmH", 4];
 // Performance parameters.
 _params set ["_delay", 2];
 // Marker parameters.

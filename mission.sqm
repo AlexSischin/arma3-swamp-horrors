@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=24;
+		nextID=31;
 	};
 	class MarkerIDProvider
 	{
@@ -20,18 +20,18 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={1018.0532,21.534107,1292.1464};
-		dir[]={-0.073820956,-0.7260552,0.68366474};
-		up[]={-0.077945285,0.6876359,0.72186112};
-		aside[]={0.9942233,3.8708095e-09,0.10735448};
+		pos[]={1029.7488,32.256737,1273.4054};
+		dir[]={-0.30802873,-0.5672034,0.76380533};
+		up[]={-0.21214142,0.82357782,0.52603781};
+		aside[]={0.9274236,-1.4901161e-08,0.37401295};
 	};
 };
 binarizationWanted=0;
 sourceName="swamp_horrors";
 addons[]=
 {
-	"rhsusf_c_troops",
-	"A3_Ui_F"
+	"A3_Ui_F",
+	"rhsusf_c_troops"
 };
 class AddonsMetaData
 {
@@ -40,17 +40,17 @@ class AddonsMetaData
 		items=2;
 		class Item0
 		{
-			className="rhsusf_c_troops";
-			name="RHSUSF Infantry & Equipment";
-			author="Red Hammer Studios";
-			url="http://www.rhsmods.org/";
-		};
-		class Item1
-		{
 			className="A3_Ui_F";
 			name="Arma 3 - User Interface";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
+		};
+		class Item1
+		{
+			className="rhsusf_c_troops";
+			name="RHSUSF Infantry & Equipment";
+			author="Red Hammer Studios";
+			url="http://www.rhsmods.org/";
 		};
 	};
 };
@@ -93,6 +93,17 @@ class Mission
 		items=2;
 		class Item0
 		{
+			dataType="Marker";
+			position[]={1400.9902,1.2273352,1582.6847};
+			name="marker_0";
+			markerType="RECTANGLE";
+			type="";
+			a=75;
+			b=25;
+			id=10;
+		};
+		class Item1
+		{
 			dataType="Group";
 			side="West";
 			class Entities
@@ -103,17 +114,16 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1011.449,8.0742884,1302.6421};
+						position[]={1012.252,8.050559,1302.696};
 					};
 					side="West";
 					flags=7;
 					class Attributes
 					{
-						name="player1";
 						isPlayer=1;
 					};
-					id=5;
-					type="rhsusf_socom_marsoc_elementleader";
+					id=30;
+					type="rhsusf_socom_marsoc_sniper_m107";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -125,7 +135,7 @@ class Mission
 								class data
 								{
 									singleType="STRING";
-									value="Male12ENG";
+									value="Male10ENG";
 								};
 							};
 						};
@@ -138,7 +148,7 @@ class Mission
 								class data
 								{
 									singleType="SCALAR";
-									value=1;
+									value=0.98000002;
 								};
 							};
 						};
@@ -149,18 +159,7 @@ class Mission
 			class Attributes
 			{
 			};
-			id=4;
-		};
-		class Item1
-		{
-			dataType="Marker";
-			position[]={1400.9902,1.2273352,1582.6847};
-			name="marker_0";
-			markerType="RECTANGLE";
-			type="";
-			a=75;
-			b=25;
-			id=10;
+			id=29;
 		};
 	};
 };
