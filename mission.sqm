@@ -5,14 +5,14 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=1;
+	toggles=513;
 	mods[]=
 	{
 		"WBK_Zombies_AdvancedEditorSettings"
 	};
 	class ItemIDProvider
 	{
-		nextID=31;
+		nextID=35;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={1029.7488,32.256737,1273.4054};
-		dir[]={-0.30802873,-0.5672034,0.76380533};
-		up[]={-0.21214142,0.82357782,0.52603781};
-		aside[]={0.9274236,-1.4901161e-08,0.37401295};
+		pos[]={1016.0499,12.641931,1300.327};
+		dir[]={-0.60821706,-0.47504011,0.63594323};
+		up[]={-0.32834283,0.87996173,0.34331};
+		aside[]={0.72269207,-1.6080594e-07,0.69118339};
 	};
 };
 binarizationWanted=0;
@@ -117,13 +117,13 @@ class Mission
 						position[]={1012.252,8.050559,1302.696};
 					};
 					side="West";
-					flags=7;
+					flags=6;
 					class Attributes
 					{
 						isPlayer=1;
 					};
-					id=30;
-					type="rhsusf_socom_marsoc_sniper_m107";
+					id=33;
+					type="rhsusf_socom_marsoc_marksman";
 					class CustomAttributes
 					{
 						class Attribute0

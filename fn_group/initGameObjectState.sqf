@@ -16,20 +16,24 @@ private _groupWorldPos = [_groupIndexPos, _chunkSize, _housePosWeight, _roadPosW
 private _nUnits = count _unitArray;
 private _nVehicles = count _vehicleArray;
 
+private _unitGameObjectArray = [];
 for [{private _u = 0}, {_u < _nUnits}, {_u = _u + 1}] do {
     private _unit = _unitArray select _u;
 
     private _unitPos = [_groupWorldPos, _nUnits, _nVehicles] call fn_groupFindSafePos;
     private _unitGameObject = [_group, _unitPos, _unit] call fn_groupCreateUnit;
+    _unitGameObjectArray pushBack _unitGameObject;
     _unitGameObject setDir _groupDir;
 };
 
+private _vehicleGameObjectArray = [];
 for [{private _v = 0}, {_v < _nVehicles}, {_v = _v + 1}] do {
     private _vehicle = _vehicleArray select _v;
 
     private _vehicleClass = _vehicle select 0;
     private _vehiclePos = [_groupWorldPos, _nUnits, _nVehicles] call fn_groupFindSafePos;
     private _vehicleGameObject = [_vehiclePos, _vehicleClass] call fn_groupCreateVehicle;
+    _vehicleGameObjectArray pushBack _vehicleGameObject;
     _vehicleGameObject setDir _groupDir;
 
     private _crewArray = _vehicle select 1;
@@ -39,6 +43,7 @@ for [{private _v = 0}, {_v < _nVehicles}, {_v = _v + 1}] do {
         private _crewPos = [_groupWorldPos, _nUnits, _nVehicles] call fn_groupFindSafePos;
         private _crewClass = _crew select 0;
         private _crewGameObject = [_group, _crewPos, _crewClass] call fn_groupCreateUnit;
+        _unitGameObjectArray pushBack _crewGameObject;
         private _crewRole = _crew select 1;
         switch (_crewRole) do {
             case "driver": {
@@ -63,4 +68,6 @@ for [{private _v = 0}, {_v < _nVehicles}, {_v = _v + 1}] do {
 
 private _gameObjectState = createHashMap;
 _gameObjectState set ["_group", _group];
+_gameObjectState set ["_unitGameObjectArray", _unitGameObjectArray];
+_gameObjectState set ["_vehicleGameObjectArray", _vehicleGameObjectArray];
 _gameObjectState
