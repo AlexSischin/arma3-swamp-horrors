@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=41;
+		nextID=42;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={1002.3851,19.205929,1308.8096};
-		dir[]={0.66836578,-0.7320928,0.13165748};
-		up[]={0.71829075,0.68120247,0.14149205};
-		aside[]={0.19327064,8.5228749e-09,-0.981148};
+		pos[]={1017.0421,13.598721,1297.2374};
+		dir[]={-0.4176462,-0.41125375,0.81022567};
+		up[]={-0.18843082,0.9115169,0.36555243};
+		aside[]={0.88886714,-1.4153193e-07,0.4581838};
 	};
 };
 binarizationWanted=0;
@@ -78,6 +78,9 @@ randomSeed=7486610;
 class ScenarioData
 {
 	author="Alex32";
+};
+class CustomAttributes
+{
 };
 class Mission
 {
@@ -138,8 +141,8 @@ class Mission
 					{
 						isPlayer=1;
 					};
-					id=33;
-					type="rhsusf_socom_marsoc_marksman";
+					id=41;
+					type="rhsusf_socom_marsoc_elementleader";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -182,8 +185,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={1011.9518,9.2421999,1310.0094};
-				angles[]={0.019996032,0,0.010000871};
+				position[]={1012.7585,9.2291775,1311.5219};
+				angles[]={0.019999012,0,0.02999169};
 			};
 			side="Empty";
 			flags=4;
@@ -193,7 +196,6 @@ class Mission
 			};
 			id=40;
 			type="rhsusf_m1a2sep1tuskiiwd_usarmy";
-			atlOffset=-0.0036759377;
 		};
 	};
 };
