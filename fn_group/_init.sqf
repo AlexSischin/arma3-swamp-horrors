@@ -4,7 +4,6 @@ fn_groupInitMigrationState = compile preprocessFileLineNumbers "fn_group\initMig
 fn_groupInitMarkerState = compile preprocessFileLineNumbers "fn_group\initMarkerState.sqf";
 
 fn_groupReloadGameObjectState = compile preprocessFileLineNumbers "fn_group\reloadGameObjectState.sqf";
-fn_groupPersistGameObjectState = compile preprocessFileLineNumbers "fn_group\persistGameObjectState.sqf";
 
 fn_groupUpdateMarkers = compile preprocessFileLineNumbers "fn_group\updateMarkers.sqf";
 
