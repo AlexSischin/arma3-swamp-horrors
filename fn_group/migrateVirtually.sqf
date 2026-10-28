@@ -1,4 +1,4 @@
-params ["_params", "_posState", "_migrationState"];
+params ["_params", "_posState", "_gameObjectState", "_migrationState"];
 
 private _chunkMap = _params get "_chunkMap";
 private _chunkSize = _params get "_chunkSize";

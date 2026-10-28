@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=35;
+		nextID=39;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={1015.9264,11.619623,1296.9174};
-		dir[]={-0.27784571,-0.32411256,0.90430319};
-		up[]={-0.095193163,0.94601661,0.30982509};
-		aside[]={0.95590484,2.6668567e-07,0.29370096};
+		pos[]={1003.1405,14.158291,1311.2036};
+		dir[]={0.84579951,-0.49756438,-0.19249235};
+		up[]={0.48515841,0.86742657,-0.11041541};
+		aside[]={-0.22191192,2.6673661e-08,-0.97506601};
 	};
 };
 binarizationWanted=0;
@@ -31,13 +31,14 @@ sourceName="swamp_horrors";
 addons[]=
 {
 	"A3_Ui_F",
-	"rhsusf_c_troops"
+	"rhsusf_c_troops",
+	"rhsusf_c_MATV"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=2;
+		items=3;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -49,6 +50,13 @@ class AddonsMetaData
 		{
 			className="rhsusf_c_troops";
 			name="RHSUSF Infantry & Equipment";
+			author="Red Hammer Studios";
+			url="http://www.rhsmods.org/";
+		};
+		class Item2
+		{
+			className="rhsusf_c_MATV";
+			name="MATV MRAP";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
@@ -90,7 +98,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=2;
+		items=3;
 		class Item0
 		{
 			dataType="Marker";
@@ -160,6 +168,26 @@ class Mission
 			{
 			};
 			id=29;
+		};
+		class Item2
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1013.9509,10.808817,1310.448};
+				angles[]={0.02999169,0,0.019999012};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				reportRemoteTargets=1;
+				receiveRemoteTargets=1;
+				reportOwnPosition=1;
+			};
+			id=38;
+			type="rhsusf_m1245_m2crows_socom_d";
+			atlOffset=-0.0015392303;
 		};
 	};
 };

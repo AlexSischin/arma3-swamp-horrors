@@ -27,6 +27,11 @@ private _fsm = [
         "HIDDEN",
         [
             [
+                "ELIMINATED",
+                {[_gameObjectState] call fn_groupIsEliminated},
+                {}
+            ],
+            [
                 "NORMAL",
                 {[_params, _posState] call fn_groupShouldShow},
                 {[_gameObjectState] call fn_groupFSMShow}
@@ -38,7 +43,7 @@ private _fsm = [
             ]
         ],
         {
-            [_params, _posState, _migrationState] call fn_groupMigrateVirtually;
+            [_params, _posState, _gameObjectState, _migrationState] call fn_groupMigrateVirtually;
             [_params, _posState, _migrationState, _markerState] call fn_groupUpdateMarkers;
         }
     ],
@@ -47,7 +52,7 @@ private _fsm = [
         [
             [
                 "ELIMINATED",
-                {[] call fn_groupFSMIsEliminated},
+                {[_gameObjectState] call fn_groupIsEliminated},
                 {}
             ],
             [
@@ -73,7 +78,10 @@ private _fsm = [
     [
         "ELIMINATED",
         [],
-        {}
+        {
+            [_gameObjectState] call fn_groupFSMShow;
+            [_params, _posState, _markerState] call fn_groupFinalizeMarkers;
+        }
     ]
 ];
 private _delay = _params get "_delay";
