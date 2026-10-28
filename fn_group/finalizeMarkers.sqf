@@ -14,3 +14,8 @@ _groupMarker setMarkerColor "ColorGrey";
 
 private _pathMarkerArray = _markerState get "_pathMarkerArray";
 {deleteMarker _x} forEach _pathMarkerArray;
+
+private _waypointMarker = _markerState get "_waypointMarker";
+if !(isNil "_waypointMarker") then {
+    deleteMarker _waypointMarker;
+};

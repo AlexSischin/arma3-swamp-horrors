@@ -44,7 +44,7 @@ private _fsm = [
         ],
         {
             [_params, _posState, _gameObjectState, _migrationState] call fn_groupMigrateVirtually;
-            [_params, _posState, _migrationState, _markerState] call fn_groupUpdateMarkers;
+            [_params, _posState, _gameObjectState, _migrationState, _markerState] call fn_groupUpdateMarkers;
         }
     ],
     [
@@ -72,7 +72,7 @@ private _fsm = [
         {
             [_params, _posState, _gameObjectState] call fn_groupReloadGameObjectState;
             [_params, _posState, _gameObjectState, _migrationState] call fn_groupMigratePhysically;
-            [_params, _posState, _migrationState, _markerState] call fn_groupUpdateMarkers;
+            [_params, _posState, _gameObjectState, _migrationState, _markerState] call fn_groupUpdateMarkers;
         }
     ],
     [

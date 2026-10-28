@@ -1,4 +1,4 @@
-params ["_params", "_posState", "_migrationState", "_markerState"];
+params ["_params", "_posState", "_gameObjectState", "_migrationState", "_markerState"];
 
 private _markersEnabled = _params get "_markersEnabled";
 
@@ -16,3 +16,15 @@ private _pathMarkerArray = _markerState get "_pathMarkerArray";
 {deleteMarker _x} forEach _pathMarkerArray;
 _pathMarkerArray = [_path, _chunkSize, "colorBLUFOR"] call fn_groupVisualizeIndexPath;
 _markerState set ["_pathMarkerArray", _pathMarkerArray];
+
+private _waypointMarker = _markerState get "_waypointMarker";
+if !(isNil "_waypointMarker") then {
+    deleteMarker _waypointMarker;
+    _markerState set ["_waypointMarker", nil];
+};
+private _group = _gameObjectState get "_group";
+private _currentWaypointWorldPos = waypointPosition [_group, currentWaypoint _group];
+if !(_currentWaypointWorldPos isEqualTo [0, 0, 0]) then {
+    _waypointMarker = [_currentWaypointWorldPos, "ColorBLUFOR", "mil_circle_noShadow"] call fn_commonVisualizePoint;
+    _markerState set ["_waypointMarker", _waypointMarker];
+};
