@@ -39,7 +39,7 @@ if (_createNewWaypoint) then {
     private _housePosWeight = _params get "_housePosWeight";
     private _roadPosWeight = _params get "_roadPosWeight";
     private _otherPosWeight = _params get "_otherPosWeight";
-    private _newWaypointIndexPos = _path select 1;
+    private _newWaypointIndexPos = _path select _waypointChunkDistance;
     private _newWaypointWorldPos = [_newWaypointIndexPos, _chunkSize, _housePosWeight, _roadPosWeight, _otherPosWeight] call fn_chunkSelectRandomWorldPos;
     _group addWaypoint [_newWaypointWorldPos, 0];
 };
