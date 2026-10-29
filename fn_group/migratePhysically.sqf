@@ -12,12 +12,13 @@ private _deleteExistingWaypoints = false;
 private _createNewWaypoint = false;
 _path = [_chunkMap, _path, _groupIndexPos, _migrationMaxDistance] call fn_groupUpdatePath;
 if (count _path > _waypointChunkDistance) then {
-    private _currentWaypointWorldPos = waypointPosition [_group, currentWaypoint _group];
-    if (_currentWaypointWorldPos isEqualTo [0, 0, 0]) then {
+    private _currentDestination = expectedDestination leader _group;
+    private _currentDestinationWorldPos = (_currentDestination select 0) select [0, 2];
+    if (_currentDestinationWorldPos isEqualTo [0, 0]) then {
         _deleteExistingWaypoints = true;
         _createNewWaypoint = true;
     } else {
-        private _currentWaypointIndexPos = [_currentWaypointWorldPos, _chunkSize] call fn_chunkGetIndexForPos;
+        private _currentWaypointIndexPos = [_currentDestinationWorldPos, _chunkSize] call fn_chunkGetIndexForPos;
         private _pathNextTarget = _path select _waypointChunkDistance;
         if !(_currentWaypointIndexPos isEqualTo _pathNextTarget) then {
             _deleteExistingWaypoints = true;

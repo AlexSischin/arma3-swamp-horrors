@@ -17,14 +17,15 @@ private _pathMarkerArray = _markerState get "_pathMarkerArray";
 _pathMarkerArray = [_path, _chunkSize, "colorBLUFOR"] call fn_groupVisualizeIndexPath;
 _markerState set ["_pathMarkerArray", _pathMarkerArray];
 
-private _waypointMarker = _markerState get "_waypointMarker";
-if !(isNil "_waypointMarker") then {
-    deleteMarker _waypointMarker;
-    _markerState set ["_waypointMarker", nil];
+private _destinationMarker = _markerState get "_destinationMarker";
+if !(isNil "_destinationMarker") then {
+    deleteMarker _destinationMarker;
+    _markerState set ["_destinationMarker", nil];
 };
 private _group = _gameObjectState get "_group";
-private _currentWaypointWorldPos = waypointPosition [_group, currentWaypoint _group];
-if !(_currentWaypointWorldPos isEqualTo [0, 0, 0]) then {
-    _waypointMarker = [_currentWaypointWorldPos, "ColorBLUFOR", "mil_circle_noShadow"] call fn_commonVisualizePoint;
-    _markerState set ["_waypointMarker", _waypointMarker];
+private _currentDestination = expectedDestination leader _group;
+private _currentDestinationWorldPos = (_currentDestination select 0) select [0, 2];
+if !(_currentDestinationWorldPos isEqualTo [0, 0]) then {
+    _destinationMarker = [_currentDestinationWorldPos, "ColorBLUFOR", "mil_circle_noShadow"] call fn_commonVisualizePoint;
+    _markerState set ["_destinationMarker", _destinationMarker];
 };

@@ -14,5 +14,5 @@ private _groupMarker = [_groupWorldPos, "ColorBLUFOR", "b_inf"] call fn_commonVi
 private _markerState = createHashMap;
 _markerState set ["_groupMarker", _groupMarker];
 _markerState set ["_pathMarkerArray", []];
-_markerState set ["_waypointMarker", nil];
+_markerState set ["_destinationMarker", nil];
 _markerState
