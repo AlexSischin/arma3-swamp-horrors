@@ -1,5 +1,5 @@
 // FSM & chunks.
-fn_groupExecFSM = compile preprocessFileLineNumbers "fn_group\execFSM.sqf";
+fn_groupExecFSMLive = compile preprocessFileLineNumbers "fn_group\execFSMLive.sqf";
 fn_groupChunkGridToInverseWeightGrid = compile preprocessFileLineNumbers "fn_group\chunkGridToInverseWeightGrid.sqf";
 
 // Positioning.

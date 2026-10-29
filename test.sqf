@@ -65,5 +65,5 @@ _params set ["_markersEnabled", true];
 _params set ["_markerColor", "ColorOPFOR"];
 
 for [{private _i = 0}, {_i < 1}, {_i = _i + 1}] do {
-    [_params] spawn fn_groupExecFSM;
+    [_params] spawn fn_groupExecFSMLive;
 };
