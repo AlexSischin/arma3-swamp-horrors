@@ -1,9 +1,11 @@
 // FSM & chunks.
 fn_groupExecFSMLive = compile preprocessFileLineNumbers "fn_group\execFSMLive.sqf";
+fn_groupExecFSMLight = compile preprocessFileLineNumbers "fn_group\execFSMLight.sqf";
 fn_groupChunkGridToInverseWeightGrid = compile preprocessFileLineNumbers "fn_group\chunkGridToInverseWeightGrid.sqf";
 
 // Positioning.
 fn_groupInitPositionState = compile preprocessFileLineNumbers "fn_group\initPositionState.sqf";
+fn_groupCalculateSafePosParams = compile preprocessFileLineNumbers "fn_group\calculateSafePosParams.sqf";
 fn_groupFindSafePos = compile preprocessFileLineNumbers "fn_group\findSafePos.sqf";
 
 // Migration.
@@ -15,6 +17,7 @@ fn_groupChooseRandomPath = compile preprocessFileLineNumbers "fn_group\chooseRan
 fn_groupChooseBackoffPath = compile preprocessFileLineNumbers "fn_group\chooseBackoffPath.sqf";
 fn_groupChooseRandomNeighbourPath = compile preprocessFileLineNumbers "fn_group\chooseRandomNeighbourPath.sqf";
 fn_groupUpdatePath = compile preprocessFileLineNumbers "fn_group\updatePath.sqf";
+fn_groupUpdateGameObjectPos = compile preprocessFileLineNumbers "fn_group\updateGameObjectPos.sqf";
 fn_groupMigrateVirtually = compile preprocessFileLineNumbers "fn_group\migrateVirtually.sqf";
 fn_groupMigratePhysically = compile preprocessFileLineNumbers "fn_group\migratePhysically.sqf";
 
@@ -22,7 +25,9 @@ fn_groupMigratePhysically = compile preprocessFileLineNumbers "fn_group\migrateP
 fn_groupCreateUnit = compile preprocessFileLineNumbers "fn_group\createUnit.sqf";
 fn_groupCreateVehicle = compile preprocessFileLineNumbers "fn_group\createVehicle.sqf";
 fn_groupInitGameObjectState = compile preprocessFileLineNumbers "fn_group\initGameObjectState.sqf";
+fn_groupInitGameObjectLightState = compile preprocessFileLineNumbers "fn_group\initGameObjectLightState.sqf";
 fn_groupReloadGameObjectState = compile preprocessFileLineNumbers "fn_group\reloadGameObjectState.sqf";
+fn_groupReloadGameObjectLightState = compile preprocessFileLineNumbers "fn_group\reloadGameObjectLightState.sqf";
 fn_groupIsEliminated = compile preprocessFileLineNumbers "fn_group\isEliminated.sqf";
 
 // Visibility.
@@ -32,6 +37,8 @@ fn_groupShouldShow = compile preprocessFileLineNumbers "fn_group\shouldShow.sqf"
 fn_groupShouldHide = compile preprocessFileLineNumbers "fn_group\shouldHide.sqf";
 fn_groupFSMShow = compile preprocessFileLineNumbers "fn_group\show.sqf";
 fn_groupFSMHide = compile preprocessFileLineNumbers "fn_group\hide.sqf";
+fn_groupFSMCreate = compile preprocessFileLineNumbers "fn_group\create.sqf";
+fn_groupFSMDelete = compile preprocessFileLineNumbers "fn_group\delete.sqf";
 
 // Markers.
 fn_groupVisualizeIndexPos = compile preprocessFileLineNumbers "fn_group\visualizeIndexPos.sqf";

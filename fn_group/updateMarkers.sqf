@@ -24,9 +24,11 @@ if !(isNil "_destinationMarker") then {
     _markerState set ["_destinationMarker", nil];
 };
 private _group = _gameObjectState get "_group";
-private _currentDestination = expectedDestination leader _group;
-private _currentDestinationWorldPos = (_currentDestination select 0) select [0, 2];
-if !(_currentDestinationWorldPos isEqualTo [0, 0]) then {
-    _destinationMarker = [_currentDestinationWorldPos, _markerColor, "mil_circle_noShadow"] call fn_commonVisualizePoint;
-    _markerState set ["_destinationMarker", _destinationMarker];
+if !(isNil "_group") then {
+    private _currentDestination = expectedDestination leader _group;
+    private _currentDestinationWorldPos = (_currentDestination select 0) select [0, 2];
+    if !(_currentDestinationWorldPos isEqualTo [0, 0]) then {
+        _destinationMarker = [_currentDestinationWorldPos, _markerColor, "mil_circle_noShadow"] call fn_commonVisualizePoint;
+        _markerState set ["_destinationMarker", _destinationMarker];
+    };
 };

@@ -5,6 +5,7 @@ call compile preprocessFileLineNumbers "fn_chunk\_init.sqf";
 call compile preprocessFileLineNumbers "fn_path\_init.sqf";
 call compile preprocessFileLineNumbers "fn_group\_init.sqf";
 
-execVM "test.sqf";
+// execVM "testLive.sqf";
+execVM "testLight.sqf";
 
 setTimeMultiplier 24;
