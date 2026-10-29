@@ -9,7 +9,8 @@ private _chunkSize = _params get "_chunkSize";
 private _groupIndexPos = _posState get "_groupIndexPos";
 
 private _groupWorldPos = [_groupIndexPos, _chunkSize] call fn_chunkGetPosForIndex;
-private _groupMarker = [_groupWorldPos, "ColorBLUFOR", "b_inf"] call fn_commonVisualizePoint;
+private _markerColor = _params get "_markerColor";
+private _groupMarker = [_groupWorldPos, _markerColor, "b_inf"] call fn_commonVisualizePoint;
 
 private _markerState = createHashMap;
 _markerState set ["_groupMarker", _groupMarker];
