@@ -56,7 +56,8 @@ _params set ["_hideDistanceMin", 600];
 // Migration parameters.
 _params set ["_migrationMaxDistance", 500];
 _params set ["_speedKmH", 40];
-_params set ["_waypointChunkDistance", 3];
+_params set ["_destinationChunkDistance", 3];
+_params set ["_migrationMode", "DOMOVE"];
 // Performance parameters.
 _params set ["_delay", 2];
 // Marker parameters.
