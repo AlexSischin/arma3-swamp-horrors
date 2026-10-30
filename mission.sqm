@@ -12,28 +12,28 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=48;
+		nextID=52;
 	};
 	class MarkerIDProvider
 	{
-		nextID=1;
+		nextID=2;
 	};
 	class Camera
 	{
-		pos[]={979.35706,10.009988,1198.0929};
-		dir[]={0.020811772,-0.48853385,-0.87229794};
-		up[]={0.011652407,0.87254423,-0.48839447};
-		aside[]={-0.99971581,2.9976945e-09,-0.023851765};
+		pos[]={1026.2413,24.994541,1151.8347};
+		dir[]={0.03289998,-0.39277908,0.91904902};
+		up[]={0.014051739,0.91962969,0.39252999};
+		aside[]={0.99936247,3.8198777e-10,-0.035774995};
 	};
 };
 binarizationWanted=0;
 sourceName="swamp_horrors";
 addons[]=
 {
-	"A3_Ui_F",
 	"rhsusf_c_troops",
 	"rhsusf_c_m1a2",
-	"ace_compat_rhs_usf3"
+	"ace_compat_rhs_usf3",
+	"A3_Ui_F"
 };
 class AddonsMetaData
 {
@@ -42,31 +42,31 @@ class AddonsMetaData
 		items=4;
 		class Item0
 		{
-			className="A3_Ui_F";
-			name="Arma 3 - User Interface";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item1
-		{
 			className="rhsusf_c_troops";
 			name="RHSUSF Infantry & Equipment";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item2
+		class Item1
 		{
 			className="rhsusf_c_m1a2";
 			name="M1A2 Tanks";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item3
+		class Item2
 		{
 			className="ace_compat_rhs_usf3";
 			name="ACE3 - RHS USAF Compatibility";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
+		};
+		class Item3
+		{
+			className="A3_Ui_F";
+			name="Arma 3 - User Interface";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
 		};
 	};
 };
@@ -107,19 +107,8 @@ class Mission
 	};
 	class Entities
 	{
-		items=3;
+		items=6;
 		class Item0
-		{
-			dataType="Marker";
-			position[]={1400.9902,1.2273352,1582.6847};
-			name="marker_0";
-			markerType="RECTANGLE";
-			type="";
-			a=75;
-			b=25;
-			id=10;
-		};
-		class Item1
 		{
 			dataType="Group";
 			side="West";
@@ -178,7 +167,7 @@ class Mission
 			};
 			id=29;
 		};
-		class Item2
+		class Item1
 		{
 			dataType="Object";
 			class PositionInfo
@@ -195,6 +184,54 @@ class Mission
 			id=40;
 			type="rhsusf_m1a2sep1tuskiiwd_usarmy";
 			atlOffset=-0.00031137466;
+		};
+		class Item2
+		{
+			dataType="Marker";
+			position[]={1973,13.124,1024};
+			name="side_right";
+			markerType="RECTANGLE";
+			type="";
+			a=75;
+			b=1024;
+			id=48;
+			atlOffset=0.52055836;
+		};
+		class Item3
+		{
+			dataType="Marker";
+			position[]={75,12.429,1024};
+			name="side_left";
+			markerType="RECTANGLE";
+			type="";
+			a=75;
+			b=1024;
+			id=49;
+			atlOffset=1.559;
+		};
+		class Item4
+		{
+			dataType="Marker";
+			position[]={1024,9.0839996,75};
+			name="side_bottom";
+			markerType="RECTANGLE";
+			type="";
+			a=1024;
+			b=75;
+			id=50;
+			atlOffset=1.5439997;
+		};
+		class Item5
+		{
+			dataType="Marker";
+			position[]={1024,1.744,1973};
+			name="side_top";
+			markerType="RECTANGLE";
+			type="";
+			a=1024;
+			b=75;
+			id=51;
+			atlOffset=-7.046;
 		};
 	};
 };

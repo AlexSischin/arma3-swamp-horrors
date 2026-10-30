@@ -19,13 +19,13 @@ private _chunkMap = [
         //     params ["_pos", "_chunkSize"];
         //     [_pos, 1] call fn_chunkScoreHeight
         // },
-        // {
-        //     params ["_pos", "_chunkSize"];
-        //     [_pos, ["marker_0"]] call fn_chunkScoreMarker
-        // },
         {
             params ["_pos", "_chunkSize"];
             [_pos, 0.001] call fn_chunkScorePhragmitesAustralis
+        },
+        {
+            params ["_pos", "_chunkSize"];
+            -16 * ([_pos, ["side_right", "side_left", "side_top", "side_bottom"]] call fn_chunkScoreMarker)
         }
     ]
 ] call fn_chunkBuildMap;
