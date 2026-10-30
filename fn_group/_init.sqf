@@ -22,7 +22,7 @@ fn_groupMigrateVirtually = compile preprocessFileLineNumbers "fn_group\migrateVi
 fn_groupMigratePhysically = compile preprocessFileLineNumbers "fn_group\migratePhysically.sqf";
 
 // Game objects.
-fn_groupCreateUnit = compile preprocessFileLineNumbers "fn_group\createUnit.sqf";
+fn_groupCreateHiddenUnit = compile preprocessFileLineNumbers "fn_group\createHiddenUnit.sqf";
 fn_groupCreateVehicle = compile preprocessFileLineNumbers "fn_group\createVehicle.sqf";
 fn_groupInitGameObjectState = compile preprocessFileLineNumbers "fn_group\initGameObjectState.sqf";
 fn_groupInitGameObjectLightState = compile preprocessFileLineNumbers "fn_group\initGameObjectLightState.sqf";

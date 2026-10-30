@@ -21,7 +21,7 @@ for [{private _u = 0}, {_u < _nUnits}, {_u = _u + 1}] do {
     private _unit = _unitArray select _u;
 
     private _unitPos = [_groupWorldPos, _nUnits, _nVehicles] call fn_groupFindSafePos;
-    private _unitGameObject = [_group, _unitPos, _unit] call fn_groupCreateUnit;
+    private _unitGameObject = [_group, _unitPos, _unit] call fn_groupCreateHiddenUnit;
     _unitGameObjectArray pushBack _unitGameObject;
     _unitGameObject setDir _groupDir;
 };
@@ -42,7 +42,7 @@ for [{private _v = 0}, {_v < _nVehicles}, {_v = _v + 1}] do {
 
         private _crewPos = [_groupWorldPos, _nUnits, _nVehicles] call fn_groupFindSafePos;
         private _crewClass = _crew select 0;
-        private _crewGameObject = [_group, _crewPos, _crewClass] call fn_groupCreateUnit;
+        private _crewGameObject = [_group, _crewPos, _crewClass] call fn_groupCreateHiddenUnit;
         _unitGameObjectArray pushBack _crewGameObject;
         private _crewRole = _crew select 1;
         switch (_crewRole) do {
