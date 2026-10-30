@@ -3,22 +3,6 @@ private _color = "Color3_FD_F";
 private _chunkMap = [
     _chunkSize,
     [
-        // {
-        //     params ["_pos", "_chunkSize"];
-        //     [_pos, 1] call fn_chunkScoreHouse
-        // },
-        // {
-        //     params ["_pos", "_chunkSize"];
-        //     [_pos, 1] call fn_chunkScoreRoad
-        // },
-        // {
-        //     params ["_pos", "_chunkSize"];
-        //     [_pos, _chunkSize] call fn_chunkScoreWater
-        // }
-        // {
-        //     params ["_pos", "_chunkSize"];
-        //     [_pos, 1] call fn_chunkScoreHeight
-        // },
         {
             params ["_pos", "_chunkSize"];
             1 * ([_pos, 0.001] call fn_chunkScorePhragmitesAustralis)
