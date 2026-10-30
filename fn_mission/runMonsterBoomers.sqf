@@ -23,7 +23,6 @@ _params set ["_chunkGrid", _chunkMap select 1];
 _params set ["_chunkSize", _chunkMap select 2];
 // Identity parameters.
 _params set ["_side", independent];
-_params set ["_class", "B_Soldier_F"];
 _params set ["_unitArray", [
     "Zombie_Special_GREENFOR_Boomer",
     "Zombie_Special_GREENFOR_Boomer",

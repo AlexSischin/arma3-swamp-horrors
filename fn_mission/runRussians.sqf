@@ -40,7 +40,6 @@ _params set ["_chunkGrid", _chunkMap select 1];
 _params set ["_chunkSize", _chunkMap select 2];
 // Identity parameters.
 _params set ["_side", east];
-_params set ["_class", "B_Soldier_F"];
 _params set ["_unitArray", [
     "rhs_msv_sergeant",
     "rhs_msv_machinegunner",
