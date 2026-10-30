@@ -10,6 +10,7 @@ fn_chunkVisualizeMap = compile preprocessFileLineNumbers "fn_chunk\visualizeMap.
 
 fn_chunkScoreHouse = compile preprocessFileLineNumbers "fn_chunk\scoreHouse.sqf";
 fn_chunkScoreRoad = compile preprocessFileLineNumbers "fn_chunk\scoreRoad.sqf";
+fn_chunkScoreVegetation = compile preprocessFileLineNumbers "fn_chunk\scoreVegetation.sqf";
 fn_chunkScorePhragmitesAustralis = compile preprocessFileLineNumbers "fn_chunk\scorePhragmitesAustralis.sqf";
 fn_chunkScoreWater = compile preprocessFileLineNumbers "fn_chunk\scoreWater.sqf";
 fn_chunkScoreHeight = compile preprocessFileLineNumbers "fn_chunk\scoreHeight.sqf";

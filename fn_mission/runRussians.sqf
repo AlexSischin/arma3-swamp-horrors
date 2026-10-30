@@ -3,21 +3,26 @@ private _color = "ColorOPFOR";
 private _chunkMap = [
     _chunkSize,
     [
-        // {
-        //     params ["_pos", "_chunkSize"];
-        //     [_pos, 1] call fn_chunkScoreRoad
-        // },
-        // {
-        //     params ["_pos", "_chunkSize"];
-        //     [_pos, _chunkSize] call fn_chunkScoreWater
-        // }
-        // {
-        //     params ["_pos", "_chunkSize"];
-        //     [_pos, 1] call fn_chunkScoreHeight
-        // },
+        {0.1},
         {
             params ["_pos", "_chunkSize"];
-            [_pos, 1] call fn_chunkScoreHouse
+            0.1 * ([_pos, 10] call fn_chunkScoreRoad)
+        },
+        {
+            params ["_pos", "_chunkSize"];
+            0.05 * ([_pos, 0.1] call fn_chunkScoreHeight)
+        },
+        {
+            params ["_pos", "_chunkSize"];
+            -1 * ([_pos, 0.5] call fn_chunkScoreHouse)
+        },
+        {
+            params ["_pos", "_chunkSize"];
+            -1 * ([_pos, 0.01] call fn_chunkScoreVegetation)
+        },
+        {
+            params ["_pos", "_chunkSize"];
+            -1 * ([_pos, _chunkSize] call fn_chunkScoreWater)
         },
         {
             params ["_pos", "_chunkSize"];
