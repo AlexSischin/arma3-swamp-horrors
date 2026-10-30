@@ -9,10 +9,10 @@ call compile preprocessFileLineNumbers "fn_mission\_init.sqf";
 
 // Create monsters.
 // spawn fn_missionRunMonsterBoomers;
-spawn fn_missionRunMonsterLeapers;
+// spawn fn_missionRunMonsterLeapers;
 
 // Create Russians.
-// spawn fn_missionRunRussians;
+spawn fn_missionRunRussians;
 
 // Set mission params.
 setTimeMultiplier 24;

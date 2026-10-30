@@ -5,7 +5,7 @@ private _chunkMap = [
     [
         {
             params ["_pos", "_chunkSize"];
-            1 * ([_pos, 0.001] call fn_chunkScorePhragmitesAustralis)
+            1 * ([_pos, 0.003] call fn_chunkScorePhragmitesAustralis)
         },
         {
             params ["_pos", "_chunkSize"];

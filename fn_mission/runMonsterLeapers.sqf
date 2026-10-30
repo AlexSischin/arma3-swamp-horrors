@@ -6,7 +6,7 @@ private _chunkMap = [
         {0.00001},
         {
             params ["_pos", "_chunkSize"];
-            10 * ([_pos, 1] call fn_chunkScoreHouse)
+            1 * ([_pos, 0.3] call fn_chunkScoreHouse)
         },
         {
             params ["_pos", "_chunkSize"];

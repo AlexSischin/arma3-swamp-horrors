@@ -1,3 +1,4 @@
+fn_objectGetNearest = compile preprocessFileLineNumbers "fn_object\getNearest.sqf";
 fn_objectGetGroupUnits = compile preprocessFileLineNumbers "fn_object\getGroupUnits.sqf";
 fn_objectGetGroupVehicleArray = compile preprocessFileLineNumbers "fn_object\getGroupVehicleArray.sqf";
 fn_objectGetVehicleState = compile preprocessFileLineNumbers "fn_object\getVehicleState.sqf";

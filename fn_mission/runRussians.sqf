@@ -3,10 +3,10 @@ private _color = "ColorOPFOR";
 private _chunkMap = [
     _chunkSize,
     [
-        {0.1},
+        {0.5},
         {
             params ["_pos", "_chunkSize"];
-            0.1 * ([_pos, 10] call fn_chunkScoreRoad)
+            1 * ([_pos, 0.5] call fn_chunkScoreRoad)
         },
         {
             params ["_pos", "_chunkSize"];
@@ -14,11 +14,11 @@ private _chunkMap = [
         },
         {
             params ["_pos", "_chunkSize"];
-            -1 * ([_pos, 0.5] call fn_chunkScoreHouse)
+            -5 * ([_pos, 0.1] call fn_chunkScoreHouse)
         },
         {
             params ["_pos", "_chunkSize"];
-            -1 * ([_pos, 0.01] call fn_chunkScoreVegetation)
+            -1 * ([_pos, 0.0001] call fn_chunkScoreVegetation)
         },
         {
             params ["_pos", "_chunkSize"];
@@ -59,7 +59,7 @@ _params set ["_showDistanceMin", 50];
 _params set ["_showDistanceMax", 500];
 _params set ["_hideDistanceMin", 600];
 // Migration parameters.
-_params set ["_migrationMaxDistance", 500];
+_params set ["_migrationMaxDistance", 2000];
 _params set ["_speedKmH", 40];
 _params set ["_destinationChunkDistance", 3];
 _params set ["_migrationMode", "WAYPOINT"];
