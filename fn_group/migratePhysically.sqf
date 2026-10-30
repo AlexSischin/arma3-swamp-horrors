@@ -40,9 +40,7 @@ if !(_currentDestinationWorldPos isEqualTo [0, 0]) then {
     private _currentDestinationIndexPos = [_currentDestinationWorldPos, _chunkSize] call fn_chunkGetIndexForPos;
     private _pathNextTarget = _path select _destinationChunkDistance;
     if (_currentDestinationIndexPos isEqualTo _pathNextTarget) then {
-        if ((getUnitState _leader) != "WAIT") then {
-            breakOut "main";
-        };
+        breakOut "main";
     };
 };
 
