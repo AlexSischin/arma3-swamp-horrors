@@ -1,4 +1,5 @@
 private _chunkSize = 25;
+private _color = "ColorOPFOR";
 private _chunkMap = [
     _chunkSize,
     [
@@ -24,7 +25,7 @@ private _chunkMap = [
         // }
     ]
 ] call fn_chunkBuildMap;
-[_chunkMap] call fn_chunkVisualizeMap;
+[_chunkMap, _color] call fn_chunkVisualizeMap;
 
 private _params = createHashMap;
 // Map parameters.
@@ -62,7 +63,7 @@ _params set ["_migrationMode", "WAYPOINT"];
 _params set ["_delay", 2];
 // Marker parameters.
 _params set ["_markersEnabled", true];
-_params set ["_markerColor", "ColorOPFOR"];
+_params set ["_markerColor", _color];
 
 for [{private _i = 0}, {_i < 1}, {_i = _i + 1}] do {
     [_params] spawn fn_groupExecFSMLive;
