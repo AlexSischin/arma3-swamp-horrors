@@ -1,11 +1,12 @@
 private _chunkSize = 25;
+private _color = "colorIndependent";
 private _chunkMap = [
     _chunkSize,
     [
-        {
-            params ["_pos", "_chunkSize"];
-            [_pos, 1] call fn_chunkScoreHouse
-        }
+        // {
+        //     params ["_pos", "_chunkSize"];
+        //     [_pos, 1] call fn_chunkScoreHouse
+        // },
         // {
         //     params ["_pos", "_chunkSize"];
         //     [_pos, 1] call fn_chunkScoreRoad
@@ -21,10 +22,14 @@ private _chunkMap = [
         // {
         //     params ["_pos", "_chunkSize"];
         //     [_pos, ["marker_0"]] call fn_chunkScoreMarker
-        // }
+        // },
+        {
+            params ["_pos", "_chunkSize"];
+            [_pos, 0.001] call fn_chunkScorePhragmitesAustralis
+        }
     ]
 ] call fn_chunkBuildMap;
-[_chunkMap] call fn_chunkVisualizeMap;
+[_chunkMap, _color] call fn_chunkVisualizeMap;
 
 private _params = createHashMap;
 // Map parameters.
@@ -59,7 +64,7 @@ _params set ["_migrationMode", "DOMOVE"];
 _params set ["_delay", 2];
 // Marker parameters.
 _params set ["_markersEnabled", true];
-_params set ["_markerColor", "colorIndependent"];
+_params set ["_markerColor", _color];
 
 for [{private _i = 0}, {_i < 1}, {_i = _i + 1}] do {
     [_params] spawn fn_groupExecFSMLight;

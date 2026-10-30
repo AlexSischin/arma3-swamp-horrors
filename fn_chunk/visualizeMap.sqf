@@ -1,6 +1,6 @@
 params [
     ["_chunkMap", nil],
-    ["_color", "colorBLUFOR"]
+    ["_color", "ColorBLUFOR"]
 ];
 
 private _chunkMapId = _chunkMap select 0;
