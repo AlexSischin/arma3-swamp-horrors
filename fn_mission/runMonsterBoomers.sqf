@@ -1,5 +1,5 @@
 private _chunkSize = 25;
-private _color = "colorIndependent";
+private _color = "Color3_FD_F";
 private _chunkMap = [
     _chunkSize,
     [
