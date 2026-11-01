@@ -9,5 +9,5 @@ private _defaultPos = [
     random (2 * _innerSquareSize) - _innerSquareSize,
     0
 ];
-_pos = [_groupWorldPos, 0, _radius, _objDist, 1, 0, 0, [], _defaultPos] call BIS_fnc_findSafePos;
+_pos = [_groupWorldPos, 0, _radius, _objDist, 1, 0, 0, [], [_defaultPos, _defaultPos]] call BIS_fnc_findSafePos;
 _pos
