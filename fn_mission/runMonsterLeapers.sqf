@@ -39,10 +39,7 @@ for [{private _g = 0}, {_g < _groupNumber}, {_g = _g + 1}] do {
     _params set ["_chunkSize", _chunkMap select 2];
     // Identity parameters.
     _params set ["_side", independent];
-    _params set ["_unitArray", [
-        "Zombie_Special_GREENFOR_Leaper_1",
-        "Zombie_Special_GREENFOR_Leaper_2"
-    ]];
+    _params set ["_unitArray", _unitArray];
     // Placement parameters.
     _params set ["_housePosWeight", 4];
     _params set ["_roadPosWeight", 1];

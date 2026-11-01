@@ -1,4 +1,4 @@
-FSMDebugEnabled = false;
+FSMDebugEnabled = true;
 
 fn_FSMExec = compile preprocessFileLineNumbers "fn_FSM\exec.sqf";
 

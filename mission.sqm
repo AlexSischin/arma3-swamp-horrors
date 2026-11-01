@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=145;
+		nextID=160;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={1020.7299,20.093306,1288.178};
-		dir[]={-0.31163591,-0.60664916,0.73134196};
-		up[]={-0.23781227,0.79496956,0.55809408};
-		aside[]={0.91996193,2.0925654e-08,0.39200971};
+		pos[]={1003.7157,24.338518,1323.7559};
+		dir[]={-0.11444169,-0.57959437,-0.80683929};
+		up[]={-0.08139468,0.81490219,-0.57385439};
+		aside[]={-0.99010068,-4.127869e-07,0.14043497};
 	};
 };
 binarizationWanted=0;
@@ -31,13 +31,14 @@ sourceName="swamp_horrors";
 addons[]=
 {
 	"rhsusf_c_troops",
-	"A3_Ui_F"
+	"A3_Ui_F",
+	"rhsusf_c_mrzr"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=2;
+		items=3;
 		class Item0
 		{
 			className="rhsusf_c_troops";
@@ -51,6 +52,13 @@ class AddonsMetaData
 			name="Arma 3 - User Interface";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
+		};
+		class Item2
+		{
+			className="rhsusf_c_mrzr";
+			name="MRZR";
+			author="Red Hammer Studios";
+			url="http://www.rhsmods.org/";
 		};
 	};
 };
@@ -91,7 +99,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=5;
+		items=7;
 		class Item0
 		{
 			dataType="Group";
@@ -199,6 +207,32 @@ class Mission
 			b=75;
 			id=51;
 			atlOffset=-7.046;
+		};
+		class Item5
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1012.0331,9.3224068,1307.6302};
+				angles[]={0.079830162,0,0.02999169};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=156;
+			type="rhsusf_mrzr4_d";
+		};
+		class Item6
+		{
+			dataType="Group";
+			side="Independent";
+			class Attributes
+			{
+			};
+			id=157;
+			atlOffset=-19.200001;
 		};
 	};
 };
