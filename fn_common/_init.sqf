@@ -1,6 +1,7 @@
 // Logging.
 fn_commonDebug = compile preprocessFileLineNumbers "fn_common\debug.sqf";
 fn_commonError = compile preprocessFileLineNumbers "fn_common\error.sqf";
+fn_commonLogExecutionTime = compile preprocessFileLineNumbers "fn_common\logExecutionTime.sqf";
 
 // Random.
 fn_commonGenerateId = compile preprocessFileLineNumbers "fn_common\generateId.sqf";
