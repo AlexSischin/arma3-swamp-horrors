@@ -34,9 +34,9 @@ for [{private _g = 0}, {_g < _groupNumber}, {_g = _g + 1}] do {
     private _params = createHashMap;
     // Map parameters.
     _params set ["_chunkMap", _chunkMap];
-    _params set ["_chunkMapId", _chunkMap select 0];
-    _params set ["_chunkGrid", _chunkMap select 1];
-    _params set ["_chunkSize", _chunkMap select 2];
+    _params set ["_chunkMapId", _chunkMap # 0];
+    _params set ["_chunkGrid", _chunkMap # 1];
+    _params set ["_chunkSize", _chunkMap # 2];
     // Identity parameters.
     _params set ["_side", independent];
     _params set ["_unitArray", _unitArray];

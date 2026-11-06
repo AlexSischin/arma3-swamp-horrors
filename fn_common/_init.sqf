@@ -11,6 +11,11 @@ fn_commonFlattenArray = compile preprocessFileLineNumbers "fn_common\flattenArra
 fn_commonSelectRandomWeighted = compile preprocessFileLineNumbers "fn_common\selectRandomWeighted.sqf";
 fn_commonSortedInsert = compile preprocessFileLineNumbers "fn_common\sortedInsert.sqf";
 
+// HashMap utilities.
+fn_commonSelectRandomWeightedFromHashMap = compile preprocessFileLineNumbers "fn_common\selectRandomWeightedFromHashMap.sqf";
+fn_commonIjToKey = compile preprocessFileLineNumbers "fn_common\ijToKey.sqf";
+fn_commonKeyToIj = compile preprocessFileLineNumbers "fn_common\keyToIj.sqf";
+
 // Visualization.
 fn_commonVisualizePoint = compile preprocessFileLineNumbers "fn_common\visualizePoint.sqf";
 fn_commonVisualizePointArray = compile preprocessFileLineNumbers "fn_common\visualizePointArray.sqf";

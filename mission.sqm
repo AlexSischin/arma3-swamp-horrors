@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=160;
+		nextID=182;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={1003.7157,24.338518,1323.7559};
-		dir[]={-0.11444169,-0.57959437,-0.80683929};
-		up[]={-0.08139468,0.81490219,-0.57385439};
-		aside[]={-0.99010068,-4.127869e-07,0.14043497};
+		pos[]={1006.1557,14.210305,1305.0233};
+		dir[]={0.86639875,-0.49729663,0.045306038};
+		up[]={0.49661967,0.86758018,0.025969403};
+		aside[]={0.05222109,-2.8085196e-09,-0.99863708};
 	};
 };
 binarizationWanted=0;
@@ -32,13 +32,15 @@ addons[]=
 {
 	"rhsusf_c_troops",
 	"A3_Ui_F",
-	"rhsusf_c_mrzr"
+	"rhsusf_c_fmtv",
+	"ace_compat_rhs_usf3",
+	"ace_compat_rhs_usf3_repair"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=3;
+		items=4;
 		class Item0
 		{
 			className="rhsusf_c_troops";
@@ -55,10 +57,17 @@ class AddonsMetaData
 		};
 		class Item2
 		{
-			className="rhsusf_c_mrzr";
-			name="MRZR";
+			className="rhsusf_c_fmtv";
+			name="FMTV Trucks";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
+		};
+		class Item3
+		{
+			className="ace_compat_rhs_usf3";
+			name="ACE3 - RHS USAF Compatibility";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
 		};
 	};
 };
@@ -70,6 +79,60 @@ randomSeed=7486610;
 class ScenarioData
 {
 	author="Alex32";
+};
+class CustomAttributes
+{
+	class Category0
+	{
+		name="Scenario";
+		class Attribute0
+		{
+			property="cba_settings_hash";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					singleType="ARRAY";
+					class value
+					{
+						items=4;
+						class Item0
+						{
+							class data
+							{
+								singleType="STRING";
+								value="#CBA_HASH#";
+							};
+						};
+						class Item1
+						{
+							class data
+							{
+								singleType="ARRAY";
+							};
+						};
+						class Item2
+						{
+							class data
+							{
+								singleType="ARRAY";
+							};
+						};
+						class Item3
+						{
+							class data
+							{
+								nil=1;
+								singleType="ANY";
+							};
+						};
+					};
+				};
+			};
+		};
+		nAttributes=1;
+	};
 };
 class Mission
 {
@@ -99,7 +162,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=7;
+		items=6;
 		class Item0
 		{
 			dataType="Group";
@@ -213,26 +276,17 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={1012.0331,9.3224068,1307.6302};
-				angles[]={0.079830162,0,0.02999169};
+				position[]={1013.4189,10.270441,1310.8036};
+				angles[]={0.02999169,0,0.019999012};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 			};
-			id=156;
-			type="rhsusf_mrzr4_d";
-		};
-		class Item6
-		{
-			dataType="Group";
-			side="Independent";
-			class Attributes
-			{
-			};
-			id=157;
-			atlOffset=-19.200001;
+			id=178;
+			type="rhsusf_M1078A1R_SOV_M2_D_fmtv_socom";
+			atlOffset=-0.0012860298;
 		};
 	};
 };

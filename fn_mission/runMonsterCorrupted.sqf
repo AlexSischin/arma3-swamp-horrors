@@ -1,6 +1,6 @@
 private _chunkSize = 25;
 private _color = "ColorBrown";
-private _markersEnabled = false;
+private _markersEnabled = true;
 private _chunkMap = [
     _chunkSize,
     [
@@ -19,7 +19,7 @@ if (_markersEnabled) then {
     [_chunkMap, _color] call fn_chunkVisualizeMap;
 };
 
-private _groupNumber = 50;
+private _groupNumber = 1;
 private _groupSizeDistribution = [1, 3, 6];
 private _className = "WBK_SpecialZombie_Corrupted_1";
 
@@ -32,9 +32,9 @@ for [{private _g = 0}, {_g < _groupNumber}, {_g = _g + 1}] do {
     private _params = createHashMap;
     // Map parameters.
     _params set ["_chunkMap", _chunkMap];
-    _params set ["_chunkMapId", _chunkMap select 0];
-    _params set ["_chunkGrid", _chunkMap select 1];
-    _params set ["_chunkSize", _chunkMap select 2];
+    _params set ["_chunkMapId", _chunkMap # 0];
+    _params set ["_chunkGrid", _chunkMap # 1];
+    _params set ["_chunkSize", _chunkMap # 2];
     // Identity parameters.
     _params set ["_side", independent];
     _params set ["_unitArray", [
@@ -54,7 +54,7 @@ for [{private _g = 0}, {_g < _groupNumber}, {_g = _g + 1}] do {
     _params set ["_hideDistanceMin", 300];
     // Migration parameters.
     _params set ["_migrationMaxDistance", 500];
-    _params set ["_speedKmH", 40];
+    _params set ["_speedKmH", 20];
     _params set ["_destinationChunkDistance", 3];
     _params set ["_migrationMode", "DOMOVE"];
     // Performance parameters.

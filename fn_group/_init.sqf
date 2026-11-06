@@ -15,7 +15,6 @@ fn_groupCalculatePathHopPlan = compile preprocessFileLineNumbers "fn_group\calcu
 fn_groupChoosePathToTarget = compile preprocessFileLineNumbers "fn_group\choosePathToTarget.sqf";
 fn_groupChooseRandomPath = compile preprocessFileLineNumbers "fn_group\chooseRandomPath.sqf";
 fn_groupChooseBackoffPath = compile preprocessFileLineNumbers "fn_group\chooseBackoffPath.sqf";
-fn_groupChooseRandomNeighbourPath = compile preprocessFileLineNumbers "fn_group\chooseRandomNeighbourPath.sqf";
 fn_groupUpdatePath = compile preprocessFileLineNumbers "fn_group\updatePath.sqf";
 fn_groupUpdateGameObjectPos = compile preprocessFileLineNumbers "fn_group\updateGameObjectPos.sqf";
 fn_groupMigrateVirtually = compile preprocessFileLineNumbers "fn_group\migrateVirtually.sqf";

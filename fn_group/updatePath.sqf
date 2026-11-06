@@ -28,5 +28,5 @@ if (count _newRandomPath > 0) exitWith {_newRandomPath};
 private _newBackoffPath = [_chunkMap, _groupIndexPos] call fn_groupChooseBackoffPath;
 if (count _newBackoffPath > 1) exitWith {_newBackoffPath};
 
-private _randomNeighbourPath = [_chunkMap, _groupIndexPos] call fn_groupChooseRandomNeighbourPath;
+private _randomNeighbourPath = [_groupIndexPos] call fn_pathFindRandomNeighbourPath;
 _randomNeighbourPath
