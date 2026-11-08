@@ -47,7 +47,8 @@ for [{private _g = 0}, {_g < _groupNumber}, {_g = _g + 1}] do {
     // Migration parameters.
     _params set ["_migrationMaxDistance", 20];
     _params set ["_speedKmH", 40];
-    _params set ["_destinationDistance", 3];
+    _params set ["_checkpointCompletionDistance", 10];
+    _params set ["_checkpointMaxDistance", 100];
     _params set ["_migrationMode", "DOMOVE"];
     // Performance parameters.
     _params set ["_delay", 5];

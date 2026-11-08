@@ -66,7 +66,7 @@ private _fsm = [
         ],
         {
             [_params, _posState, _gameObjectLightState] call fn_groupReloadGameObjectLightState;
-            [_params, _posState, _gameObjectLightState, _migrationState] call fn_groupMigratePhysically;
+            [_params, _gameObjectLightState, _migrationState] call fn_groupMigratePhysically;
             [_params, _posState, _gameObjectLightState, _migrationState, _markerState] call fn_groupUpdateMarkers;
         }
     ],

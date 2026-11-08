@@ -61,7 +61,8 @@ _params set ["_hideDistanceMin", 600];
 // Migration parameters.
 _params set ["_migrationMaxDistance", 40];
 _params set ["_speedKmH", 40];
-_params set ["_destinationDistance", 3];
+_params set ["_checkpointCompletionDistance", 25];
+    _params set ["_checkpointMaxDistance", 200];
 _params set ["_migrationMode", "WAYPOINT"];
 // Performance parameters.
 _params set ["_delay", 2];
