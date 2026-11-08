@@ -4,7 +4,6 @@ private _markersEnabled = true;
 private _chunkMap = [
     _chunkSize,
     [
-        {0.01},
         {
             params ["_pos", "_chunkSize"];
             1 * ([_pos, _chunkSize] call fn_chunkScoreWater)
