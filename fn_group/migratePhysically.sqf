@@ -4,14 +4,14 @@ scopeName "main";
 private _chunkMap = _params get "_chunkMap";
 private _chunkSize = _params get "_chunkSize";
 private _migrationMaxDistance = _params get "_migrationMaxDistance";
-private _destinationChunkDistance = _params get "_destinationChunkDistance";
+private _destinationDistance = _params get "_destinationDistance";
 private _migrationMode = _params get "_migrationMode";
 private _groupIndexPos = _posState get "_groupIndexPos";
 private _group = _gameObjectState get "_group";
 private _path = _migrationState get "_path";
 
 _path = [_chunkMap, _path, _groupIndexPos, _migrationMaxDistance] call fn_groupUpdatePath;
-if (count _path <= _destinationChunkDistance) then {
+if (count _path <= _destinationDistance) then {
     _path = [];
 };
 _migrationState set ["_path", _path];
@@ -38,7 +38,7 @@ private _currentDestination = expectedDestination _leader;
 private _currentDestinationWorldPos = (_currentDestination select 0) select [0, 2];
 if !(_currentDestinationWorldPos isEqualTo [0, 0]) then {
     private _currentDestinationIndexPos = [_currentDestinationWorldPos, _chunkSize] call fn_chunkGetIndexForPos;
-    private _pathNextTarget = _path select _destinationChunkDistance;
+    private _pathNextTarget = _path select _destinationDistance;
     if (_currentDestinationIndexPos isEqualTo _pathNextTarget) then {
         breakOut "main";
     };
@@ -47,7 +47,7 @@ if !(_currentDestinationWorldPos isEqualTo [0, 0]) then {
 private _housePosWeight = _params get "_housePosWeight";
 private _roadPosWeight = _params get "_roadPosWeight";
 private _otherPosWeight = _params get "_otherPosWeight";
-private _newDestinationIndexPos = _path select _destinationChunkDistance;
+private _newDestinationIndexPos = _path select _destinationDistance;
 private _newDestinationWorldPos = [_newDestinationIndexPos, _chunkSize, _housePosWeight, _roadPosWeight, _otherPosWeight] call fn_chunkSelectRandomWorldPos;
 switch (_migrationMode) do {
     case "WAYPOINT": {
