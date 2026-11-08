@@ -49,7 +49,7 @@ for [{private _g = 0}, {_g < _groupNumber}, {_g = _g + 1}] do {
     _params set ["_showDistanceMax", 500];
     _params set ["_hideDistanceMin", 600];
     // Migration parameters.
-    _params set ["_migrationMaxDistance", 500];
+    _params set ["_migrationMaxDistance", 20];
     _params set ["_speedKmH", 40];
     _params set ["_destinationDistance", 3];
     _params set ["_migrationMode", "DOMOVE"];

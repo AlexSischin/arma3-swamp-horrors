@@ -59,7 +59,7 @@ _params set ["_showDistanceMin", 50];
 _params set ["_showDistanceMax", 500];
 _params set ["_hideDistanceMin", 600];
 // Migration parameters.
-_params set ["_migrationMaxDistance", 2000];
+_params set ["_migrationMaxDistance", 40];
 _params set ["_speedKmH", 40];
 _params set ["_destinationDistance", 3];
 _params set ["_migrationMode", "WAYPOINT"];
