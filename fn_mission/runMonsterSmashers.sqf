@@ -1,13 +1,16 @@
 private _chunkSize = 25;
 private _color = "ColorGreen";
-private _markersEnabled = false;
+private _markersEnabled = true;
 private _chunkMap = [
     _chunkSize,
     [
-        {0.00001},
         {
             params ["_pos", "_chunkSize"];
             1 * ([_pos, 0.3] call fn_chunkScoreHouse)
+        },
+        {
+            params ["_pos", "_chunkSize"];
+            -10 * ([_pos, _chunkSize] call fn_chunkScoreWater)
         },
         {
             params ["_pos", "_chunkSize"];
