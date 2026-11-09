@@ -49,9 +49,10 @@ for [{private _i = 0}, {_i < _number}, {_i = _i + 1}] do {
     // Migration parameters.
     _params set ["_migrationMaxDistance", 20];
     _params set ["_speedKmH", 40];
+    _params set ["_pathfindingMode", "NORMAL"];
     _params set ["_checkpointCompletionDistance", 10];
     _params set ["_checkpointMaxDistance", 100];
-    _params set ["_migrationMode", "DOMOVE"];
+    _params set ["_checkpointMode", "DOMOVE"];
     // Performance parameters.
     _params set ["_delay", 5];
     // Marker parameters.

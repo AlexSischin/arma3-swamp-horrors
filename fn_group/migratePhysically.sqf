@@ -9,14 +9,15 @@ if !(alive _leader) exitWith {};
 private _chunkSize = _params get "_chunkSize";
 private _checkpointCompletionDistance = _params get "_checkpointCompletionDistance";
 private _checkpointMaxDistance = _params get "_checkpointMaxDistance";
-private _migrationMode = _params get "_migrationMode";
+private _checkpointMode = _params get "_checkpointMode";
 
 private _chunkMap = _params get "_chunkMap";
 private _migrationMaxDistance = _params get "_migrationMaxDistance";
+private _pathfindingMode = _params get "_pathfindingMode";
 private _path = _migrationState get "_path";
 private _groupWorldPos = getPos _leader;
 private _groupIndexPos = [_groupWorldPos, _chunkSize] call fn_chunkGetIndexForPos;
-_path = [_chunkMap, _path, _groupIndexPos, _migrationMaxDistance] call fn_groupUpdatePath;
+_path = [_chunkMap, _path, _groupIndexPos, _migrationMaxDistance, _pathfindingMode] call fn_groupUpdatePath;
 _migrationState set ["_path", _path];
 
 private _checkpointIsValid = false;
@@ -35,7 +36,7 @@ if !(_currentCheckpointWorldPos isEqualTo [0, 0]) then {
         };
     };
     if !(_checkpointIsValid) then {
-        switch (_migrationMode) do {
+        switch (_checkpointMode) do {
             case "WAYPOINT": {
                 for [{private _w = 0}, {_w < count waypoints _group}, {_w = _w + 1}] do {
                     deleteWaypoint [_group, 0];
@@ -71,7 +72,7 @@ for [{private _p = 1}, {_p < count _path}, {_p = _p + 1}] do {
 if (isNil "_newCheckpointWorldPos") then {
     _migrationState set ["_path", []];
 } else {
-    switch (_migrationMode) do {
+    switch (_checkpointMode) do {
         case "WAYPOINT": {
             for [{private _w = 0}, {_w < count waypoints _group}, {_w = _w + 1}] do {
                 deleteWaypoint [_group, 0];

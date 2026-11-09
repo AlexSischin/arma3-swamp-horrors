@@ -63,7 +63,7 @@ _params set ["_migrationMaxDistance", 40];
 _params set ["_speedKmH", 40];
 _params set ["_checkpointCompletionDistance", 25];
     _params set ["_checkpointMaxDistance", 200];
-_params set ["_migrationMode", "WAYPOINT"];
+_params set ["_checkpointMode", "WAYPOINT"];
 // Performance parameters.
 _params set ["_delay", 2];
 // Marker parameters.

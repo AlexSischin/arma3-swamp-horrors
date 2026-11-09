@@ -4,6 +4,7 @@ private _chunkMap = _params get "_chunkMap";
 private _chunkSize = _params get "_chunkSize";
 private _speedKmH = _params get "_speedKmH";
 private _migrationMaxDistance = _params get "_migrationMaxDistance";
+private _pathfindingMode = _params get "_pathfindingMode";
 private _delay = _params get "_delay";
 
 private _groupIndexPos = _posState get "_groupIndexPos";
@@ -16,7 +17,7 @@ private _nHops = _pathHopPlan select 0;
 private _untraveledTime = _pathHopPlan select 1;
 private _nHopsRemaining = _nHops;
 while {_nHopsRemaining > 0} do {
-    _path = [_chunkMap, _path, _groupIndexPos, _migrationMaxDistance] call fn_groupUpdatePath;
+    _path = [_chunkMap, _path, _groupIndexPos, _migrationMaxDistance, _pathfindingMode] call fn_groupUpdatePath;
     if (count _path > 1) then {
         private _currentPathHops = _nHopsRemaining min ((count _path) - 1);
         _nHopsRemaining = _nHopsRemaining - _currentPathHops;

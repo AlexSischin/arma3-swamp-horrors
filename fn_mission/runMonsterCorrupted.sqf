@@ -52,11 +52,12 @@ for [{private _g = 0}, {_g < _groupNumber}, {_g = _g + 1}] do {
     _params set ["_showDistanceMax", 200];
     _params set ["_hideDistanceMin", 300];
     // Migration parameters.
-    _params set ["_migrationMaxDistance", 40];
+    _params set ["_migrationMaxDistance", 4];
     _params set ["_speedKmH", 20];
+    _params set ["_pathfindingMode", "SIMPLE"];
     _params set ["_checkpointCompletionDistance", 10];
     _params set ["_checkpointMaxDistance", 100];
-    _params set ["_migrationMode", "DOMOVE"];
+    _params set ["_checkpointMode", "DOMOVE"];
     // Performance parameters.
     _params set ["_delay", 5];
     // Marker parameters.

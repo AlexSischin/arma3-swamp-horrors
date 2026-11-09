@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=182;
+		nextID=189;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={1006.2389,14.210305,1303.7175};
-		dir[]={0.70084226,-0.51870179,0.48966533};
-		up[]={0.4252013,0.85495442,0.29708007};
-		aside[]={0.57273734,3.434252e-08,-0.81974053};
+		pos[]={1002.7562,15.469913,1300.2589};
+		dir[]={0.64614946,-0.43570313,0.62662113};
+		up[]={0.31277892,0.90008986,0.30332601};
+		aside[]={0.69617563,-2.8740033e-08,-0.71787161};
 	};
 };
 binarizationWanted=0;
@@ -32,15 +32,13 @@ addons[]=
 {
 	"rhsusf_c_troops",
 	"A3_Ui_F",
-	"rhsusf_c_fmtv",
-	"ace_compat_rhs_usf3",
-	"ace_compat_rhs_usf3_repair"
+	"A3_Soft_F_Gamma_Van_01"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=4;
+		items=3;
 		class Item0
 		{
 			className="rhsusf_c_troops";
@@ -57,17 +55,10 @@ class AddonsMetaData
 		};
 		class Item2
 		{
-			className="rhsusf_c_fmtv";
-			name="FMTV Trucks";
-			author="Red Hammer Studios";
-			url="http://www.rhsmods.org/";
-		};
-		class Item3
-		{
-			className="ace_compat_rhs_usf3";
-			name="ACE3 - RHS USAF Compatibility";
-			author="ACE-Team";
-			url="https://ace3.acemod.org/";
+			className="A3_Soft_F_Gamma";
+			name="Arma 3 - Unarmored Land Vehicles";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
 		};
 	};
 };
@@ -276,17 +267,17 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={1013.4189,10.270441,1310.8036};
-				angles[]={0.02999169,0,0.019999012};
+				position[]={1012.8257,9.5713139,1309.2378};
+				angles[]={0.019996032,0,0.010000871};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 			};
-			id=178;
-			type="rhsusf_M1078A1R_SOV_M2_D_fmtv_socom";
-			atlOffset=-0.0012860298;
+			id=188;
+			type="C_Van_01_transport_F";
+			atlOffset=-0.0041613579;
 		};
 	};
 };

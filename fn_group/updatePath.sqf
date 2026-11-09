@@ -1,4 +1,4 @@
-params ["_chunkMap", "_indexPath", "_groupIndexPos", "_migrationMaxDistance"];
+params ["_chunkMap", "_indexPath", "_groupIndexPos", "_migrationMaxDistance", "_pathfindingMode"];
 
 private _onTrack = false;
 private _remainingPath = [];
@@ -22,7 +22,16 @@ if (count _indexPath > 1) then {
 };
 if (count _newPathToTarget > 1) exitWith {_newPathToTarget};
 
-private _newRandomPath = [_chunkMap, _groupIndexPos, _migrationMaxDistance] call fn_groupChooseRandomPath;
+private _newRandomPath = nil;
+switch (_pathfindingMode) do {
+    case "NORMAL": {
+        _newRandomPath = [_chunkMap, _groupIndexPos, _migrationMaxDistance] call fn_groupChooseRandomPath;
+    };
+    case "SIMPLE": {
+        _newRandomPath = [_chunkMap, _groupIndexPos, _migrationMaxDistance] call fn_groupChooseSimpleRandomPath;
+    };
+    default {};
+};
 if (count _newRandomPath > 0) exitWith {_newRandomPath};
 
 private _newBackoffPath = [_chunkMap, _groupIndexPos] call fn_groupChooseBackoffPath;
