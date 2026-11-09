@@ -48,7 +48,7 @@ for [{private _i = 0}, {_i < _number}, {_i = _i + 1}] do {
     _params set ["_hideDistanceMin", 600];
     // Migration parameters.
     _params set ["_migrationMaxDistance", 20];
-    _params set ["_speedKmH", 40];
+    _params set ["_speedKmH", 10];
     _params set ["_pathfindingMode", "NORMAL"];
     _params set ["_checkpointCompletionDistance", 10];
     _params set ["_checkpointMaxDistance", 100];

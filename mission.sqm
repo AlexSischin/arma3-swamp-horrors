@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=189;
+		nextID=190;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={1002.7562,15.469913,1300.2589};
-		dir[]={0.64614946,-0.43570313,0.62662113};
-		up[]={0.31277892,0.90008986,0.30332601};
-		aside[]={0.69617563,-2.8740033e-08,-0.71787161};
+		pos[]={1004.5692,11.843954,1314.6416};
+		dir[]={0.74566138,-0.20977201,-0.63244504};
+		up[]={0.15997836,0.97774947,-0.13568836};
+		aside[]={-0.64683676,-1.0768417e-08,-0.76262897};
 	};
 };
 binarizationWanted=0;
@@ -32,7 +32,7 @@ addons[]=
 {
 	"rhsusf_c_troops",
 	"A3_Ui_F",
-	"A3_Soft_F_Gamma_Van_01"
+	"rhsusf_c_m11xx"
 };
 class AddonsMetaData
 {
@@ -55,10 +55,10 @@ class AddonsMetaData
 		};
 		class Item2
 		{
-			className="A3_Soft_F_Gamma";
-			name="Arma 3 - Unarmored Land Vehicles";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
+			className="rhsusf_c_m11xx";
+			name="M1151/M1152/M1165";
+			author="Red Hammer Studios";
+			url="http://www.rhsmods.org/";
 		};
 	};
 };
@@ -267,17 +267,20 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={1012.8257,9.5713139,1309.2378};
-				angles[]={0.019996032,0,0.010000871};
+				position[]={1014.2585,9.6258526,1307.6338};
+				angles[]={0.039979152,0,0.059928458};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
+				reportRemoteTargets=1;
+				receiveRemoteTargets=1;
+				reportOwnPosition=1;
 			};
-			id=188;
-			type="C_Van_01_transport_F";
-			atlOffset=-0.0041613579;
+			id=189;
+			type="rhsusf_m1165a1_gmv_m134d_m240_socom_d";
+			atlOffset=-0.0011515617;
 		};
 	};
 };

@@ -42,11 +42,11 @@ for [{private _g = 0}, {_g < _groupNumber}, {_g = _g + 1}] do {
     _params set ["_otherPosWeight", 1];
     // Render parameters.
     _params set ["_showDistanceMin", 50];
-    _params set ["_showDistanceMax", 500];
-    _params set ["_hideDistanceMin", 600];
+    _params set ["_showDistanceMax", 300];
+    _params set ["_hideDistanceMin", 400];
     // Migration parameters.
     _params set ["_migrationMaxDistance", 4];
-    _params set ["_speedKmH", 40];
+    _params set ["_speedKmH", 8];
     _params set ["_pathfindingMode", "SIMPLE"];
     _params set ["_checkpointCompletionDistance", 10];
     _params set ["_checkpointMaxDistance", 100];

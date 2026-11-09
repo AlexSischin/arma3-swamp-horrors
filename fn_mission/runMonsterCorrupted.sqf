@@ -1,6 +1,6 @@
 private _chunkSize = 25;
 private _color = "ColorBrown";
-private _markersEnabled = true;
+private _markersEnabled = false;
 private _chunkMap = [
     _chunkSize,
     [
@@ -18,7 +18,7 @@ if (_markersEnabled) then {
     [_chunkMap, _color] call fn_chunkVisualizeMap;
 };
 
-private _groupNumber = 1;
+private _groupNumber = 50;
 private _groupSizeDistribution = [1, 3, 6];
 private _className = "WBK_SpecialZombie_Corrupted_1";
 
@@ -49,11 +49,11 @@ for [{private _g = 0}, {_g < _groupNumber}, {_g = _g + 1}] do {
     _params set ["_otherPosWeight", 1];
     // Render parameters.
     _params set ["_showDistanceMin", 50];
-    _params set ["_showDistanceMax", 200];
-    _params set ["_hideDistanceMin", 300];
+    _params set ["_showDistanceMax", 100];
+    _params set ["_hideDistanceMin", 200];
     // Migration parameters.
     _params set ["_migrationMaxDistance", 4];
-    _params set ["_speedKmH", 20];
+    _params set ["_speedKmH", 2];
     _params set ["_pathfindingMode", "SIMPLE"];
     _params set ["_checkpointCompletionDistance", 10];
     _params set ["_checkpointMaxDistance", 100];
