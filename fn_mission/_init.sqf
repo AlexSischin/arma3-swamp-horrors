@@ -2,7 +2,7 @@
 fn_missionRunMonsterBoomers = compile preprocessFileLineNumbers "fn_mission\runMonsterBoomers.sqf";
 fn_missionRunMonsterLeapers = compile preprocessFileLineNumbers "fn_mission\runMonsterLeapers.sqf";
 fn_missionRunMonsterCorrupted = compile preprocessFileLineNumbers "fn_mission\runMonsterCorrupted.sqf";
-fn_missionRunMonsterSmashers = compile preprocessFileLineNumbers "fn_mission\runMonsterSmashers.sqf";
+fn_missionRunMonsterBosses = compile preprocessFileLineNumbers "fn_mission\runMonsterBosses.sqf";
 
 // Russians.
 fn_missionRunRussians = compile preprocessFileLineNumbers "fn_mission\runRussians.sqf";

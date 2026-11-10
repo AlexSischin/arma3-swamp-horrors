@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=324;
+		nextID=337;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={1743.8031,61.750217,834.74237};
-		dir[]={0.39045766,-0.46507528,0.79452497};
-		up[]={0.20512626,0.88526595,0.41740248};
-		aside[]={0.89748979,-6.7753717e-08,-0.44105893};
+		pos[]={997.06262,24.429756,1304.0707};
+		dir[]={0.63364291,-0.52255988,0.57046705};
+		up[]={0.38836041,0.85260171,0.34963986};
+		aside[]={0.6690883,-7.9162419e-08,-0.74318683};
 	};
 };
 binarizationWanted=0;
@@ -32,13 +32,14 @@ addons[]=
 {
 	"rhsusf_c_troops",
 	"A3_Ui_F",
-	"A3_Soft_F_Gamma_Hatchback_01"
+	"A3_Soft_F_Gamma_SUV_01",
+	"A3_Soft_F_EPC_Truck_03"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=3;
+		items=4;
 		class Item0
 		{
 			className="rhsusf_c_troops";
@@ -57,6 +58,13 @@ class AddonsMetaData
 		{
 			className="A3_Soft_F_Gamma";
 			name="Arma 3 - Unarmored Land Vehicles";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item3
+		{
+			className="A3_Soft_F_EPC";
+			name="Arma 3 Win Episode - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -101,6 +109,26 @@ class CustomAttributes
 							class data
 							{
 								singleType="ARRAY";
+								class value
+								{
+									items=2;
+									class Item0
+									{
+										class data
+										{
+											singleType="STRING";
+											value="wbk_zommbiesgoliaththrowshardsparam";
+										};
+									};
+									class Item1
+									{
+										class data
+										{
+											singleType="STRING";
+											value="wbk_zommbiesgoliathundergroundattackparam";
+										};
+									};
+								};
 							};
 						};
 						class Item2
@@ -108,6 +136,64 @@ class CustomAttributes
 							class data
 							{
 								singleType="ARRAY";
+								class value
+								{
+									items=2;
+									class Item0
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														singleType="BOOL";
+														value=0;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item1
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														singleType="BOOL";
+														value=0;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1;
+													};
+												};
+											};
+										};
+									};
+								};
 							};
 						};
 						class Item3
@@ -153,7 +239,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=6;
+		items=7;
 		class Item0
 		{
 			dataType="Group";
@@ -268,17 +354,33 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={1014.5041,9.3381042,1306.7582};
-				angles[]={0.019996032,0,0.059928458};
+				position[]={1012.5894,9.3162479,1308.4553};
+				angles[]={0.029989703,0,0.0099949092};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 			};
-			id=323;
-			type="C_Hatchback_01_F";
-			atlOffset=-4.7683716e-07;
+			id=328;
+			type="C_SUV_01_F";
+			atlOffset=-0.0032458305;
+		};
+		class Item6
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1097.6692,9.4320068,1706.3961};
+				angles[]={0.019999012,0.34537086,6.2531939};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=335;
+			type="O_Truck_03_device_F";
 		};
 	};
 };

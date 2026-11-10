@@ -11,7 +11,7 @@ call compile preprocessFileLineNumbers "fn_mission\_init.sqf";
 spawn fn_missionRunMonsterBoomers;
 // spawn fn_missionRunMonsterLeapers;
 spawn fn_missionRunMonsterCorrupted;
-spawn fn_missionRunMonsterSmashers;
+spawn fn_missionRunMonsterBosses;
 
 // Create Russians.
 // spawn fn_missionRunRussians;
