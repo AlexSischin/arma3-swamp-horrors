@@ -24,13 +24,8 @@ if (_markersEnabled) then {
 
 private _number = 15;
 private _groupSizeDistribution = [1, 2, 4];
-private _classNameArray = [
-    "WBK_SpecialZombie_Smasher_1",
-    "WBK_SpecialZombie_Smasher_Acid_1"
-];
+private _className = "WBK_SpecialZombie_Smasher_1";
 for [{private _i = 0}, {_i < _number}, {_i = _i + 1}] do {
-
-    private _unitArray = [selectRandom _classNameArray];
 
     private _params = createHashMap;
     // Map parameters.
@@ -40,7 +35,7 @@ for [{private _i = 0}, {_i < _number}, {_i = _i + 1}] do {
     _params set ["_chunkSize", _chunkMap # 2];
     // Identity parameters.
     _params set ["_side", independent];
-    _params set ["_unitArray", _unitArray];
+    _params set ["_unitArray", [_className]];
     // Placement parameters.
     _params set ["_housePosWeight", 4];
     _params set ["_roadPosWeight", 1];

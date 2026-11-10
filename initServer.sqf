@@ -9,7 +9,7 @@ call compile preprocessFileLineNumbers "fn_mission\_init.sqf";
 
 // Create monsters.
 spawn fn_missionRunMonsterBoomers;
-spawn fn_missionRunMonsterLeapers;
+// spawn fn_missionRunMonsterLeapers;
 spawn fn_missionRunMonsterCorrupted;
 spawn fn_missionRunMonsterSmashers;
 
