@@ -57,6 +57,8 @@ for [{private _g = 0}, {_g < _groupNumber}, {_g = _g + 1}] do {
     _params set ["_pathfindingMode", "SIMPLE"];
     _params set ["_checkpointCompletionDistance", 10];
     _params set ["_checkpointMaxDistance", 100];
+    _params set ["_fnDestinationVirtual", {}];
+    _params set ["_fnDestinationPhysical", {}];
     _params set ["_checkpointMode", "DOMOVE"];
     // Performance parameters.
     _params set ["_delay", 5];

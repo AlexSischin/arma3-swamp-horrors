@@ -15,9 +15,14 @@ private _chunkMap = _params get "_chunkMap";
 private _migrationMaxDistance = _params get "_migrationMaxDistance";
 private _pathfindingMode = _params get "_pathfindingMode";
 private _path = _migrationState get "_path";
+private _destination = _migrationState get "_destination";
+private _destinationIndexPos = [];
+if !(_destination isEqualTo []) then {
+    _destinationIndexPos = [_destination, _chunkSize] call fn_chunkGetIndexForPos;
+};
 private _groupWorldPos = getPos _leader;
 private _groupIndexPos = [_groupWorldPos, _chunkSize] call fn_chunkGetIndexForPos;
-_path = [_chunkMap, _path, _groupIndexPos, _migrationMaxDistance, _pathfindingMode] call fn_groupUpdatePath;
+_path = [_chunkMap, _path, _groupIndexPos, _migrationMaxDistance, _destinationIndexPos, _pathfindingMode] call fn_groupUpdatePath;
 _migrationState set ["_path", _path];
 
 private _checkpointIsValid = false;
@@ -55,7 +60,7 @@ if (_checkpointIsValid) exitWith {};
 private _housePosWeight = _params get "_housePosWeight";
 private _roadPosWeight = _params get "_roadPosWeight";
 private _otherPosWeight = _params get "_otherPosWeight";
-private _newCheckpointWorldPos = nil;
+private _newCheckpointWorldPos = [];
 for [{private _p = 1}, {_p < count _path}, {_p = _p + 1}] do {
     private _indexPos = _path # _p;
 
@@ -69,7 +74,7 @@ for [{private _p = 1}, {_p < count _path}, {_p = _p + 1}] do {
         };
     };
 };
-if (isNil "_newCheckpointWorldPos") then {
+if (_newCheckpointWorldPos isEqualTo []) then {
     _migrationState set ["_path", []];
 } else {
     switch (_checkpointMode) do {

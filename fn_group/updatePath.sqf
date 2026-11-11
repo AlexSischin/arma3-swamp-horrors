@@ -1,24 +1,39 @@
-params ["_chunkMap", "_indexPath", "_groupIndexPos", "_migrationMaxDistance", "_pathfindingMode"];
+params ["_chunkMap", "_path", "_groupIndexPos", "_migrationMaxDistance", "_destination", "_pathfindingMode"];
 
-private _onTrack = false;
-private _remainingPath = [];
-for [{private _i = 0}, {_i < count _indexPath}, {_i = _i + 1}] do {
-    private _point = _indexPath select _i;
+if (_destination isEqualTo _groupIndexPos) exitWith {[]};
 
-    if (_point isEqualTo _groupIndexPos) then {
-        _onTrack = true;
-    };
-    if (_onTrack) then {
-        _remainingPath pushBack _point;
+private _destinationIsValid = true;
+if !(_destination isEqualTo []) then {
+    if (count _path == 0) then {
+        _destinationIsValid = false;
+    } else {
+        private _currentDestination = _path select -1;
+        _destinationIsValid = _currentDestination isEqualTo _destination;
     };
 };
 
+private _remainingPath = [];
+if (_destinationIsValid) then {
+    private _onTrack = false;
+    for [{private _i = 0}, {_i < count _path}, {_i = _i + 1}] do {
+        private _point = _path select _i;
+
+        if (_point isEqualTo _groupIndexPos) then {
+            _onTrack = true;
+        };
+        if (_onTrack) then {
+            _remainingPath pushBack _point;
+        };
+    };
+};
 if (count _remainingPath > 1) exitWith {_remainingPath};
 
+if ((_destination isEqualTo []) && (count _path > 1)) then {
+    private _destination = _path select -1;
+};
 private _newPathToTarget = [];
-if (count _indexPath > 1) then {
-    private _target = _indexPath select -1;
-    _newPathToTarget = [_chunkMap, _groupIndexPos, _target] call fn_groupChoosePathToTarget;
+if !(_destination isEqualTo []) then {
+    _newPathToTarget = [_chunkMap, _groupIndexPos, _destination] call fn_groupChoosePathToTarget;
 };
 if (count _newPathToTarget > 1) exitWith {_newPathToTarget};
 

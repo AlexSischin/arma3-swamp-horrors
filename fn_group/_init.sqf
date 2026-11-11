@@ -20,6 +20,8 @@ fn_groupUpdatePath = compile preprocessFileLineNumbers "fn_group\updatePath.sqf"
 fn_groupUpdateGameObjectPos = compile preprocessFileLineNumbers "fn_group\updateGameObjectPos.sqf";
 fn_groupMigrateVirtually = compile preprocessFileLineNumbers "fn_group\migrateVirtually.sqf";
 fn_groupMigratePhysically = compile preprocessFileLineNumbers "fn_group\migratePhysically.sqf";
+fn_groupUpdateMigrationDestinationVirtual = compile preprocessFileLineNumbers "fn_group\updateMigrationDestinationVirtual.sqf";
+fn_groupUpdateMigrationDestinationPhysical = compile preprocessFileLineNumbers "fn_group\updateMigrationDestinationPhysical.sqf";
 
 // Game objects.
 fn_groupCreateHiddenUnit = compile preprocessFileLineNumbers "fn_group\createHiddenUnit.sqf";

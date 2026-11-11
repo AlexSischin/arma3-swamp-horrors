@@ -64,6 +64,8 @@ _params set ["_speedKmH", 40];
 _params set ["_pathfindingMode", "NORMAL"];
 _params set ["_checkpointCompletionDistance", 25];
 _params set ["_checkpointMaxDistance", 200];
+_params set ["_fnDestinationVirtual", {}];
+_params set ["_fnDestinationPhysical", {}];
 _params set ["_checkpointMode", "WAYPOINT"];
 // Performance parameters.
 _params set ["_delay", 2];
