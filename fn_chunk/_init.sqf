@@ -13,6 +13,7 @@ fn_chunkScoreRoad = compile preprocessFileLineNumbers "fn_chunk\scoreRoad.sqf";
 fn_chunkScoreVegetation = compile preprocessFileLineNumbers "fn_chunk\scoreVegetation.sqf";
 fn_chunkScorePhragmitesAustralis = compile preprocessFileLineNumbers "fn_chunk\scorePhragmitesAustralis.sqf";
 fn_chunkScoreWater = compile preprocessFileLineNumbers "fn_chunk\scoreWater.sqf";
+fn_chunkScoreWaterDepth = compile preprocessFileLineNumbers "fn_chunk\scoreWaterDepth.sqf";
 fn_chunkScoreHeight = compile preprocessFileLineNumbers "fn_chunk\scoreHeight.sqf";
 fn_chunkScoreMarker = compile preprocessFileLineNumbers "fn_chunk\scoreMarker.sqf";
 

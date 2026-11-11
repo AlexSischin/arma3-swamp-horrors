@@ -10,6 +10,10 @@ private _chunkMap = [
         },
         {
             params ["_pos", "_chunkSize"];
+            -2 * ([_pos, _chunkSize, 1] call fn_chunkScoreWaterDepth)
+        },
+        {
+            params ["_pos", "_chunkSize"];
             -16 * ([_pos, ["side_right", "side_left", "side_top", "side_bottom"]] call fn_chunkScoreMarker)
         }
     ]
