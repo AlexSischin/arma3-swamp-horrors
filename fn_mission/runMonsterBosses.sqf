@@ -41,6 +41,7 @@ for [{private _i = 0}, {_i < _number}, {_i = _i + 1}] do {
     // Identity parameters.
     _params set ["_side", independent];
     _params set ["_unitArray", _unitArray];
+    _params set ["_vehicleArray", []];
     // Placement parameters.
     _params set ["_housePosWeight", 4];
     _params set ["_roadPosWeight", 1];
@@ -61,5 +62,5 @@ for [{private _i = 0}, {_i < _number}, {_i = _i + 1}] do {
     // Marker parameters.
     _params set ["_markersEnabled", _markersEnabled];
     _params set ["_markerColor", _color];
-    [_params] spawn fn_groupExecFSMLight;
+    [_params] spawn fn_groupExecFSMNormal;
 };
