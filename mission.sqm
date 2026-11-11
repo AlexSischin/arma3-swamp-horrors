@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={1226.6321,133.07133,1442.2943};
-		dir[]={-0.36159855,-0.57712942,0.73223728};
-		up[]={-0.25554132,0.81665093,0.51747173};
-		aside[]={0.89663059,-2.7783244e-08,0.44278029};
+		pos[]={1069.2078,13.017028,1713.7167};
+		dir[]={-0.65367532,-0.33146214,-0.68033355};
+		up[]={-0.22965227,0.94346446,-0.23901859};
+		aside[]={-0.72109759,2.9480725e-07,0.69283956};
 	};
 };
 binarizationWanted=0;
@@ -33,14 +33,13 @@ addons[]=
 	"rhsusf_c_troops",
 	"A3_Ui_F",
 	"A3_Soft_F_Gamma_SUV_01",
-	"A3_Soft_F_EPC_Truck_03",
-	"A3_Modules_F"
+	"A3_Soft_F_EPC_Truck_03"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=5;
+		items=4;
 		class Item0
 		{
 			className="rhsusf_c_troops";
@@ -66,13 +65,6 @@ class AddonsMetaData
 		{
 			className="A3_Soft_F_EPC";
 			name="Arma 3 Win Episode - Unarmored Land Vehicles";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item4
-		{
-			className="A3_Modules_F";
-			name="Arma 3 Alpha - Scripted Modules";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -247,7 +239,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=8;
+		items=7;
 		class Item0
 		{
 			dataType="Group";
@@ -379,29 +371,18 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={1097.6692,9.4320068,1706.3961};
-				angles[]={0.019999012,0.34537086,6.2531939};
+				position[]={1061.6494,10.495825,1705.4376};
+				angles[]={0.0099949092,0.34536576,6.2531958};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
+				name="deviceVehicle";
 			};
 			id=335;
 			type="O_Truck_03_device_F";
-			atlOffset=-9.5367432e-05;
-		};
-		class Item7
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={1131.5026,6.5855103,1675.8503};
-				angles[]={6.2531958,0,0};
-			};
-			name="bossBase";
-			id=337;
-			type="Logic";
+			atlOffset=9.5367432e-07;
 		};
 	};
 };
