@@ -1,6 +1,5 @@
-params ["_pathMap", "_point"];
+params ["_pathGrid", "_point"];
 
-private _pathGrid = _pathMap # 0;
 if (count _pathGrid == 0) exitWith {[]};
 
 private _randomPointKey = {breakWith _x} forEach _pathGrid;

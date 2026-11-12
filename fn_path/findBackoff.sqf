@@ -1,7 +1,6 @@
-params ["_pathMap", "_fromPoint"];
-scopeName "main";
+params ["_pathGrid", "_fromPoint"];
 
-private _backoffPoint = [_pathMap, _fromPoint] call fn_pathFindNearestPoint;
+private _backoffPoint = [_pathGrid, _fromPoint] call fn_pathFindNearestPoint;
 if (_backoffPoint isEqualTo []) exitWith {[]};
 
 private _path = [_fromPoint];
