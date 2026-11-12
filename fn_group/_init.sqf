@@ -1,7 +1,7 @@
 // FSM & chunks.
 fn_groupExecFSMNormal = compile preprocessFileLineNumbers "fn_group\execFSMNormal.sqf";
 fn_groupExecFSMLight = compile preprocessFileLineNumbers "fn_group\execFSMLight.sqf";
-fn_groupChunkMapToPathMap = compile preprocessFileLineNumbers "fn_group\chunkGridToInverseWeightGrid.sqf";
+fn_groupChunkMapToPathMap = compile preprocessFileLineNumbers "fn_group\chunkMapToPathMap.sqf";
 
 // Positioning.
 fn_groupInitPositionState = compile preprocessFileLineNumbers "fn_group\initPositionState.sqf";

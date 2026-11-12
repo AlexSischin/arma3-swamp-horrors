@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=338;
+		nextID=339;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={1069.2078,13.017028,1713.7167};
-		dir[]={-0.65367532,-0.33146214,-0.68033355};
-		up[]={-0.22965227,0.94346446,-0.23901859};
-		aside[]={-0.72109759,2.9480725e-07,0.69283956};
+		pos[]={996.04529,24.841076,1296.7554};
+		dir[]={0.44076034,-0.65332115,0.61555183};
+		up[]={0.38035312,0.75708055,0.53118825};
+		aside[]={0.81305951,-5.7683792e-08,-0.58218443};
 	};
 };
 binarizationWanted=0;
@@ -32,8 +32,8 @@ addons[]=
 {
 	"rhsusf_c_troops",
 	"A3_Ui_F",
-	"A3_Soft_F_Gamma_SUV_01",
-	"A3_Soft_F_EPC_Truck_03"
+	"A3_Soft_F_EPC_Truck_03",
+	"A3_Soft_F_Exp_Offroad_02"
 };
 class AddonsMetaData
 {
@@ -56,15 +56,15 @@ class AddonsMetaData
 		};
 		class Item2
 		{
-			className="A3_Soft_F_Gamma";
-			name="Arma 3 - Unarmored Land Vehicles";
+			className="A3_Soft_F_EPC";
+			name="Arma 3 Win Episode - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
 		class Item3
 		{
-			className="A3_Soft_F_EPC";
-			name="Arma 3 Win Episode - Unarmored Land Vehicles";
+			className="A3_Soft_F_Exp";
+			name="Arma 3 Apex - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -72,7 +72,8 @@ class AddonsMetaData
 };
 dlcs[]=
 {
-	"RHS_USAF"
+	"RHS_USAF",
+	"Expansion"
 };
 randomSeed=7486610;
 class ScenarioData
@@ -354,24 +355,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={1012.5894,9.3162479,1308.4553};
-				angles[]={0.029989703,0,0.0099949092};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=328;
-			type="C_SUV_01_F";
-			atlOffset=-0.0032458305;
-		};
-		class Item6
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={1061.6494,10.495825,1705.4376};
+				position[]={1079.5469,9.988287,1705.9749};
 				angles[]={0.0099949092,0.34536576,6.2531958};
 			};
 			side="Empty";
@@ -382,7 +366,24 @@ class Mission
 			};
 			id=335;
 			type="O_Truck_03_device_F";
-			atlOffset=9.5367432e-07;
+			atlOffset=-0.0053372383;
+		};
+		class Item6
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1014.4562,9.4502926,1306.8652};
+				angles[]={0.019996032,0,0.059928458};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=338;
+			type="C_Offroad_02_unarmed_F";
+			atlOffset=-0.0025043488;
 		};
 	};
 };
