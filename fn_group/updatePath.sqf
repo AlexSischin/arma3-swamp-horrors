@@ -29,7 +29,7 @@ if (_destinationIsValid) then {
 if (count _remainingPath > 1) exitWith {_remainingPath};
 
 if ((_destination isEqualTo []) && (count _path > 1)) then {
-    private _destination = _path select -1;
+    _destination = _path select -1;
 };
 private _newPathToTarget = [];
 if !(_destination isEqualTo []) then {
