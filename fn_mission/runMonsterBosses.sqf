@@ -24,7 +24,7 @@ if (_markersEnabled) then {
 };
 
 private _fnDestination = {if (sunOrMoon <= 0.001) exitWith {getPos deviceVehicle}};
-private _number = 15;
+private _number = 1;
 private _groupSizeDistribution = [1, 2, 4];
 private _classNameArray = [
     "WBK_SpecialZombie_Smasher_1",
@@ -54,7 +54,7 @@ for [{private _i = 0}, {_i < _number}, {_i = _i + 1}] do {
     _params set ["_hideDistanceMin", 600];
     // Migration parameters.
     _params set ["_migrationMaxDistance", 20];
-    _params set ["_speedKmH", 20];
+    _params set ["_speedKmH", 30];
     _params set ["_pathfindingMode", "NORMAL"];
     _params set ["_checkpointCompletionDistance", 10];
     _params set ["_checkpointMaxDistance", 100];

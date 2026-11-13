@@ -20,10 +20,20 @@ private _destinationIndexPos = [];
 if !(_destination isEqualTo []) then {
     _destinationIndexPos = [_destination, _chunkSize] call fn_chunkGetIndexForPos;
 };
+private _lastDestination = _migrationState get "_lastDestination";
+private _lastDestinationIndexPos = [];
+if !(_lastDestination isEqualTo []) then {
+    if (_lastDestination isEqualTo _destination) then {
+        _lastDestinationIndexPos = _destinationIndexPos;
+    } else {
+        _lastDestinationIndexPos = [_lastDestination, _chunkSize] call fn_chunkGetIndexForPos;
+    };
+};
 private _groupWorldPos = getPos _leader;
 private _groupIndexPos = [_groupWorldPos, _chunkSize] call fn_chunkGetIndexForPos;
-_path = [_chunkMap, _path, _groupIndexPos, _migrationMaxDistance, _destinationIndexPos, _pathfindingMode] call fn_groupUpdatePath;
+_path = [_chunkMap, _path, _groupIndexPos, _migrationMaxDistance, _destinationIndexPos, _lastDestinationIndexPos, _pathfindingMode] call fn_groupUpdatePath;
 _migrationState set ["_path", _path];
+_migrationState set ["_lastDestination", _destination];
 
 private _checkpointIsValid = false;
 private _currentCheckpointWorldPos = ((expectedDestination _leader) # 0) select [0, 2];
@@ -74,9 +84,7 @@ for [{private _p = 1}, {_p < count _path}, {_p = _p + 1}] do {
         };
     };
 };
-if (_newCheckpointWorldPos isEqualTo []) then {
-    _migrationState set ["_path", []];
-} else {
+if !(_newCheckpointWorldPos isEqualTo []) then {
     switch (_checkpointMode) do {
         case "WAYPOINT": {
             for [{private _w = 0}, {_w < count waypoints _group}, {_w = _w + 1}] do {

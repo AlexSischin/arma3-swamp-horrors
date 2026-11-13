@@ -9,6 +9,9 @@ if !(_path isEqualTo []) exitWith {_path};
 
 private _bestPathWeightGrid = _pathFinding # 2;
 private _closestPoint = [_bestPathWeightGrid, _toPoint] call fn_pathFindNearestPoint;
-private _closestPointKey = _closestPoint call fn_commonIjToKey;
-private _closestPointPath = _bestPathGrid getOrDefault [_closestPointKey, []];
+private _closestPointPath = [];
+if !(_closestPoint isEqualTo []) then {
+    private _closestPointKey = _closestPoint call fn_commonIjToKey;
+    _closestPointPath = _bestPathGrid getOrDefault [_closestPointKey, []];
+};
 _closestPointPath
