@@ -15,6 +15,10 @@ private _chunkMap = [
         },
         {
             params ["_pos", "_chunkSize"];
+            -16 * ([_pos, ["island_1", "island_2"]] call fn_chunkScoreMarker)
+        },
+        {
+            params ["_pos", "_chunkSize"];
             -16 * ([_pos, ["side_right", "side_left", "side_top", "side_bottom"]] call fn_chunkScoreMarker)
         }
     ]
