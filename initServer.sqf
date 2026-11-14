@@ -8,7 +8,7 @@ call compile preprocessFileLineNumbers "fn_group\_init.sqf";
 call compile preprocessFileLineNumbers "fn_mission\_init.sqf";
 
 // Objects.
-spawn fn_missionDeviceVehicle;
+spawn fn_missionBossDevice;
 
 // Create monsters.
 // spawn fn_missionRunMonsterBoomers;

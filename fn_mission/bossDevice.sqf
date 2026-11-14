@@ -22,16 +22,16 @@ if (_markersEnabled) then {
     [_chunkMap, _color] call fn_chunkVisualizeMap;
 };
 
-private _deviceVehiclePlacementRadius = 50;
-private _deviceVehicleObjectDistance = 10;
+private _bossDevicePlacementRadius = 50;
+private _bossDeviceObjectDistance = 10;
 private _chunkGrid = _chunkMap # 1;
 private _chunkSize = _chunkMap # 2;
-private _deviceVehicleSpawnIndexPos = ([_chunkGrid, {_this # 1}] call fn_commonSelectRandomWeightedFromHashMap) # 0;
-private _deviceVehicleSpawnWorldPosCenter = [_deviceVehicleSpawnIndexPos, _chunkSize] call fn_chunkGetPosForIndex;
-private _deviceVehicleSpawnWorldPos = [_deviceVehicleSpawnWorldPosCenter, 0, _deviceVehiclePlacementRadius, _deviceVehicleObjectDistance, 1, 0, 0, [], [_deviceVehicleSpawnWorldPosCenter, _deviceVehicleSpawnWorldPosCenter]] call BIS_fnc_findSafePos;
-deviceVehicle setPos _deviceVehicleSpawnWorldPos;
-deviceVehicle setDir random 360;
+private _bossDeviceSpawnIndexPos = ([_chunkGrid, {_this # 1}] call fn_commonSelectRandomWeightedFromHashMap) # 0;
+private _bossDeviceSpawnWorldPosCenter = [_bossDeviceSpawnIndexPos, _chunkSize] call fn_chunkGetPosForIndex;
+private _bossDeviceSpawnWorldPos = [_bossDeviceSpawnWorldPosCenter, 0, _bossDevicePlacementRadius, _bossDeviceObjectDistance, 1, 0, 0, [], [_bossDeviceSpawnWorldPosCenter, _bossDeviceSpawnWorldPosCenter]] call BIS_fnc_findSafePos;
+bossDevice setPos _bossDeviceSpawnWorldPos;
+bossDevice setDir random 360;
 
 if (_markersEnabled) then {
-    [_deviceVehicleSpawnWorldPos, _color, "KIA"] call fn_commonVisualizePoint;
+    [_bossDeviceSpawnWorldPos, _color, "KIA"] call fn_commonVisualizePoint;
 };

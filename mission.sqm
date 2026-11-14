@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=392;
+		nextID=490;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={1011.6457,32.779705,1282.2092};
-		dir[]={0.012874778,-0.65567422,0.75493443};
-		up[]={0.01118035,0.75504369,0.65557861};
-		aside[]={0.99985415,-1.7246293e-09,-0.017051676};
+		pos[]={990.05347,24.41503,1300.3601};
+		dir[]={0.4914135,-0.70571876,0.51036638};
+		up[]={0.48948991,0.7084921,0.50836861};
+		aside[]={0.72035581,1.4901161e-08,-0.69360483};
 	};
 };
 binarizationWanted=0;
@@ -32,14 +32,16 @@ addons[]=
 {
 	"rhsusf_c_troops",
 	"A3_Ui_F",
-	"A3_Soft_F_EPC_Truck_03",
-	"A3_Soft_F_Exp_Offroad_02"
+	"rhsusf_c_fmtv",
+	"rhsusf_c_M1239",
+	"A3_Structures_F_EPC_Items_Electronics",
+	"A3_Soft_F_Enoch_Truck_01"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=4;
+		items=6;
 		class Item0
 		{
 			className="rhsusf_c_troops";
@@ -56,15 +58,29 @@ class AddonsMetaData
 		};
 		class Item2
 		{
-			className="A3_Soft_F_EPC";
-			name="Arma 3 Win Episode - Unarmored Land Vehicles";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
+			className="rhsusf_c_fmtv";
+			name="FMTV Trucks";
+			author="Red Hammer Studios";
+			url="http://www.rhsmods.org/";
 		};
 		class Item3
 		{
-			className="A3_Soft_F_Exp";
-			name="Arma 3 Apex - Unarmored Land Vehicles";
+			className="rhsusf_c_M1239";
+			name="SOCOM AUV MRAP";
+			author="Red Hammer Studios";
+			url="http://www.rhsmods.org/";
+		};
+		class Item4
+		{
+			className="A3_Structures_F_EPC";
+			name="Arma 3 Win Episode - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item5
+		{
+			className="A3_Soft_F_Enoch";
+			name="Arma 3 Contact Platform - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -72,8 +88,7 @@ class AddonsMetaData
 };
 dlcs[]=
 {
-	"RHS_USAF",
-	"Expansion"
+	"RHS_USAF"
 };
 randomSeed=7486610;
 class ScenarioData
@@ -240,7 +255,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=10;
+		items=12;
 		class Item0
 		{
 			dataType="Group";
@@ -253,8 +268,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1011.2634,8.0548525,1303.3395};
-						angles[]={0.029989703,0,6.2531958};
+						position[]={1011.263,8.0548811,1303.339};
+						angles[]={0.029984757,0,6.2532005};
 					};
 					side="West";
 					flags=6;
@@ -263,8 +278,8 @@ class Mission
 						name="player1";
 						isPlayer=1;
 					};
-					id=294;
-					type="rhsusf_socom_marsoc_elementleader";
+					id=444;
+					type="rhsusf_socom_marsoc_cso_eod";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -352,41 +367,6 @@ class Mission
 		};
 		class Item5
 		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={1079.5469,9.988287,1705.9749};
-				angles[]={0.0099949092,0.34536576,6.2531958};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				name="deviceVehicle";
-			};
-			id=335;
-			type="O_Truck_03_device_F";
-			atlOffset=-0.0053372383;
-		};
-		class Item6
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={1014.4562,9.4502926,1306.8652};
-				angles[]={0.019996032,0,0.059928458};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=338;
-			type="C_Offroad_02_unarmed_F";
-			atlOffset=-0.0025043488;
-		};
-		class Item7
-		{
 			dataType="Marker";
 			position[]={1024,0,1024};
 			name="device_vehicle_zone";
@@ -400,7 +380,7 @@ class Mission
 			id=389;
 			atlOffset=1.11;
 		};
-		class Item8
+		class Item6
 		{
 			dataType="Marker";
 			position[]={504.05099,0,1479.569};
@@ -415,7 +395,7 @@ class Mission
 			id=390;
 			atlOffset=0.2189099;
 		};
-		class Item9
+		class Item7
 		{
 			dataType="Marker";
 			position[]={1311.714,0.449,313.229};
@@ -429,6 +409,76 @@ class Mission
 			drawBorder=1;
 			id=391;
 			atlOffset=-0.00042015314;
+		};
+		class Item8
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1014.4591,9.5816212,1320.0853};
+				angles[]={0.079830162,0,6.2731848};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=405;
+			type="rhsusf_M1083A1P2_D_flatbed_fmtv_usarmy";
+			atlOffset=-0.0007314682;
+		};
+		class Item9
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1008.263,10.686329,1320.1677};
+				angles[]={0.049958061,0,6.2631893};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="myTruck";
+			};
+			id=434;
+			type="rhsusf_M1239_M2_socom_d";
+			atlOffset=-0.0006403923;
+		};
+		class Item10
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={996.966,8.2831841,1316.1112};
+				angles[]={6.2631865,0.056915186,0.019999012};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="bossDevice";
+			};
+			id=480;
+			type="Land_Device_assembled_F";
+			atlOffset=-4.7683716e-07;
+		};
+		class Item11
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1001.8118,10.419872,1310.7002};
+				angles[]={0.12927477,0.056907829,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=489;
+			type="B_Truck_01_flatbed_F";
+			atlOffset=-0.0038743019;
 		};
 	};
 };
