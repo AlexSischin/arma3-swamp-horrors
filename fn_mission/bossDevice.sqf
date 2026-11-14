@@ -32,6 +32,8 @@ private _bossDeviceSpawnWorldPos = [_bossDeviceSpawnWorldPosCenter, 0, _bossDevi
 bossDevice setPos _bossDeviceSpawnWorldPos;
 bossDevice setDir random 360;
 
+[bossDevice] call fn_objectMakeLoadableExplicitly;
+
 if (_markersEnabled) then {
     [_bossDeviceSpawnWorldPos, _color, "KIA"] call fn_commonVisualizePoint;
 };
