@@ -60,7 +60,7 @@ if (_destination isEqualTo []) then {
         if (count _newBackoffPath > 0) then {
             private _backoffPoint = _newBackoffPath select -1;
             private _pathToDestinationFromBackoffPoint = [_chunkMap, _backoffPoint, _destination] call fn_groupChoosePathToTarget;
-            private _newBackoffWithPathToDestination = (_newBackoffPath select [0, (count _newBackoffPath) - 1]) + _pathToDestinationFromBackoffPoint;
+            private _newBackoffWithPathToDestination = [_newBackoffPath, _pathToDestinationFromBackoffPoint] call fn_pathConcat;
             if (count _newBackoffWithPathToDestination > 1) then {
                 _newBackoffWithPathToDestination breakOut "main";
             };
