@@ -23,7 +23,7 @@ if (_markersEnabled) then {
     [_chunkMap, _color] call fn_chunkVisualizeMap;
 };
 
-private _fnDestination = {if (sunOrMoon <= 0.001) exitWith {getPos deviceVehicle}};
+private _fnDestination = {if ((sunOrMoon <= 0.001) && (alive deviceVehicle)) exitWith {getPos deviceVehicle}};
 private _number = 1;
 private _groupSizeDistribution = [1, 2, 4];
 private _classNameArray = [
