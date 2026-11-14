@@ -12,18 +12,18 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=389;
+		nextID=392;
 	};
 	class MarkerIDProvider
 	{
-		nextID=2;
+		nextID=4;
 	};
 	class Camera
 	{
-		pos[]={1065.5248,15.874756,1701.6614};
-		dir[]={0.90075481,-0.31233707,0.30184984};
-		up[]={0.29615861,0.94996494,0.099245563};
-		aside[]={0.31774575,1.2617602e-07,-0.94818616};
+		pos[]={1011.6457,32.779705,1282.2092};
+		dir[]={0.012874778,-0.65567422,0.75493443};
+		up[]={0.01118035,0.75504369,0.65557861};
+		aside[]={0.99985415,-1.7246293e-09,-0.017051676};
 	};
 };
 binarizationWanted=0;
@@ -240,7 +240,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=7;
+		items=10;
 		class Item0
 		{
 			dataType="Group";
@@ -384,6 +384,51 @@ class Mission
 			id=338;
 			type="C_Offroad_02_unarmed_F";
 			atlOffset=-0.0025043488;
+		};
+		class Item7
+		{
+			dataType="Marker";
+			position[]={1024,0,1024};
+			name="device_vehicle_zone";
+			markerType="RECTANGLE";
+			type="";
+			alpha=0;
+			fillName="Border";
+			a=800;
+			b=800;
+			drawBorder=1;
+			id=389;
+			atlOffset=1.11;
+		};
+		class Item8
+		{
+			dataType="Marker";
+			position[]={504.05099,0,1479.569};
+			name="island_1";
+			markerType="ELLIPSE";
+			type="";
+			alpha=0;
+			fillName="Border";
+			a=300;
+			b=170;
+			drawBorder=1;
+			id=390;
+			atlOffset=0.2189099;
+		};
+		class Item9
+		{
+			dataType="Marker";
+			position[]={1311.714,0.449,313.229};
+			name="island_2";
+			markerType="RECTANGLE";
+			type="";
+			alpha=0;
+			fillName="Border";
+			a=110;
+			b=90;
+			drawBorder=1;
+			id=391;
+			atlOffset=-0.00042015314;
 		};
 	};
 };
