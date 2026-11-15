@@ -21,9 +21,9 @@ class EditorData
 	class Camera
 	{
 		pos[]={985.55927,5.837492,866.30011};
-		dir[]={0.77585125,-0.27853826,-0.56610185};
-		up[]={0.22500895,0.96042508,-0.16417834};
-		aside[]={-0.58942837,1.4901161e-08,-0.80782056};
+		dir[]={0.76833498,-0.26690161,-0.5817436};
+		up[]={0.21278889,0.96372366,-0.16111283};
+		aside[]={-0.60364163,-8.3527993e-08,-0.79725605};
 	};
 };
 binarizationWanted=0;
@@ -400,13 +400,12 @@ class Mission
 		{
 			dataType="Marker";
 			position[]={1024,0,1024};
-			name="device_vehicle_zone";
+			name="device_zone";
 			markerType="RECTANGLE";
 			type="";
-			alpha=0;
 			fillName="Border";
-			a=800;
-			b=800;
+			a=500;
+			b=500;
 			drawBorder=1;
 			id=389;
 			atlOffset=1.11;

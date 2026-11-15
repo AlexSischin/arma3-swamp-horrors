@@ -6,7 +6,7 @@ private _chunkMap = [
     [
         {
             params ["_pos", "_chunkSize"];
-            1 * ([_pos, ["device_vehicle_zone"]] call fn_chunkScoreMarker)
+            1 * ([_pos, ["device_zone"]] call fn_chunkScoreMarker)
         },
         {
             params ["_pos", "_chunkSize"];
@@ -26,8 +26,8 @@ if (_markersEnabled) then {
     [_chunkMap, _color] call fn_chunkVisualizeMap;
 };
 
-private _placementRadius = 50;
-private _objectDistance = 10;
+private _placementRadius = 25;
+private _objectDistance = 5;
 private _chunkGrid = _chunkMap # 1;
 private _chunkSize = _chunkMap # 2;
 private _spawnIndexPos = ([_chunkGrid, {_this # 1}] call fn_commonSelectRandomWeightedFromHashMap) # 0;
