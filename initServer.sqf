@@ -15,10 +15,10 @@ spawn fn_missionMinefield;
 // spawn fn_missionRunMonsterBoomers;
 // spawn fn_missionRunMonsterLeapers;
 // spawn fn_missionRunMonsterCorrupted;
-spawn fn_missionRunMonsterBosses;
+// spawn fn_missionRunMonsterBosses;
 
 // Create Russians.
-// spawn fn_missionRunRussians;
+spawn fn_missionRunRussians;
 
 // Set mission params.
 setTimeMultiplier 24;

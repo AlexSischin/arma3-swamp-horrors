@@ -3,10 +3,10 @@ private _color = "ColorOPFOR";
 private _chunkMap = [
     _chunkSize,
     [
-        {0.5},
+        {0.1},
         {
             params ["_pos", "_chunkSize"];
-            1 * ([_pos, 0.5] call fn_chunkScoreRoad)
+            1 * ([_pos, 20] call fn_chunkScoreRoad)
         },
         {
             params ["_pos", "_chunkSize"];
