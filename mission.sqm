@@ -12,18 +12,18 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=698;
+		nextID=719;
 	};
 	class MarkerIDProvider
 	{
-		nextID=11;
+		nextID=14;
 	};
 	class Camera
 	{
-		pos[]={985.55927,5.837492,866.30011};
-		dir[]={0.76833498,-0.26690161,-0.5817436};
-		up[]={0.21278889,0.96372366,-0.16111283};
-		aside[]={-0.60364163,-8.3527993e-08,-0.79725605};
+		pos[]={1037.5425,38.429226,1302.8672};
+		dir[]={-0.77903414,-0.59424758,0.19993916};
+		up[]={-0.57559294,0.80428207,0.14772597};
+		aside[]={0.24859327,-7.4505806e-09,0.9686079};
 	};
 };
 binarizationWanted=0;
@@ -37,13 +37,15 @@ addons[]=
 	"rhsusf_c_RG33",
 	"A3_Structures_F_Wrecks",
 	"A3_Data_F_ParticleEffects",
-	"A3_Modules_F_Effects"
+	"A3_Modules_F_Effects",
+	"CBRN_scripts",
+	"A3_Weapons_F_Ammoboxes"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=8;
+		items=10;
 		class Item0
 		{
 			className="rhsusf_c_troops";
@@ -97,6 +99,18 @@ class AddonsMetaData
 		{
 			className="A3_Modules_F";
 			name="Arma 3 Alpha - Scripted Modules";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item8
+		{
+			className="CBRN_scripts";
+			name="CBRN_scripts";
+		};
+		class Item9
+		{
+			className="A3_Weapons_F";
+			name="Arma 3 Alpha - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -272,7 +286,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=32;
+		items=37;
 		class Item0
 		{
 			dataType="Group";
@@ -285,8 +299,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1865.6056,7.5436788,80.387589};
-						angles[]={6.2531939,0,0.019999012};
+						position[]={1865.606,7.5436983,80.388};
+						angles[]={6.2532005,0,0.020001473};
 					};
 					side="West";
 					flags=6;
@@ -295,9 +309,8 @@ class Mission
 						name="player1";
 						isPlayer=1;
 					};
-					id=444;
-					type="rhsusf_socom_marsoc_cso_eod";
-					atlOffset=4.7683716e-07;
+					id=710;
+					type="rhsusf_socom_marsoc_jfo";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -334,7 +347,6 @@ class Mission
 			{
 			};
 			id=29;
-			atlOffset=4.7683716e-07;
 		};
 		class Item1
 		{
@@ -445,7 +457,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={1000,2.5716405,856};
+				position[]={1024,-0.38835949,1024};
 			};
 			side="Empty";
 			flags=4;
@@ -455,7 +467,6 @@ class Mission
 			};
 			id=480;
 			type="Land_Device_assembled_F";
-			atlOffset=-1.1920929e-07;
 		};
 		class Item9
 		{
@@ -956,8 +967,8 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={1869.1504,8.5706005,74.546387};
-				angles[]={0.15865479,0,6.1147952};
+				position[]={1869.1356,8.5705185,74.558975};
+				angles[]={0.02999169,0,6.2631865};
 			};
 			id=694;
 			type="ModuleChemlight_F";
@@ -1007,6 +1018,130 @@ class Mission
 			};
 			id=695;
 			type="Crater";
+		};
+		class Item32
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={1872.788,8.3300304,115.243};
+				angles[]={6.2332339,0,0.010000736};
+			};
+			areaSize[]={25,-1,25};
+			flags=1;
+			id=700;
+			type="PHEN_CWPLUS_ModulespawnCSGas";
+			atlOffset=9.5367432e-07;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="CBRN_Lifetime";
+					expression="_this setVariable ['CBRN_Lifetime', _value, true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=60;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="CBRN_ChemType";
+					expression="_this setVariable ['CBRN_ChemType',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=4;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="CBRN_Thickness";
+					expression="_this setVariable ['CBRN_Thickness', _value, true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=1;
+						};
+					};
+				};
+				nAttributes=3;
+			};
+		};
+		class Item33
+		{
+			dataType="Trigger";
+			position[]={1767.541,0.022050172,360.056};
+			class Attributes
+			{
+				onActivation="spawn fn_objectAirdrop;";
+				sizeA=0;
+				sizeB=0;
+				activationBy="ALPHA";
+			};
+			id=711;
+			type="EmptyDetector";
+		};
+		class Item34
+		{
+			dataType="Marker";
+			position[]={1044.7439,0,267.526};
+			name="heli_spawn";
+			type="mil_objective";
+			id=712;
+			atlOffset=0.33730105;
+		};
+		class Item35
+		{
+			dataType="Marker";
+			position[]={1005.207,7.4970002,1319.3};
+			name="drop_zone";
+			type="mil_circle";
+			id=713;
+			atlOffset=0.0001411438;
+		};
+		class Item36
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1004.3842,8.5417757,1314.0383};
+				angles[]={0.029989703,0,0.049956869};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="supplyBox";
+			};
+			id=717;
+			type="B_supplyCrate_F";
+			atlOffset=-0.00022411346;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F""],[1,2,1]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""NLAW_F"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareWhite_Illumination_F"",""UGL_FlareGreen_F"",""UGL_FlareGreen_Illumination_F""],[24,6,6,6,6,3,1,2,2,6,3,2,6,6,2,2,2,2,2,2]],[[""Laserdesignator"",""FirstAidKit"",""acc_flashlight"",""bipod_01_F_blk""],[1,10,2,1]],[[""B_Kitbag_mcamo""],[2]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 	};
 };

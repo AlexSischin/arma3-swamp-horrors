@@ -5,5 +5,6 @@ fn_objectGetVehicleState = compile preprocessFileLineNumbers "fn_object\getVehic
 fn_objectSetVehicleState = compile preprocessFileLineNumbers "fn_object\setVehicleState.sqf";
 fn_objectMakeLoadableExplicitly = compile preprocessFileLineNumbers "fn_object\makeLoadableExplicitly.sqf";
 fn_objectMinefield = compile preprocessFileLineNumbers "fn_object\minefield.sqf";
+fn_objectAirdrop = compile preprocessFileLineNumbers "fn_object\airdrop.sqf";
 
 diag_log "fn_object module is initialized";
