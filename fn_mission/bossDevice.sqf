@@ -1,5 +1,5 @@
 private _chunkSize = 25;
-private _color = "ColorOPFOR";
+private _color = "Color1_FD_F";
 private _markersEnabled = false;
 private _chunkMap = [
     _chunkSize,
@@ -22,18 +22,20 @@ if (_markersEnabled) then {
     [_chunkMap, _color] call fn_chunkVisualizeMap;
 };
 
-private _bossDevicePlacementRadius = 50;
-private _bossDeviceObjectDistance = 10;
+private _placementRadius = 50;
+private _objectDistance = 10;
 private _chunkGrid = _chunkMap # 1;
 private _chunkSize = _chunkMap # 2;
-private _bossDeviceSpawnIndexPos = ([_chunkGrid, {_this # 1}] call fn_commonSelectRandomWeightedFromHashMap) # 0;
-private _bossDeviceSpawnWorldPosCenter = [_bossDeviceSpawnIndexPos, _chunkSize] call fn_chunkGetPosForIndex;
-private _bossDeviceSpawnWorldPos = [_bossDeviceSpawnWorldPosCenter, 0, _bossDevicePlacementRadius, _bossDeviceObjectDistance, 1, 0, 0, [], [_bossDeviceSpawnWorldPosCenter, _bossDeviceSpawnWorldPosCenter]] call BIS_fnc_findSafePos;
-bossDevice setPos _bossDeviceSpawnWorldPos;
+private _spawnIndexPos = ([_chunkGrid, {_this # 1}] call fn_commonSelectRandomWeightedFromHashMap) # 0;
+private _spawnIndexPosCenter = [_spawnIndexPos, _chunkSize] call fn_chunkGetPosForIndex;
+private _spawnWorldPos = [_spawnIndexPosCenter, 0, _placementRadius, _objectDistance, 1, 0, 0, [], [_spawnIndexPosCenter, _spawnIndexPosCenter]] call BIS_fnc_findSafePos;
+_spawnWorldPos set [2, getTerrainHeightASL _spawnWorldPos];
+systemChat str _spawnWorldPos;
+bossDevice setPosASL _spawnWorldPos;
 bossDevice setDir random 360;
 
 [bossDevice] call fn_objectMakeLoadableExplicitly;
 
 if (_markersEnabled) then {
-    [_bossDeviceSpawnWorldPos, _color, "KIA"] call fn_commonVisualizePoint;
+    [bossDevice, _color, "loc_container"] call fn_commonVisualizeObject;
 };

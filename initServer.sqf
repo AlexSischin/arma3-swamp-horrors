@@ -9,6 +9,7 @@ call compile preprocessFileLineNumbers "fn_mission\_init.sqf";
 
 // Objects.
 spawn fn_missionBossDevice;
+spawn fn_missionBigTruck;
 spawn fn_missionMinefield;
 
 // Create monsters.
@@ -18,7 +19,7 @@ spawn fn_missionMinefield;
 // spawn fn_missionRunMonsterBosses;
 
 // Create Russians.
-spawn fn_missionRunRussians;
+// spawn fn_missionRunRussians;
 
 // Set mission params.
 setTimeMultiplier 24;
