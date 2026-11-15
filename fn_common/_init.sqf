@@ -19,6 +19,7 @@ fn_commonKeyToIj = compile preprocessFileLineNumbers "fn_common\keyToIj.sqf";
 // Visualization.
 fn_commonVisualizePoint = compile preprocessFileLineNumbers "fn_common\visualizePoint.sqf";
 fn_commonVisualizePointArray = compile preprocessFileLineNumbers "fn_common\visualizePointArray.sqf";
+fn_commonVisualizeObject = compile preprocessFileLineNumbers "fn_common\visualizeObject.sqf";
 
 // Cache.
 fn_commonCacheHas = compile preprocessFileLineNumbers "fn_common\cacheHas.sqf";

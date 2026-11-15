@@ -1,6 +1,6 @@
 private _chunkSize = 25;
 private _color = "ColorOPFOR";
-private _markersEnabled = true;
+private _markersEnabled = false;
 private _chunkMap = [
     _chunkSize,
     [

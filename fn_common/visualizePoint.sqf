@@ -1,6 +1,6 @@
 params [
     ["_point", nil],
-    ["_color", "colorBLUFOR"],
+    ["_color", "Default"],
     ["_type", "mil_dot_noShadow"]
 ];
 

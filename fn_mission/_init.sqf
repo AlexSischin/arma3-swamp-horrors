@@ -1,5 +1,6 @@
 // Objects.
 fn_missionBossDevice = compile preprocessFileLineNumbers "fn_mission\bossDevice.sqf";
+fn_missionMinefield = compile preprocessFileLineNumbers "fn_mission\minefield.sqf";
 
 // Monsters.
 fn_missionRunMonsterBoomers = compile preprocessFileLineNumbers "fn_mission\runMonsterBoomers.sqf";
