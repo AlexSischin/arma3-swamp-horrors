@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={1885.3202,86.053337,64.655693};
-		dir[]={-0.33330548,-0.47654408,0.81352353};
-		up[]={-0.18066859,0.87914819,0.44097129};
-		aside[]={0.92534959,-5.7450961e-08,0.37912136};
+		pos[]={985.55927,5.837492,866.30011};
+		dir[]={0.77585125,-0.27853826,-0.56610185};
+		up[]={0.22500895,0.96042508,-0.16417834};
+		aside[]={-0.58942837,1.4901161e-08,-0.80782056};
 	};
 };
 binarizationWanted=0;
@@ -446,7 +446,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={1800,-0.29835945,256};
+				position[]={1000,2.5716405,856};
 			};
 			side="Empty";
 			flags=4;
@@ -456,14 +456,15 @@ class Mission
 			};
 			id=480;
 			type="Land_Device_assembled_F";
+			atlOffset=-1.1920929e-07;
 		};
 		class Item9
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={339.87265,1.2598534,1546.2267};
-				angles[]={6.2232571,0.82213539,6.2631893};
+				position[]={1657.66,13.74433,1065.1976};
+				angles[]={6.2332273,6.0357704,6.2332263};
 			};
 			side="Empty";
 			flags=4;
@@ -473,7 +474,7 @@ class Mission
 			};
 			id=515;
 			type="rhssaf_army_o_kraz255b1_pmp";
-			atlOffset=-0.0037465692;
+			atlOffset=-0.0010967255;
 			class CustomAttributes
 			{
 				class Attribute0

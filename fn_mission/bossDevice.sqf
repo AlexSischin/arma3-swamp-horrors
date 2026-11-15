@@ -10,6 +10,10 @@ private _chunkMap = [
         },
         {
             params ["_pos", "_chunkSize"];
+            -1 * ([_pos, 20] call fn_chunkScoreRoad)
+        },
+        {
+            params ["_pos", "_chunkSize"];
             -1 * ([_pos, ["island_1", "island_2"]] call fn_chunkScoreMarker)
         },
         {
@@ -30,7 +34,6 @@ private _spawnIndexPos = ([_chunkGrid, {_this # 1}] call fn_commonSelectRandomWe
 private _spawnIndexPosCenter = [_spawnIndexPos, _chunkSize] call fn_chunkGetPosForIndex;
 private _spawnWorldPos = [_spawnIndexPosCenter, 0, _placementRadius, _objectDistance, 1, 0, 0, [], [_spawnIndexPosCenter, _spawnIndexPosCenter]] call BIS_fnc_findSafePos;
 _spawnWorldPos set [2, getTerrainHeightASL _spawnWorldPos];
-systemChat str _spawnWorldPos;
 bossDevice setPosASL _spawnWorldPos;
 bossDevice setDir random 360;
 
