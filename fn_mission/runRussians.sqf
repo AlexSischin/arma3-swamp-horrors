@@ -26,7 +26,7 @@ private _chunkMap = [
         },
         {
             params ["_pos", "_chunkSize"];
-            -16 * ([_pos, ["side_right", "side_left", "side_top", "side_bottom"]] call fn_chunkScoreMarker)
+            -16 * ([_pos, blackZoneArray] call fn_chunkScoreMarker)
         }
     ]
 ] call fn_chunkBuildMap;

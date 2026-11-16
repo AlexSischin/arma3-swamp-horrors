@@ -14,11 +14,15 @@ private _chunkMap = [
         },
         {
             params ["_pos", "_chunkSize"];
-            -1 * ([_pos, ["island_1", "island_2"]] call fn_chunkScoreMarker)
+            -1 * ([_pos, islandArray] call fn_chunkScoreMarker)
         },
         {
             params ["_pos", "_chunkSize"];
             -10 * ([_pos, _chunkSize, 1] call fn_chunkScoreWaterMaxDepth)
+        },
+        {
+            params ["_pos", "_chunkSize"];
+            -16 * ([_pos, blackZoneArray] call fn_chunkScoreMarker)
         }
     ]
 ] call fn_chunkBuildMap;
