@@ -27,8 +27,7 @@ private _fnDestination = {if ((sunOrMoon <= 0.001) && (alive bossDevice)) exitWi
 private _number = 1;
 private _groupSizeDistribution = [1, 2, 4];
 private _classNameArray = [
-    "WBK_SpecialZombie_Smasher_1",
-    "WBK_Goliaph_2"
+    "WBK_SpecialZombie_Smasher_1"
 ];
 for [{private _i = 0}, {_i < _number}, {_i = _i + 1}] do {
 

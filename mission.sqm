@@ -5,14 +5,14 @@ class EditorData
 	angleGridStep=0.017453292;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=521;
+	toggles=1;
 	mods[]=
 	{
 		"WBK_Zombies_AdvancedEditorSettings"
 	};
 	class ItemIDProvider
 	{
-		nextID=1198;
+		nextID=1248;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={1861.1554,15.745173,88.439545};
-		dir[]={0.79171568,-0.53765517,-0.29004169};
-		up[]={0.50484645,0.84316266,-0.18494841};
-		aside[]={-0.34399062,5.0495146e-08,-0.9389773};
+		pos[]={1863.7556,21.215418,65.921249};
+		dir[]={0.22503686,-0.2531313,0.94090253};
+		up[]={0.058881711,0.96742874,0.24619071};
+		aside[]={0.97257662,-2.2293534e-08,-0.23261304};
 	};
 };
 binarizationWanted=0;
@@ -39,8 +39,6 @@ addons[]=
 	"A3_Modules_F_Effects",
 	"A3_Weapons_F_Ammoboxes",
 	"CBRN_scripts",
-	"rhs_c_troops",
-	"rhs_c_btr",
 	"RPG101_AIPaths",
 	"A3_Modules_F",
 	"Tanoa_Bridges",
@@ -50,7 +48,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=14;
+		items=12;
 		class Item0
 		{
 			className="rhsusf_c_troops";
@@ -114,33 +112,19 @@ class AddonsMetaData
 		};
 		class Item9
 		{
-			className="rhs_c_troops";
-			name="AFRF Infantry & Equipment";
-			author="Red Hammer Studios";
-			url="http://www.rhsmods.org/";
-		};
-		class Item10
-		{
-			className="rhs_c_btr";
-			name="BTR-70 & 80";
-			author="Red Hammer Studios";
-			url="http://www.rhsmods.org/";
-		};
-		class Item11
-		{
 			className="RPG101_AIPaths";
 			name="Path";
 			author="RPGpenguin101";
 			url="https://steamcommunity.com/profiles/76561199736136416/myworkshopfiles/?appid=107410";
 		};
-		class Item12
+		class Item10
 		{
 			className="Tanoa_Bridges";
 			name="Tanoa Bridges - 3DEN Objects";
 			author="HellBz";
 			url="https://github.com/hellbz";
 		};
-		class Item13
+		class Item11
 		{
 			className="rhsusf_c_stryker";
 			name="IAV Stryker vehicles";
@@ -152,8 +136,7 @@ class AddonsMetaData
 dlcs[]=
 {
 	"RHS_USAF",
-	"RHS_SAF",
-	"RHS_AFRF"
+	"RHS_SAF"
 };
 randomSeed=7486610;
 class ScenarioData
@@ -198,7 +181,7 @@ class CustomAttributes
 										class data
 										{
 											singleType="STRING";
-											value="wbk_zommbiesgoliaththrowshardsparam";
+											value="wbk_zommbiessmasherthrowparam";
 										};
 									};
 									class Item1
@@ -206,7 +189,7 @@ class CustomAttributes
 										class data
 										{
 											singleType="STRING";
-											value="wbk_zommbiesgoliathundergroundattackparam";
+											value="wbk_zommbiessmasherhealthparam";
 										};
 									};
 									class Item2
@@ -214,7 +197,7 @@ class CustomAttributes
 										class data
 										{
 											singleType="STRING";
-											value="wbk_zommbiesgoliaththrowparam";
+											value="wbk_zommbiessmasherhealthparam_acid";
 										};
 									};
 									class Item3
@@ -222,7 +205,7 @@ class CustomAttributes
 										class data
 										{
 											singleType="STRING";
-											value="wbk_zommbiessmasherthrowparam";
+											value="wbk_zommbiessmasherhealthparam_hell";
 										};
 									};
 								};
@@ -275,8 +258,8 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="BOOL";
-														value=0;
+														singleType="STRING";
+														value="2000";
 													};
 												};
 												class Item1
@@ -302,8 +285,8 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="BOOL";
-														value=0;
+														singleType="STRING";
+														value="2000";
 													};
 												};
 												class Item1
@@ -329,8 +312,8 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="BOOL";
-														value=0;
+														singleType="STRING";
+														value="3000";
 													};
 												};
 												class Item1
@@ -390,7 +373,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=46;
+		items=44;
 		class Item0
 		{
 			dataType="Group";
@@ -1242,185 +1225,6 @@ class Mission
 		};
 		class Item36
 		{
-			dataType="Group";
-			side="East";
-			class Entities
-			{
-				items=2;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={1808.9143,5.2304244,892.94849};
-						angles[]={0,4.7326035,0};
-					};
-					side="East";
-					flags=4;
-					class Attributes
-					{
-					};
-					id=900;
-					type="rhs_vdv_armoredcrew";
-					atlOffset=9.5367432e-07;
-				};
-				class Item1
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={1808.9143,6.8779078,892.93201};
-						angles[]={0,4.7326035,0};
-					};
-					side="East";
-					flags=2;
-					class Attributes
-					{
-					};
-					id=901;
-					type="rhs_vdv_armoredcrew";
-					atlOffset=1.6476488;
-				};
-			};
-			class Attributes
-			{
-			};
-			class CrewLinks
-			{
-				class LinkIDProvider
-				{
-					nextID=2;
-				};
-				class Links
-				{
-					items=2;
-					class Item0
-					{
-						linkID=0;
-						item0=900;
-						item1=899;
-						class CustomData
-						{
-							role=1;
-						};
-					};
-					class Item1
-					{
-						linkID=1;
-						item0=901;
-						item1=899;
-						class CustomData
-						{
-							role=2;
-							turretPath[]={0};
-						};
-					};
-				};
-			};
-			id=898;
-			atlOffset=-8.2492828e-05;
-		};
-		class Item37
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={1809.1318,6.8674836,891.93549};
-				angles[]={0,4.7326035,0};
-			};
-			side="East";
-			flags=6;
-			class Attributes
-			{
-			};
-			id=899;
-			type="rhs_btr80a_vdv";
-			atlOffset=-8.2492828e-05;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="crate_l2_unhide";
-					expression="[_this,_value,'crate_l2_unhide'] call rhs_fnc_setHabarEden";
-					class Value
-					{
-						class data
-						{
-							singleType="SCALAR";
-							value=0;
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="crate_r2_unhide";
-					expression="[_this,_value,'crate_r2_unhide'] call rhs_fnc_setHabarEden";
-					class Value
-					{
-						class data
-						{
-							singleType="SCALAR";
-							value=1;
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="wheel_1_unhide";
-					expression="[_this,_value,'wheel_1_unhide'] call rhs_fnc_setHabarEden";
-					class Value
-					{
-						class data
-						{
-							singleType="SCALAR";
-							value=0;
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="crate_l1_unhide";
-					expression="[_this,_value,'crate_l1_unhide'] call rhs_fnc_setHabarEden";
-					class Value
-					{
-						class data
-						{
-							singleType="SCALAR";
-							value=1;
-						};
-					};
-				};
-				class Attribute4
-				{
-					property="crate_l3_unhide";
-					expression="[_this,_value,'crate_l3_unhide'] call rhs_fnc_setHabarEden";
-					class Value
-					{
-						class data
-						{
-							singleType="SCALAR";
-							value=1;
-						};
-					};
-				};
-				class Attribute5
-				{
-					property="crate_r1_unhide";
-					expression="[_this,_value,'crate_r1_unhide'] call rhs_fnc_setHabarEden";
-					class Value
-					{
-						class data
-						{
-							singleType="SCALAR";
-							value=1;
-						};
-					};
-				};
-				nAttributes=6;
-			};
-		};
-		class Item38
-		{
 			dataType="Object";
 			class PositionInfo
 			{
@@ -1452,7 +1256,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item39
+		class Item37
 		{
 			dataType="Object";
 			class PositionInfo
@@ -1485,7 +1289,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item40
+		class Item38
 		{
 			dataType="Object";
 			class PositionInfo
@@ -1518,7 +1322,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item41
+		class Item39
 		{
 			dataType="Object";
 			class PositionInfo
@@ -1551,7 +1355,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item42
+		class Item40
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -1594,7 +1398,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item43
+		class Item41
 		{
 			dataType="Object";
 			class PositionInfo
@@ -1610,7 +1414,7 @@ class Mission
 			type="Tanoa_Bridge_Concrete";
 			atlOffset=0.36666614;
 		};
-		class Item44
+		class Item42
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -1653,7 +1457,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item45
+		class Item43
 		{
 			dataType="Object";
 			class PositionInfo
