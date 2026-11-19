@@ -1,0 +1,147 @@
+class CfgFunctions
+{
+    class LCX
+    {
+        class Common
+        {
+            // Logging.
+            class debug {};
+            class error {};
+            class logExecutionTime {};
+
+            // Arrays.
+            class flattenArray {};
+            class selectRandomWeighted {};
+            class sortedInsert {};
+
+            // Hash maps.
+            class ijToKey {};
+            class keyToIj {};
+            class selectRandomWeightedFromHashMap {};
+
+            // Random.
+            class generateId {};
+
+            // Caching.
+            class cacheGet {};
+            class cacheHas {};
+            class cachePut {};
+
+            // Visualization.
+            class visualizePoint {};
+            class visualizePointArray {};
+            class visualizeObject {};
+        };
+
+        class FSM
+        {
+            class execFSM {};
+        };
+
+        class Chunk
+        {
+            // Score.
+            class positiveSigmoid {};
+            class squareArea {};
+            class scoreMarker {};
+            class scoreWater {};
+            class scoreWaterMaxDepth {};
+            class scoreHouse {};
+            class scoreRoad {};
+            class scoreHeight {};
+            class scoreVegetation {};
+            class scorePhragmitesAustralis {};
+
+            // Position.
+            class getIndexForPos {};
+            class getPosForIndex {};
+            class getPosForIndexArray {};
+            class selectRandomWorldPos {};
+
+            // Map.
+            class buildChunkMap {};
+            class visualizeChunkMap {};
+        };
+
+        class Path
+        {
+            // Utility.
+            class manhattanDistance {};
+            class getNeighbourPointArray {};
+            class getNearestPoint {};
+            class concatPaths {};
+
+            // Pathfinding.
+            class findPath {};
+            class findPathGrid {};
+            class findBackoffPath {};
+            class findRandomNeighbourPath {};
+        };
+
+        class ChunkPath
+        {
+            class chunkMapToPathMap {};
+            class applyChunkMapToPathMap {};
+            class visualizePath {};
+        };
+
+        class Object
+        {
+            class getGroupUnits {};
+            class getGroupVehicleArray {};
+            class minefield {};
+            class airdrop {};
+            class makeLoadableExplicitly {};
+        };
+
+        class GroupFSM
+        {
+            // FSM.
+            class execFSMNormal {};
+            class execFSMLight {};
+
+            // Positioning.
+            class initPositionState {};
+            class calculateSafePosParams {};
+            class findSafePos {};
+
+            // Migration.
+            class initMigrationState {};
+            class calculatePathHopPlan {};
+            class choosePathToTarget {};
+            class chooseRandomPath {};
+            class chooseSimpleRandomPath {};
+            class chooseBackoffPath {};
+            class updatePath {};
+            class updateGameObjectPos {};
+            class migrateVirtually {};
+            class migratePhysically {};
+            class updateMigrationDestinationVirtual {};
+            class updateMigrationDestinationPhysical {};
+
+            // Game objects.
+            class createHiddenUnit {};
+            class createHiddenVehicle {};
+            class initGameObjectState {};
+            class initGameObjectLightState {};
+            class reloadGameObjectState {};
+            class reloadGameObjectLightState {};
+            class isEliminated {};
+
+            // Visibility.
+            class getControlledUavs {};
+            class getRenderSubjects {};
+            class shouldShow {};
+            class shouldHide {};
+            class showGroup {};
+            class hideGroup {};
+            class createGroup {};
+            class deleteGroup {};
+
+            // Markers.
+            class initMarkerState {};
+            class updateMarkers {};
+            class finalizeMarkers {};
+        };
+    };
+};

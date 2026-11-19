@@ -1,0 +1,33 @@
+private _chunkSize = 25;
+private _color = "Color1_FD_F";
+private _markersEnabled = false;
+private _chunkMap = [
+    _chunkSize,
+    [
+        {
+            params ["_pos", "_chunkSize"];
+            1 * ([_pos, 20] call LCX_fnc_scoreRoad)
+        },
+        {
+            params ["_pos", "_chunkSize"];
+            -16 * ([_pos, blackZoneArray] call LCX_fnc_scoreMarker)
+        }
+    ]
+] call LCX_fnc_buildChunkMap;
+if (_markersEnabled) then {
+    [_chunkMap, _color] call LCX_fnc_visualizeChunkMap;
+};
+
+private _placementRadius = 50;
+private _objectDistance = 10;
+private _chunkGrid = _chunkMap # 1;
+private _chunkSize = _chunkMap # 2;
+private _spawnIndexPos = ([_chunkGrid, {_this # 1}] call LCX_fnc_selectRandomWeightedFromHashMap) # 0;
+private _spawnIndexPosCenter = [_spawnIndexPos, _chunkSize] call LCX_fnc_getPosForIndex;
+private _spawnWorldPos = [_spawnIndexPosCenter, 0, _placementRadius, _objectDistance, 1, 0, 0, [], [_spawnIndexPosCenter, _spawnIndexPosCenter]] call BIS_fnc_findSafePos;
+bigTruck setPos _spawnWorldPos;
+bigTruck setDir random 360;
+
+if (_markersEnabled) then {
+    [bigTruck, _color, "loc_Truck"] call LCX_fnc_visualizeObject;
+};
