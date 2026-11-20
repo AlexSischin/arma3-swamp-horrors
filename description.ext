@@ -12,6 +12,7 @@ class CfgFunctions
             // Arrays.
             class flattenArray {};
             class selectRandomWeighted {};
+            class findExtreme {};
             class sortedInsert {};
 
             // Hash maps.
@@ -116,8 +117,7 @@ class CfgFunctions
             class updateGameObjectPos {};
             class migrateVirtually {};
             class migratePhysically {};
-            class updateMigrationDestinationVirtual {};
-            class updateMigrationDestinationPhysical {};
+            class updateMigrationDestination {};
 
             // Game objects.
             class createHiddenUnit {};

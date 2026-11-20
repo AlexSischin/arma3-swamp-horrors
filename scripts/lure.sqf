@@ -1,12 +1,12 @@
 private _chunkSize = 25;
 private _color = "Color1_FD_F";
-private _markersEnabled = false;
+private _markersEnabled = true;
 private _chunkMap = [
     _chunkSize,
     [
         {
             params ["_pos", "_chunkSize"];
-            1 * ([_pos, ["device_zone"]] call LCX_fnc_scoreMarker)
+            1 * ([_pos, ["lure_zone"]] call LCX_fnc_scoreMarker)
         },
         {
             params ["_pos", "_chunkSize"];
@@ -34,15 +34,20 @@ private _placementRadius = 25;
 private _objectDistance = 5;
 private _chunkGrid = _chunkMap # 1;
 private _chunkSize = _chunkMap # 2;
-private _spawnIndexPos = ([_chunkGrid, {_this # 1}] call LCX_fnc_selectRandomWeightedFromHashMap) # 0;
-private _spawnIndexPosCenter = [_spawnIndexPos, _chunkSize] call LCX_fnc_getPosForIndex;
-private _spawnWorldPos = [_spawnIndexPosCenter, 0, _placementRadius, _objectDistance, 1, 0, 0, [], [_spawnIndexPosCenter, _spawnIndexPosCenter]] call BIS_fnc_findSafePos;
-_spawnWorldPos set [2, getTerrainHeightASL _spawnWorldPos];
-bossDevice setPosASL _spawnWorldPos;
-bossDevice setDir random 360;
 
-[bossDevice] call LCX_fnc_makeLoadableExplicitly;
+for [{private _l = 0}, {_l < count lureArray}, {_l = _l + 1}] do {
+    private _lure = lureArray # _l;
 
-if (_markersEnabled) then {
-    [bossDevice, _color, "loc_container"] call LCX_fnc_visualizeObject;
+    private _spawnIndexPos = ([_chunkGrid, {_this # 1}] call LCX_fnc_selectRandomWeightedFromHashMap) # 0;
+    private _spawnIndexPosCenter = [_spawnIndexPos, _chunkSize] call LCX_fnc_getPosForIndex;
+    private _spawnWorldPos = [_spawnIndexPosCenter, 0, _placementRadius, _objectDistance, 1, 0, 0, [], [_spawnIndexPosCenter, _spawnIndexPosCenter]] call BIS_fnc_findSafePos;
+    _spawnWorldPos set [2, getTerrainHeightASL _spawnWorldPos];
+    _lure setPosASL _spawnWorldPos;
+    _lure setDir random 360;
+
+    [_lure] call LCX_fnc_makeLoadableExplicitly;
+
+    if (_markersEnabled) then {
+        [_lure, _color, "KIA"] call LCX_fnc_visualizeObject;
+    };
 };

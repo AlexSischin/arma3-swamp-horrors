@@ -43,7 +43,7 @@ private _fsm = [
             ]
         ],
         {
-            [_params, _posState, _migrationState] call LCX_fnc_updateMigrationDestinationVirtual;
+            [_params, _posState, _migrationState] call LCX_fnc_updateMigrationDestination;
             [_params, _posState, _migrationState] call LCX_fnc_migrateVirtually;
             [_params, _posState, _gameObjectState] call LCX_fnc_updateGameObjectPos;
             [_params, _posState, _gameObjectState, _migrationState, _markerState] call LCX_fnc_updateMarkers;
@@ -73,7 +73,7 @@ private _fsm = [
         ],
         {
             [_params, _posState, _gameObjectState] call LCX_fnc_reloadGameObjectState;
-            [_params, _gameObjectState, _migrationState] call LCX_fnc_updateMigrationDestinationPhysical;
+            [_params, _posState, _migrationState] call LCX_fnc_updateMigrationDestination;
             [_params, _gameObjectState, _migrationState] call LCX_fnc_migratePhysically;
             [_params, _posState, _gameObjectState, _migrationState, _markerState] call LCX_fnc_updateMarkers;
         }

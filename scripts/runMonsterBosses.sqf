@@ -23,7 +23,11 @@ if (_markersEnabled) then {
     [_chunkMap, _color] call LCX_fnc_visualizeChunkMap;
 };
 
-private _fnDestination = {if ((sunOrMoon <= 0.001) && (alive bossDevice)) exitWith {getPos bossDevice}};
+private _fnDestination = {
+    params ["_chunkCenter"];
+    private _closestLure = [lureArray, {_this distance2D _chunkCenter}] call LCX_fnc_findExtreme;
+    if (sunOrMoon <= 0.001) exitWith {getPos _closestLure}
+};
 private _number = 15;
 private _groupSizeDistribution = [1, 2, 4];
 private _classNameArray = [
@@ -57,8 +61,7 @@ for [{private _i = 0}, {_i < _number}, {_i = _i + 1}] do {
     _params set ["_pathfindingMode", "NORMAL"];
     _params set ["_checkpointCompletionDistance", 10];
     _params set ["_checkpointMaxDistance", 100];
-    _params set ["_fnDestinationVirtual", _fnDestination];
-    _params set ["_fnDestinationPhysical", _fnDestination];
+    _params set ["_fnDestination", _fnDestination];
     _params set ["_checkpointMode", "DOMOVE"];
     // Performance parameters.
     _params set ["_delay", 5];
