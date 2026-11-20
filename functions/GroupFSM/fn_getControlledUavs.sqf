@@ -8,7 +8,7 @@ for [{private _u = 0}, {_u < count _allUavs}, {_u = _u + 1}] do {
 	for [{private _c = 0}, {_c < _uavControlCount}, {_c = _c + 1}] do {
 
 		private _uavControlUnit = _uavControl select (_c * 2);
-		if !(isNull _uavControlUnit) then {
+		if (!isNull _uavControlUnit && {isPlayer _uavControlUnit}) then {
 			_controlledUavs pushBack _uav;
 			break;
 		};
