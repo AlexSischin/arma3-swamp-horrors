@@ -28,11 +28,6 @@ class CfgFunctions
             class cacheGet {};
             class cacheHas {};
             class cachePut {};
-
-            // Visualization.
-            class visualizePoint {};
-            class visualizePointArray {};
-            class visualizeObject {};
         };
 
         class FSM
@@ -89,11 +84,18 @@ class CfgFunctions
 
         class Object
         {
+            // Game objects.
             class getGroupUnits {};
             class getGroupVehicleArray {};
             class minefield {};
             class airdrop {};
             class makeLoadableExplicitly {};
+
+            // Markers.
+            class visualizePoint {};
+            class visualizePointArray {};
+            class visualizeObject {};
+            class createSearchAreaMarker {};
         };
 
         class GroupFSM

@@ -1,6 +1,8 @@
 private _chunkSize = 25;
-private _color = "Color1_FD_F";
-private _markersEnabled = true;
+private _searchAreaRadius = 200;
+private _searchAreaBrush = "Border";
+private _searchAreaColor = "Color1_FD_F";
+private _markersEnabled = false;
 private _chunkMap = [
     _chunkSize,
     [
@@ -27,7 +29,7 @@ private _chunkMap = [
     ]
 ] call LCX_fnc_buildChunkMap;
 if (_markersEnabled) then {
-    [_chunkMap, _color] call LCX_fnc_visualizeChunkMap;
+    [_chunkMap, _searchAreaColor] call LCX_fnc_visualizeChunkMap;
 };
 
 private _placementRadius = 25;
@@ -48,6 +50,8 @@ for [{private _l = 0}, {_l < count lureArray}, {_l = _l + 1}] do {
     [_lure] call LCX_fnc_makeLoadableExplicitly;
 
     if (_markersEnabled) then {
-        [_lure, _color, "KIA"] call LCX_fnc_visualizeObject;
+        [_lure, _searchAreaColor, "KIA"] call LCX_fnc_visualizeObject;
     };
+
+    [_spawnWorldPos, _searchAreaRadius, _searchAreaBrush, _searchAreaColor] call LCX_fnc_createSearchAreaMarker;
 };
