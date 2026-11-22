@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=2068;
+		nextID=2070;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={1878.9811,11.336856,84.689178};
-		dir[]={-0.91025257,-0.24956395,0.33051574};
-		up[]={-0.23459856,0.96835196,0.08518374};
-		aside[]={0.34131745,-1.9860454e-07,0.93999583};
+		pos[]={1858.8499,15.265585,87.748695};
+		dir[]={0.8220976,-0.35587943,-0.44441599};
+		up[]={0.31306326,0.93453187,-0.16923821};
+		aside[]={-0.47554931,0,-0.87968916};
 	};
 };
 binarizationWanted=0;
@@ -1789,7 +1789,7 @@ class Mission
 							};
 							class binocular
 							{
-								name="rhsusf_bino_lerca_1200_black";
+								name="Binocular";
 							};
 							class uniform
 							{
@@ -1906,146 +1906,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1869.1654,7.7185183,82.416649};
-						angles[]={0.089757703,0,6.2232571};
-					};
-					side="West";
-					flags=4;
-					class Attributes
-					{
-						name="player2";
-						description="UAV operator";
-						isPlayable=1;
-						class Inventory
-						{
-							class primaryWeapon
-							{
-								name="rhs_weap_mk18_KAC";
-								optics="rhsusf_acc_eotech_xps3";
-								muzzle="rhsusf_acc_nt4_black";
-								underBarrel="rhsusf_acc_rvg_blk";
-								class primaryMuzzleMag
-								{
-									name="rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger_Tracer_Red";
-									ammoLeft=30;
-								};
-							};
-							class handgun
-							{
-								name="rhsusf_weap_glock17g4";
-								muzzle="rhsusf_acc_omega9k";
-								flashlight="acc_flashlight_pistol";
-								class primaryMuzzleMag
-								{
-									name="rhsusf_mag_17Rnd_9x19_JHP";
-									ammoLeft=17;
-								};
-							};
-							class uniform
-							{
-								typeName="U_CBRN_B_green";
-								isBackpack=0;
-								class MagazineCargo
-								{
-									items=1;
-									class Item0
-									{
-										name="Chemlight_blue";
-										count=2;
-										ammoLeft=1;
-									};
-								};
-								class ItemCargo
-								{
-									items=3;
-									class Item0
-									{
-										name="G_CBRN_B_green";
-										count=1;
-									};
-									class Item1
-									{
-										name="FirstAidKit";
-										count=1;
-									};
-									class Item2
-									{
-										name="CBRN_gasmaskFilter";
-										count=1;
-									};
-								};
-							};
-							class vest
-							{
-								typeName="rhsusf_spcs_ocp_rifleman";
-								isBackpack=0;
-								class MagazineCargo
-								{
-									items=2;
-									class Item0
-									{
-										name="rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger_Tracer_Red";
-										count=8;
-										ammoLeft=30;
-									};
-									class Item1
-									{
-										name="rhsusf_mag_17Rnd_9x19_JHP";
-										count=3;
-										ammoLeft=17;
-									};
-								};
-							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="ItemWatch";
-							radio="ItemRadio";
-							gps="B_UavTerminal";
-							hmd="rhsusf_ANPVS_14";
-							headgear="rhsusf_opscore_mar_fg_pelt";
-						};
-					};
-					id=1988;
-					type="rhsusf_socom_marsoc_cso";
-					atlOffset=1.9073486e-06;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Male06ENG";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item2
-				{
-					dataType="Object";
-					class PositionInfo
-					{
 						position[]={1872.644,7.675643,82.080002};
-						angles[]={0.32773793,0,0.099675752};
+						angles[]={0.32773793,0,0.099675745};
 					};
 					side="West";
 					flags=4;
@@ -2201,7 +2063,7 @@ class Mission
 						nAttributes=2;
 					};
 				};
-				class Item3
+				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
@@ -2336,6 +2198,150 @@ class Mission
 								{
 									singleType="SCALAR";
 									value=0.95999998;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={1869.165,7.7185068,82.417};
+						angles[]={0.089762285,0,6.2232509};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						name="player2";
+						description="Scout sniper";
+						isPlayable=1;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_sr25_ec_wd";
+								optics="rhsusf_acc_su230a";
+								muzzle="rhsusf_acc_aac_762sdn6_silencer";
+								flashlight="rhsusf_acc_anpeq15side_bk";
+								underBarrel="rhsusf_acc_harris_bipod";
+								class primaryMuzzleMag
+								{
+									name="rhsusf_20Rnd_762x51_SR25_m118_special_Mag";
+									ammoLeft=20;
+								};
+							};
+							class handgun
+							{
+								name="rhsusf_weap_MP7A2_folded";
+								optics="rhsusf_acc_compm4";
+								muzzle="rhsusf_acc_rotex_mp7";
+								flashlight="rhsusf_acc_M952V";
+								class primaryMuzzleMag
+								{
+									name="rhsusf_mag_40Rnd_46x30_FMJ";
+									ammoLeft=40;
+								};
+							};
+							class binocular
+							{
+								name="Rangefinder";
+							};
+							class uniform
+							{
+								typeName="U_CBRN_B_green";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="Chemlight_blue";
+										count=2;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="CBRN_gasmaskFilter";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhsusf_spcs_ocp_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=3;
+									class Item0
+									{
+										name="rhsusf_20Rnd_762x51_SR25_m118_special_Mag";
+										count=3;
+										ammoLeft=20;
+									};
+									class Item1
+									{
+										name="rhsusf_20Rnd_762x51_SR25_m993_Mag";
+										count=3;
+										ammoLeft=20;
+									};
+									class Item2
+									{
+										name="rhsusf_mag_40Rnd_46x30_FMJ";
+										count=4;
+										ammoLeft=40;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+							gps="ItemGPS";
+							hmd="rhsusf_ANPVS_15";
+							headgear="rhsusf_opscore_mar_fg_pelt";
+						};
+					};
+					id=2069;
+					type="rhsusf_socom_marsoc_sniper";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male06ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
 								};
 							};
 						};
@@ -2583,7 +2589,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="[[[[],[]],[[""rhsusf_mag_40Rnd_46x30_FMJ""],[10]],[[""FirstAidKit""],[8]],[[],[]]],false]";
+							value="[[[[],[]],[[],[]],[[""FirstAidKit"",""B_UavTerminal""],[8,2]],[[],[]]],false]";
 						};
 					};
 				};
@@ -2612,6 +2618,7 @@ class Mission
 					};
 					id=2062;
 					type="B_UAV_AI";
+					atlOffset=1.9073486e-06;
 				};
 				class Item1
 				{
@@ -2622,12 +2629,13 @@ class Mission
 						angles[]={6.2631893,0,6.223258};
 					};
 					side="West";
-					flags=6;
+					flags=2;
 					class Attributes
 					{
 					};
 					id=2063;
 					type="B_UAV_AI";
+					atlOffset=2.1036825;
 				};
 			};
 			class Attributes
@@ -2666,6 +2674,7 @@ class Mission
 				};
 			};
 			id=2060;
+			atlOffset=-0.015151024;
 		};
 		class Item55
 		{
@@ -2683,6 +2692,7 @@ class Mission
 			};
 			id=2061;
 			type="B_UGV_01_rcws_F";
+			atlOffset=-0.015151024;
 		};
 	};
 	class Connections
