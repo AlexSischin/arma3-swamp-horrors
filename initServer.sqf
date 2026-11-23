@@ -8,6 +8,9 @@ execVM "scripts\lure.sqf";
 execVM "scripts\bigTruck.sqf";
 execVM "scripts\minefield.sqf";
 
+// Communication.
+execVM "scripts\airdropUav.sqf";
+
 // Spawn monsters.
 // execVM "scripts\runMonsterBoomers.sqf";
 // execVM "scripts\runMonsterLeapers.sqf";
