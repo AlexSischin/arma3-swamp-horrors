@@ -15,9 +15,8 @@ _targetPos set [2, _flyHeight];
 private _finishPos = [1024, 3000, _flyHeight];
 private _vehicleClass = "rhsusf_CH53e_USMC_cargo";
 
-private _uav = createVehicle ["GX_B_THEMIS_UGV_CARGO", [_startPos # 0, _startPos # 1, 0], [], 0, "NONE"];
-createVehicleCrew _uav;
-_uav addItemCargoGlobal ["B_UavTerminal", 1];
+supplyBox enableSimulationGlobal true;
+supplyBox hideObject false;
+private _cargoArray = [supplyBox];
 
-private _cargoArray = [_uav];
 [_startPos, _targetPos, _finishPos, _vehicleClass, _cargoArray] call LCX_fnc_airdrop;

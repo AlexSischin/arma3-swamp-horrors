@@ -153,9 +153,9 @@ class CfgCommunicationMenu
 {
     class LCX_RequestSupport
     {
-        text = "Request cargo UAV";
+        text = "Request supply";
         submenu = "";
-        expression = "_this execVM 'scripts\airdropUavCallback.sqf'";
+        expression = "_this execVM 'scripts\airdropSupplyCallback.sqf'";
         icon = "\a3\Ui_f\data\GUI\Cfg\CommunicationMenu\supplydrop_ca.paa";
         cursor = "\a3\Ui_f\data\IGUI\Cfg\Cursors\iconCursorSupport_ca.paa";
         enable = "1";

@@ -8,7 +8,7 @@ execVM "scripts\bigTruck.sqf";
 execVM "scripts\minefield.sqf";
 
 // Communication.
-execVM "scripts\airdropUav.sqf";
+execVM "scripts\airdropSupply.sqf";
 
 // Spawn monsters.
 // execVM "scripts\runMonsterBoomers.sqf";

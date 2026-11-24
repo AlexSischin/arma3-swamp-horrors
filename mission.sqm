@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=2251;
+		nextID=2262;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={1867.655,14.649103,96.308548};
-		dir[]={0.3491264,-0.39836821,0.8481825};
-		up[]={0.1516321,0.91722554,0.3683815};
-		aside[]={0.92472613,1.4901161e-08,-0.38063306};
+		pos[]={1862.8027,14.605942,82.94841};
+		dir[]={0.83263117,-0.48422241,0.26884863};
+		up[]={0.46080607,0.87494022,0.14879043};
+		aside[]={0.30727428,2.533634e-07,-0.95163852};
 	};
 };
 binarizationWanted=0;
@@ -40,17 +40,18 @@ addons[]=
 	"CBRN_scripts",
 	"rhsusf_c_troops",
 	"rhsusf_c_weapons",
+	"A3_Weapons_F_Acc",
 	"A3_Weapons_F",
 	"AN_Equipements_CBRN",
 	"A3_Weapons_F_Items",
 	"CBRN_gear",
-	"A3_Weapons_F_Acc",
 	"A3_Drones_F_Weapons_F_Gamma_Items",
 	"rhsusf_vehicles",
 	"A3_Characters_F_Common",
 	"A3_Drones_F_Soft_F_Gamma_UGV_01",
 	"rhssaf_c_vehicles",
-	"A3_Structures_F_EPC_Items_Electronics"
+	"A3_Structures_F_EPC_Items_Electronics",
+	"A3_Weapons_F_Ammoboxes"
 };
 class AddonsMetaData
 {
@@ -242,16 +243,8 @@ class CustomAttributes
 								singleType="ARRAY";
 								class value
 								{
-									items=5;
+									items=4;
 									class Item0
-									{
-										class data
-										{
-											singleType="STRING";
-											value="wbk_zommbiessmasherthrowparam";
-										};
-									};
-									class Item1
 									{
 										class data
 										{
@@ -259,7 +252,7 @@ class CustomAttributes
 											value="wbk_zommbiessmasherhealthparam";
 										};
 									};
-									class Item2
+									class Item1
 									{
 										class data
 										{
@@ -267,7 +260,7 @@ class CustomAttributes
 											value="wbk_zommbiessmasherhealthparam_acid";
 										};
 									};
-									class Item3
+									class Item2
 									{
 										class data
 										{
@@ -275,7 +268,7 @@ class CustomAttributes
 											value="wbk_zommbiessmasherhealthparam_hell";
 										};
 									};
-									class Item4
+									class Item3
 									{
 										class data
 										{
@@ -293,7 +286,7 @@ class CustomAttributes
 								singleType="ARRAY";
 								class value
 								{
-									items=5;
+									items=4;
 									class Item0
 									{
 										class data
@@ -306,8 +299,8 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="BOOL";
-														value=0;
+														singleType="STRING";
+														value="2000";
 													};
 												};
 												class Item1
@@ -349,33 +342,6 @@ class CustomAttributes
 										};
 									};
 									class Item2
-									{
-										class data
-										{
-											singleType="ARRAY";
-											class value
-											{
-												items=2;
-												class Item0
-												{
-													class data
-													{
-														singleType="STRING";
-														value="2000";
-													};
-												};
-												class Item1
-												{
-													class data
-													{
-														singleType="SCALAR";
-														value=1;
-													};
-												};
-											};
-										};
-									};
-									class Item3
 									{
 										class data
 										{
@@ -402,7 +368,7 @@ class CustomAttributes
 											};
 										};
 									};
-									class Item4
+									class Item3
 									{
 										class data
 										{
@@ -475,7 +441,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=43;
+		items=44;
 		class Item0
 		{
 			dataType="Marker";
@@ -1367,14 +1333,13 @@ class Mission
 							};
 							class handgun
 							{
-								name="rhsusf_weap_MP7A2_folded";
-								optics="rhsusf_acc_compm4";
-								muzzle="rhsusf_acc_rotex_mp7";
-								flashlight="rhsusf_acc_anpeq15side_bk";
+								name="rhsusf_weap_glock17g4";
+								muzzle="rhsusf_acc_omega9k";
+								flashlight="acc_flashlight_pistol";
 								class primaryMuzzleMag
 								{
-									name="rhsusf_mag_40Rnd_46x30_FMJ";
-									ammoLeft=40;
+									name="rhsusf_mag_17Rnd_9x19_JHP";
+									ammoLeft=17;
 								};
 							};
 							class binocular
@@ -1436,15 +1401,15 @@ class Mission
 									items=2;
 									class Item0
 									{
-										name="rhsusf_mag_40Rnd_46x30_FMJ";
-										count=3;
-										ammoLeft=40;
-									};
-									class Item1
-									{
 										name="rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger_Tracer_Red";
 										count=8;
 										ammoLeft=30;
+									};
+									class Item1
+									{
+										name="rhsusf_mag_17Rnd_9x19_JHP";
+										count=3;
+										ammoLeft=17;
 									};
 								};
 							};
@@ -2421,6 +2386,55 @@ class Mission
 			};
 			id=2250;
 			type="Land_Device_assembled_F";
+		};
+		class Item43
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1984.3591,9.3770666,95.951843};
+				angles[]={0.049951322,0,0.010000736};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="supplyBox";
+				disableSimulation=1;
+			};
+			id=2253;
+			type="B_supplyCrate_F";
+			atlOffset=-0.034999847;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[],[]],[[""SatchelCharge_Remote_Mag"",""rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger_Tracer_Red"",""rhsusf_20Rnd_762x51_SR25_m118_special_Mag""],[20,24,8]],[[""FirstAidKit"",""CBRN_gasmaskFilter""],[4,4]],[[""rhsusf_assault_eagleaiii_ocp""],[2]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="hideObject";
+					expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				nAttributes=2;
+			};
 		};
 	};
 	class Connections
