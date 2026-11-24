@@ -1,7 +1,6 @@
 // Global variables
 blackZoneArray = ["side_right", "side_left", "side_top", "side_bottom"];
 islandArray = ["island_1", "island_2"];
-lureArray = [lure1, lure2, lure3];
 
 // Spawn objects.
 execVM "scripts\lure.sqf";

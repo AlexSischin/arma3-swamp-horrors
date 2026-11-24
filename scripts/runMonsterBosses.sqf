@@ -24,9 +24,7 @@ if (_markersEnabled) then {
 };
 
 private _fnDestination = {
-    params ["_chunkCenter"];
-    private _closestLure = [lureArray, {_this distance2D _chunkCenter}] call LCX_fnc_findExtreme;
-    if (sunOrMoon <= 0.001) exitWith {getPos _closestLure}
+    if (sunOrMoon <= 0.001 && {alive lure}) exitWith {getPos lure}
 };
 private _number = 15;
 private _groupSizeDistribution = [1, 2, 4];
