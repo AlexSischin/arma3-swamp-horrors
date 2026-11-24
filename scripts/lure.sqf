@@ -4,7 +4,7 @@ private _searchAreaBrush = "Border";
 private _searchAreaColor = "Color1_FD_F";
 private _searchAreaIcon = "loc_search";
 private _searchAreaText = "Heat signature";
-private _markersEnabled = false
+private _markersEnabled = false;
 private _chunkMap = [
     _chunkSize,
     [
@@ -44,6 +44,7 @@ private _spawnIndexPos = ([_chunkGrid, {_this # 1}] call LCX_fnc_selectRandomWei
 private _spawnIndexPosCenter = [_spawnIndexPos, _chunkSize] call LCX_fnc_getPosForIndex;
 private _spawnWorldPos = [_spawnIndexPosCenter, 0, _placementRadius, _objectDistance, 2, 0, 0, [], [_spawnIndexPosCenter, _spawnIndexPosCenter]] call BIS_fnc_findSafePos;
 _spawnWorldPos set [2, getTerrainHeightASL _spawnWorldPos];
+[lure] call LCX_fnc_protectFromCollisions;
 lure setPosASL _spawnWorldPos;
 lure setDir random 360;
 

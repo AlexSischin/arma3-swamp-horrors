@@ -25,6 +25,7 @@ private _chunkSize = _chunkMap # 2;
 private _spawnIndexPos = ([_chunkGrid, {_this # 1}] call LCX_fnc_selectRandomWeightedFromHashMap) # 0;
 private _spawnIndexPosCenter = [_spawnIndexPos, _chunkSize] call LCX_fnc_getPosForIndex;
 private _spawnWorldPos = [_spawnIndexPosCenter, 0, _placementRadius, _objectDistance, 1, 0, 0, [], [_spawnIndexPosCenter, _spawnIndexPosCenter]] call BIS_fnc_findSafePos;
+[bigTruck] call LCX_fnc_protectFromCollisions;
 bigTruck setPos _spawnWorldPos;
 bigTruck setDir random 360;
 

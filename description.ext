@@ -85,6 +85,7 @@ class CfgFunctions
         class Object
         {
             // Game objects.
+            class protectFromCollisions {};
             class getGroupUnits {};
             class getGroupVehicleArray {};
             class minefield {};
