@@ -42,7 +42,7 @@ class CfgFunctions
             class squareArea {};
             class scoreMarker {};
             class scoreWater {};
-            class scoreWaterMaxDepth {};
+            class scoreWaterThresholdDepth {};
             class scoreHouse {};
             class scoreRoad {};
             class scoreHeight {};

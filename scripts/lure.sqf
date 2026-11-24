@@ -22,7 +22,7 @@ private _chunkMap = [
         },
         {
             params ["_pos", "_chunkSize"];
-            -10 * ([_pos, _chunkSize, 1] call LCX_fnc_scoreWaterMaxDepth)
+            -10 * ([_pos, _chunkSize, 1] call LCX_fnc_scoreWaterThresholdDepth)
         },
         {
             params ["_pos", "_chunkSize"];
