@@ -4,17 +4,18 @@ private _searchAreaBrush = "Border";
 private _searchAreaColor = "Color1_FD_F";
 private _searchAreaIcon = "loc_search";
 private _searchAreaText = "Heat signature";
-private _markersEnabled = false;
+private _markersEnabled = false
 private _chunkMap = [
     _chunkSize,
     [
+        {-1},
         {
             params ["_pos", "_chunkSize"];
             1 * ([_pos, ["lure_zone"]] call LCX_fnc_scoreMarker)
         },
         {
             params ["_pos", "_chunkSize"];
-            -1 * ([_pos, 20] call LCX_fnc_scoreRoad)
+            1 * ([_pos, _chunkSize, 0.3] call LCX_fnc_scoreWaterThresholdDepth)
         },
         {
             params ["_pos", "_chunkSize"];
@@ -41,7 +42,7 @@ private _chunkSize = _chunkMap # 2;
 
 private _spawnIndexPos = ([_chunkGrid, {_this # 1}] call LCX_fnc_selectRandomWeightedFromHashMap) # 0;
 private _spawnIndexPosCenter = [_spawnIndexPos, _chunkSize] call LCX_fnc_getPosForIndex;
-private _spawnWorldPos = [_spawnIndexPosCenter, 0, _placementRadius, _objectDistance, 1, 0, 0, [], [_spawnIndexPosCenter, _spawnIndexPosCenter]] call BIS_fnc_findSafePos;
+private _spawnWorldPos = [_spawnIndexPosCenter, 0, _placementRadius, _objectDistance, 2, 0, 0, [], [_spawnIndexPosCenter, _spawnIndexPosCenter]] call BIS_fnc_findSafePos;
 _spawnWorldPos set [2, getTerrainHeightASL _spawnWorldPos];
 lure setPosASL _spawnWorldPos;
 lure setDir random 360;
