@@ -2,6 +2,8 @@ private _chunkSize = 25;
 private _searchAreaRadius = 500;
 private _searchAreaBrush = "Border";
 private _searchAreaColor = "Color1_FD_F";
+private _searchAreaIcon = "loc_search";
+private _searchAreaText = "Heat signature";
 private _markersEnabled = false;
 private _chunkMap = [
     _chunkSize,
@@ -50,4 +52,4 @@ if (_markersEnabled) then {
     [lure, _searchAreaColor, "KIA"] call LCX_fnc_visualizeObject;
 };
 
-[_spawnWorldPos, _searchAreaRadius, _searchAreaBrush, _searchAreaColor] call LCX_fnc_createSearchAreaMarker;
+[_spawnWorldPos, _searchAreaRadius, _searchAreaBrush, _searchAreaColor, _searchAreaIcon, _searchAreaText] call LCX_fnc_createSearchAreaMarker;
