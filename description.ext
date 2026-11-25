@@ -86,6 +86,7 @@ class CfgFunctions
         {
             // Game objects.
             class protectFromCollisions {};
+            class createGroup {};
             class getGroupUnits {};
             class getGroupVehicleArray {};
             class minefield {};
@@ -107,6 +108,7 @@ class CfgFunctions
 
             // Positioning.
             class initPositionState {};
+            class initPositionLightState {};
             class calculateSafePosParams {};
             class findSafePos {};
 

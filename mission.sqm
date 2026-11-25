@@ -5,14 +5,14 @@ class EditorData
 	angleGridStep=0.017453292;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=1;
+	toggles=513;
 	mods[]=
 	{
 		"WBK_Zombies_AdvancedEditorSettings"
 	};
 	class ItemIDProvider
 	{
-		nextID=2262;
+		nextID=2461;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={1134.469,5.5307536,1074.27};
-		dir[]={0.76556832,-0.37264657,0.52444226};
-		up[]={0.30742952,0.92797333,0.21060045};
-		aside[]={0.565148,0,-0.82498956};
+		pos[]={1864.1249,10.804709,78.775139};
+		dir[]={0.39636043,-0.26411512,0.87928534};
+		up[]={0.10853887,0.96449077,0.24078237};
+		aside[]={0.91165656,1.1525117e-08,-0.41095281};
 	};
 };
 binarizationWanted=0;
@@ -47,8 +47,6 @@ addons[]=
 	"CBRN_gear",
 	"A3_Drones_F_Weapons_F_Gamma_Items",
 	"rhsusf_vehicles",
-	"A3_Characters_F_Common",
-	"A3_Drones_F_Soft_F_Gamma_UGV_01",
 	"rhssaf_c_vehicles",
 	"A3_Structures_F_EPC_Items_Electronics",
 	"A3_Weapons_F_Ammoboxes"
@@ -57,7 +55,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=17;
+		items=16;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -151,19 +149,12 @@ class AddonsMetaData
 		};
 		class Item14
 		{
-			className="A3_Characters_F";
-			name="Arma 3 Alpha - Characters and Clothing";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item15
-		{
 			className="rhssaf_c_vehicles";
 			name="RHS: SAF vehicles";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org";
 		};
-		class Item16
+		class Item15
 		{
 			className="A3_Structures_F_EPC";
 			name="Arma 3 Win Episode - Buildings and Structures";
@@ -433,6 +424,7 @@ class Mission
 		year=2035;
 		month=4;
 		day=11;
+		hour=21;
 		minute=0;
 		startFogBase=5;
 		forecastFogBase=5;
@@ -441,7 +433,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=44;
+		items=42;
 		class Item0
 		{
 			dataType="Marker";
@@ -1918,8 +1910,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={1874.0012,11.028461,101.58248};
-				angles[]={6.2631841,0,6.2232509};
+				position[]={1870.3844,9.065136,86.336525};
+				angles[]={0.02999169,0,6.2631865};
 			};
 			side="Empty";
 			flags=4;
@@ -1930,7 +1922,7 @@ class Mission
 			};
 			id=1981;
 			type="rhsusf_m998_w_s_4dr";
-			atlOffset=-0.0019989014;
+			atlOffset=-0.0033416748;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2155,122 +2147,6 @@ class Mission
 		};
 		class Item38
 		{
-			dataType="Group";
-			side="West";
-			class Entities
-			{
-				items=2;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={1877.1421,8.9043303,96.998283};
-						angles[]={6.2431998,0,6.2332339};
-					};
-					side="West";
-					flags=4;
-					class Attributes
-					{
-					};
-					id=2062;
-					type="B_UAV_AI";
-					atlOffset=1.9073486e-06;
-				};
-				class Item1
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={1877.1628,10.975949,96.723564};
-						angles[]={6.2431998,0,6.2332339};
-					};
-					side="West";
-					flags=2;
-					class Attributes
-					{
-					};
-					id=2063;
-					type="B_UAV_AI";
-					atlOffset=2.1036825;
-				};
-			};
-			class Attributes
-			{
-			};
-			class CrewLinks
-			{
-				class LinkIDProvider
-				{
-					nextID=2;
-				};
-				class Links
-				{
-					items=2;
-					class Item0
-					{
-						linkID=0;
-						item0=2062;
-						item1=2061;
-						class CustomData
-						{
-							role=1;
-						};
-					};
-					class Item1
-					{
-						linkID=1;
-						item0=2063;
-						item1=2061;
-						class CustomData
-						{
-							role=2;
-							turretPath[]={0};
-						};
-					};
-				};
-			};
-			id=2060;
-			atlOffset=-0.0040001869;
-		};
-		class Item39
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={1870.0559,9.2004242,86.977074};
-				angles[]={6.2431998,0,6.2332339};
-			};
-			side="West";
-			flags=6;
-			class Attributes
-			{
-				health=0.89950466;
-				reportOwnPosition=1;
-			};
-			id=2061;
-			type="B_UGV_01_rcws_F";
-			atlOffset=-0.0040001869;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="[[[[],[]],[[],[]],[[""FirstAidKit"",""B_UavTerminal""],[4,2]],[[],[]]],false]";
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item40
-		{
 			dataType="Marker";
 			position[]={1024,0,1024};
 			name="airdrop_zone";
@@ -2284,7 +2160,7 @@ class Mission
 			id=2114;
 			atlOffset=1.11;
 		};
-		class Item41
+		class Item39
 		{
 			dataType="Object";
 			class PositionInfo
@@ -2370,7 +2246,7 @@ class Mission
 				nAttributes=5;
 			};
 		};
-		class Item42
+		class Item40
 		{
 			dataType="Object";
 			class PositionInfo
@@ -2387,7 +2263,7 @@ class Mission
 			id=2250;
 			type="Land_Device_assembled_F";
 		};
-		class Item43
+		class Item41
 		{
 			dataType="Object";
 			class PositionInfo

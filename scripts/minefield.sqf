@@ -12,4 +12,4 @@ private _radius = 50;
 private _spawnRadius = 20;
 private _nMines = 10;
 
-[_mineFields, _mineFreeZones, _className, _radius, _spawnRadius, _nMines] call LCX_fnc_minefield;
+[_mineFields, _mineFreeZones, _className, _radius, _spawnRadius, _nMines] spawn LCX_fnc_minefield;

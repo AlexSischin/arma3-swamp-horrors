@@ -13,7 +13,7 @@ private _fsm = [
             [
                 "HIDDEN",
                 {true},
-                {}
+                {[_gameObjectState] call LCX_fnc_hideGroup}
             ]
         ],
         {

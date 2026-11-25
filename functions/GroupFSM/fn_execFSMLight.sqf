@@ -17,7 +17,7 @@ private _fsm = [
             ]
         ],
         {
-            _posState = [_params] call LCX_fnc_initPositionState;
+            _posState = [_params] call LCX_fnc_initPositionLightState;
             _gameObjectLightState = [_params, _posState] call LCX_fnc_initGameObjectLightState;
             _migrationState = [] call LCX_fnc_initMigrationState;
             _markerState = [_params, _posState] call LCX_fnc_initMarkerState;
