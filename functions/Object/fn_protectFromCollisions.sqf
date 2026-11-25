@@ -8,20 +8,24 @@ params [
 
 _object allowDamage false;
 
-sleep _initialDelay;
+[_object, _initialDelay, _checkInterval, _speedThreshold, _timeout] spawn {
+    params ["_object", "_initialDelay", "_checkInterval", "_speedThreshold", "_timeout"];
 
-private _startTime = time;
+    sleep _initialDelay;
 
-waitUntil {
-    sleep _checkInterval;
+    private _startTime = time;
 
-    if (isNull _object) exitWith { true };
+    waitUntil {
+        sleep _checkInterval;
 
-    private _speed = abs speed _object;
+        if (isNull _object) exitWith { true };
 
-    (_speed <= _speedThreshold) || (time - _startTime >= _timeout)
-};
+        private _speed = abs speed _object;
 
-if (!isNull _object) then {
-    _object allowDamage true;
+        (_speed <= _speedThreshold) || (time - _startTime >= _timeout)
+    };
+
+    if (!isNull _object) then {
+        _object allowDamage true;
+    };
 };
